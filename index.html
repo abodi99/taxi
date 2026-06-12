@@ -566,7 +566,7 @@
         </header>
         <div class="booking-dialog__body">
           <p class="booking-dialog__lead section-intro booking-lead" data-i18n="book_lead" data-i18n-html="true">
-            Du behöver inte ha alla svar klara. Skriv det du vet – <strong>resten löser vi när vi ringer</strong>. Bråttom? <a href="tel:+46701234567">Ring oss direkt</a> så slipper du formuläret helt.
+            Du behöver inte ha alla svar klara. Fyll i det du vet – <strong>vi återkommer utifrån dina kontaktuppgifter</strong> när förfrågan kan tas emot.
           </p>
           <div id="booking-modal-root" class="booking-modal-root">
             <div id="booking-flow">
@@ -777,7 +777,7 @@
 
                     <p class="form-note" data-i18n="form_note" data-i18n-html="true">
                       <span class="req" aria-hidden="true">*</span> obligatoriska uppgifter är ifyllda i stegen ovan. Utkastläge: ingen data skickas till server –
-                      <strong>ring oss efteråt</strong> för att bekräfta bokningen.
+                      <strong>bokning slutförs enligt den rutin ni sätter upp</strong> när flödet går i skarp drift.
                     </p>
 
                     <div class="booking-wizard__actions booking-wizard__actions--split">
@@ -788,31 +788,16 @@
                 </div>
               </form>
             </div>
-
-            <aside class="booking-aside" aria-labelledby="booking-aside-call">
-              <div class="booking-aside__photo">
-                <img
-                  src="https://images.unsplash.com/photo-1762698092729-f16a0f497d49?auto=format&amp;fit=crop&amp;w=560&amp;h=360&amp;q=80"
-                  width="560"
-                  height="360"
-                  alt="Taxibil på stadsgata – vi hjälper dig vidare."
-                  data-i18n-alt="aside_img_alt"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <a class="btn btn--primary btn--block" id="booking-aside-call" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
-            </aside>
           </div>
           </div>
 
           <div class="thanks-panel" id="thanks-panel" hidden tabindex="-1" role="status" aria-live="polite">
             <h2 class="thanks-panel__title" data-i18n="thanks_title">Tack – du är klar med din del</h2>
             <p class="thanks-panel__text" data-i18n="thanks_text" data-i18n-html="true">
-              I detta utkast sparas inget automatiskt. <strong>Ring oss när du kan</strong> så bekräftar vi tillsammans tid och plats – då slipper du undra om något fastnat.
+              I detta utkast sparas inget automatiskt. <strong>Vi hör av oss</strong> så fort vi kan. Vill du ändra något – välj <strong>Ny förfrågan</strong> nedan.
             </p>
-            <a class="btn btn--primary btn--lg" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
             <button type="button" class="btn btn--ghost thanks-panel__reset" id="thanks-reset" data-i18n="thanks_reset">Ny förfrågan</button>
+          </div>
           </div>
         </div>
       </div>

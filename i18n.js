@@ -80,7 +80,7 @@
       fact3_img_alt: "Kortterminal för kontaktlös betalning i taxin.",
       book_title: "Boka taxi",
       book_lead:
-        'Du behöver inte ha alla svar klara. Skriv det du vet – <strong>resten löser vi när vi ringer</strong>. Bråttom? <a href="tel:+46701234567">Ring oss direkt</a> så slipper du formuläret helt.',
+        "Du behöver inte ha alla svar klara. Fyll i det du vet – <strong>vi återkommer utifrån dina kontaktuppgifter</strong> när förfrågan kan tas emot.",
       book_teaser_text:
         'Vill du boka skriftligt? Öppna formuläret – tre enkla steg. Bråttom? <a href="tel:+46701234567">Ring</a> så hjälper vi dig direkt.',
       book_teaser_hint: "Samma upplägg som tidigare – formuläret visas i ett fönster så sidan blir enklare.",
@@ -139,12 +139,12 @@
       ph_message: "T.ex. portkod, rullstol, tyst resa, husdjur i bur",
       summary_aria: "Sammanfattning av din förfrågan",
       form_note:
-        '<span class="req" aria-hidden="true">*</span> obligatoriska uppgifter är ifyllda i stegen ovan. Utkastläge: ingen data skickas till server – <strong>ring oss efteråt</strong> för att bekräfta bokningen.',
+        '<span class="req" aria-hidden="true">*</span> obligatoriska uppgifter är ifyllda i stegen ovan. Utkastläge: ingen data skickas till server – <strong>bokning slutförs enligt den rutin ni sätter upp</strong> när flödet går i skarp drift.',
       btn_submit: "Skicka förfrågan",
       aside_img_alt: "Taxibil på stadsgata – vi hjälper dig vidare.",
       thanks_title: "Tack – du är klar med din del",
       thanks_text:
-        "I detta utkast sparas inget automatiskt. <strong>Ring oss när du kan</strong> så bekräftar vi tillsammans tid och plats – då slipper du undra om något fastnat.",
+        "I detta utkast sparas inget automatiskt. <strong>Vi hör av oss</strong> så fort vi kan. Vill du ändra något – välj <strong>Ny förfrågan</strong> nedan.",
       thanks_reset: "Ny förfrågan",
       price_title: "Prislista",
       price_intro:
@@ -314,7 +314,7 @@
       fact3_img_alt: "Kortterminal til kontaktløs betaling i taxien.",
       book_title: "Book taxi",
       book_lead:
-        'Du behøver ikke have alle svar klar. Skriv det, du ved – <strong>resten finder vi ud af, når vi ringer</strong>. Travlt? <a href="tel:+46701234567">Ring direkte</a> og spring formularen over.',
+        "Du behøver ikke have alle svar klar. Udfyld det, du ved – <strong>vi vender tilbage ud fra dine kontaktoplysninger</strong>, når forespørgslen kan modtages.",
       book_teaser_text:
         'Vil du booke skriftligt? Åbn formularen – tre enkle trin. Travlt? <a href="tel:+46701234567">Ring</a>, så hjælper vi med det samme.',
       book_teaser_hint: "Samme flow som før – formularen åbner i et vindue.",
@@ -373,12 +373,12 @@
       ph_message: "Fx dørkode, kørestol, stille tur, kæledyr i bur",
       summary_aria: "Opsummering af din forespørgsel",
       form_note:
-        '<span class="req" aria-hidden="true">*</span> obligatoriske felter er udfyldt i trinene ovenfor. Udkast: ingen data sendes til server – <strong>ring bagefter</strong> for at bekræfte bookingen.',
+        '<span class="req" aria-hidden="true">*</span> obligatoriske felter er udfyldt i trinene ovenfor. Udkast: ingen data sendes til server – <strong>booking afsluttes efter den rutine, I sætter op</strong>, når flowet går i drift.',
       btn_submit: "Send forespørgsel",
       aside_img_alt: "Taxa på bygade – vi hjælper dig videre.",
       thanks_title: "Tak – din del er gjort",
       thanks_text:
-        "I dette udkast gemmes intet automatisk. <strong>Ring når du kan</strong>, så bekræfter vi tid og sted sammen.",
+        "I dette udkast gemmes intet automatisk. <strong>Vi hører fra dig</strong>, så snart vi kan. Vil du rette noget, vælger du <strong>Ny forespørgsel</strong> nedenfor.",
       thanks_reset: "Ny forespørgsel",
       price_title: "Prisliste",
       price_intro:
@@ -548,7 +548,7 @@
       fact3_img_alt: "Card terminal for contactless payment in the taxi.",
       book_title: "Book a taxi",
       book_lead:
-        'You don’t need every answer ready. Write what you know – <strong>we’ll sort the rest when we call</strong>. In a hurry? <a href="tel:+46701234567">Call us directly</a> and skip the form.',
+        "You don’t need every answer ready. Fill in what you know – <strong>we’ll follow up using your contact details</strong> when the request can be received.",
       book_teaser_text:
         'Prefer to book in writing? Open the form – three quick steps. In a hurry? <a href="tel:+46701234567">Call us</a> and we’ll help right away.',
       book_teaser_hint: "Same steps as before – the form opens in a window so the page stays simple.",
@@ -607,12 +607,12 @@
       ph_message: "E.g. door code, wheelchair, quiet ride, pet in carrier",
       summary_aria: "Summary of your request",
       form_note:
-        '<span class="req" aria-hidden="true">*</span> required fields were completed in the steps above. Draft: no data is sent to a server – <strong>call us afterwards</strong> to confirm the booking.',
+        '<span class="req" aria-hidden="true">*</span> required fields were completed in the steps above. Draft: no data is sent to a server yet – <strong>how the booking is finalised follows the process you set up</strong> when you go live.',
       btn_submit: "Send request",
       aside_img_alt: "Taxi on a city street – we’ll help you get sorted.",
       thanks_title: "Thanks – you’re done on your side",
       thanks_text:
-        "Nothing is saved automatically in this draft. <strong>Call when you can</strong> and we’ll confirm time and place together.",
+        "Nothing is saved automatically in this draft. <strong>We’ll be in touch</strong> as soon as we can. Need to change something? Choose <strong>New request</strong> below.",
       thanks_reset: "New request",
       price_title: "Price list",
       price_intro:
