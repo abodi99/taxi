@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" role="img" aria-labelledby="swishTitle">
+  <title id="swishTitle">Swish</title>
+  <rect width="200" height="56" rx="10" fill="#118C4F"/>
+  <text x="100" y="37" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700">Swish</text>
+</svg>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1a4f7a" />
+    <title>Cookies | Stadstaxi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="legal-body">
+    <a class="skip-link" href="#main">Hoppa till innehåll</a>
+    <main id="main" class="legal-page">
+      <div class="container legal-page__inner">
+        <p class="legal-page__back"><a href="index.html">&larr; Till startsidan</a></p>
+        <h1 class="legal-page__title">Cookies och liknande teknik</h1>
+        <p class="legal-page__lead">
+          Denna sida beskriver hur webbplatsen Stadstaxi använder lagring i webbläsaren och – om du samtycker – webbanalys. Texten är ett
+          <strong>utkast</strong> och ska juridiskt granskas innan produktion.
+        </p>
+
+        <section class="legal-page__section" aria-labelledby="cookies-samtycke">
+          <h2 id="cookies-samtycke" class="legal-page__h2">Ditt val (samtycke)</h2>
+          <p>
+            När du besöker sidan första gången visas en banner där du kan välja <strong>endast nödvändigt</strong> eller
+            <strong>godkänna analys</strong>. Ditt val sparas lokalt i webbläsaren under nyckeln
+            <code>stadstaxi_cookie_consent_v1</code> (värdena <code>essential</code> eller <code>analytics</code>). Du kan när som helst
+            ändra valet via länken <strong>Cookie-inställningar</strong> i sidfoten på startsidan och karriärsidan, eller med knappen nedan.
+          </p>
+          <p>
+            <button type="button" class="btn btn--ghost" id="cookie-settings-btn" data-i18n="cookie_settings">
+              Cookie-inställningar
+            </button>
+          </p>
+        </section>
+
+        <section class="legal-page__section" aria-labelledby="cookies-nodvandiga">
+          <h2 id="cookies-nodvandiga" class="legal-page__h2">Nödvändig lagring</h2>
+          <p>
+            För att webbplatsen ska fungera används bland annat språkval i <code>localStorage</code> (via befintlig språkmodul). Detta
+            räknas som nödvändigt och kräver inte analys-samtycke.
+          </p>
+        </section>
+
+        <section class="legal-page__section" aria-labelledby="cookies-analys">
+          <h2 id="cookies-analys" class="legal-page__h2">Webbanalys (valfritt)</h2>
+          <p>
+            Om ni aktiverar Google Analytics 4 laddas analysskript <strong>först efter</strong> att besökaren valt ”Godkänn analys”. Id för
+            mätning sätts i <code>stadstaxi-config.js</code> under <code>window.STADSTAXI.analytics.measurementId</code> (t.ex.
+            <code>G-XXXXXXXX</code>). Lämna fältet tomt om analys inte ska användas alls.
+          </p>
+          <p>
+            Google kan behandla data enligt sina villkor; ni ansvarar för att ert upplägg följer gällande lag (t.ex. GDPR) och att
+            integritetspolicyn beskriver detta.
+          </p>
+        </section>
+
+        <section class="legal-page__section" aria-labelledby="cookies-ovrigt">
+          <h2 id="cookies-ovrigt" class="legal-page__h2">Övrigt</h2>
+          <p>
+            Tredjepartstjänster som chatt (Chatwoot) kan sätta egna cookies när de aktiveras – beskriv detta i er slutgiltiga policy om det
+            gäller er drift.
+          </p>
+          <p>
+            Frågor: se kontaktuppgifter på <a href="index.html#kontakt">startsidan</a> eller i er <a href="integritet.html"
+              >integritetspolicy</a
+            >.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div
+      id="cookie-consent"
+      class="cookie-consent"
+      hidden
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-consent-title"
+      aria-hidden="true"
+      data-i18n-aria-label="cookie_banner_region_aria"
+    >
+      <div class="cookie-consent__inner container">
+        <div class="cookie-consent__text">
+          <h2 id="cookie-consent-title" class="cookie-consent__title" data-i18n="cookie_banner_title">Cookies och analys</h2>
+          <p class="cookie-consent__lead" data-i18n="cookie_banner_lead">
+            Vi använder nödvändig lagring för språkval m.m. Om du godkänner kan vi också samla in anonym besöksstatistik för att förbättra
+            sidan.
+          </p>
+        </div>
+        <div class="cookie-consent__actions">
+          <button type="button" class="btn btn--ghost" id="cookie-consent-reject" data-i18n="cookie_reject">Endast nödvändigt</button>
+          <button type="button" class="btn btn--primary" id="cookie-consent-accept" data-i18n="cookie_accept">Godkänn analys</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="stadstaxi-config.js"></script>
+    <script src="i18n.js" defer></script>
+    <script src="cookies-consent.js" defer></script>
+  </body>
+</html>

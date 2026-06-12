@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      id="meta-description"
+      name="description"
+      content="Boka taxi hos Stadstaxi – ring dygnet runt eller lämna en bokningsförfrågan. Se prislista och betala med kort eller Swish i bilen. Lokal taxitjänst för trygga resor i stan."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a4f7a" />
+    <title>Taxi &amp; bokning | Stadstaxi</title>
+    <link rel="canonical" href="https://www.stadstaxi.se/" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:url" content="https://www.stadstaxi.se/" />
+    <meta property="og:title" content="Taxi &amp; bokning | Stadstaxi" />
+    <meta
+      property="og:description"
+      content="Boka taxi hos Stadstaxi – ring dygnet runt eller lämna en bokningsförfrågan. Se prislista och betala med kort eller Swish i bilen. Lokal taxitjänst för trygga resor i stan."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1705844351809-c061130580f5?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Taxi på gata i Stockholm en kväll, Sverige." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Taxi &amp; bokning | Stadstaxi" />
+    <meta
+      name="twitter:description"
+      content="Boka taxi hos Stadstaxi – ring dygnet runt eller lämna en bokningsförfrågan. Prislista, kort och Swish. Lokal taxitjänst."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1705844351809-c061130580f5?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Stadstaxi",
+        "url": "https://www.stadstaxi.se/",
+        "telephone": "+46701234567",
+        "email": "info@stadstaxi.example",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Exempelgatan 1",
+          "postalCode": "123 45",
+          "addressLocality": "Stad",
+          "addressCountry": "SE"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Stad med omnejd"
+        },
+        "priceRange": "$$",
+        "currenciesAccepted": "SEK",
+        "paymentAccepted": "Kontant, kreditkort, Swish, Klarna där avtal finns, Apple Pay, Google Pay"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Hoppa till innehåll</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__start">
+          <a class="logo" href="#hem" data-i18n-aria-label="logo_aria">
+            <img
+              class="logo__mark"
+              src="images/logo-taxi.svg"
+              width="40"
+              height="40"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+              aria-hidden="true"
+            />
+            <span class="logo__text">Stadstaxi</span>
+          </a>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="visually-hidden" data-i18n="menu">Meny</span>
+          </button>
+        </div>
+        <nav class="site-nav" id="site-nav" data-i18n-aria-label="nav_aria">
+          <ul class="site-nav__list">
+            <li><a href="#hem" data-i18n="nav_home">Hem</a></li>
+            <li><a href="#boka" data-open-booking data-i18n="nav_book">Boka</a></li>
+            <li><a href="#priser" data-i18n="nav_prices">Priser</a></li>
+            <li><a href="karriar.html" data-i18n="nav_careers">Karriär</a></li>
+            <li><a href="#kontakt" data-i18n="nav_contact">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button
+              type="button"
+              class="lang-dropdown__toggle"
+              id="lang-dropdown-toggle"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="lang-dropdown-list"
+            >
+              <span class="lang-dropdown__flag" data-lang-current-flag aria-hidden="true">🇸🇪</span>
+              <span class="lang-dropdown__code" data-lang-current-code>SV</span>
+              <svg class="lang-dropdown__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M6 8.2 1 3.2h10z" />
+              </svg>
+            </button>
+            <ul id="lang-dropdown-list" class="lang-dropdown__list" role="listbox" hidden>
+              <li class="lang-dropdown__item" role="none">
+                <button type="button" class="lang-dropdown__option" role="option" data-set-lang="sv" aria-selected="true">
+                  <span class="lang-dropdown__flag" aria-hidden="true">🇸🇪</span>
+                  <span data-i18n="lang_sv">Svenska</span>
+                </button>
+              </li>
+              <li class="lang-dropdown__item" role="none">
+                <button type="button" class="lang-dropdown__option" role="option" data-set-lang="da" aria-selected="false">
+                  <span class="lang-dropdown__flag" aria-hidden="true">🇩🇰</span>
+                  <span data-i18n="lang_da">Dansk</span>
+                </button>
+              </li>
+              <li class="lang-dropdown__item" role="none">
+                <button type="button" class="lang-dropdown__option" role="option" data-set-lang="en" aria-selected="false">
+                  <span class="lang-dropdown__flag" aria-hidden="true">🇬🇧</span>
+                  <span data-i18n="lang_en">English</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn--small btn--call site-header__call" href="tel:+46701234567" data-i18n="ring">Ring</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero hero--simple" id="hem" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="hero__eyebrow" data-i18n="hero_eyebrow">Din lokala taxi</p>
+            <h1 id="hero-title" class="hero__title" data-i18n="hero_title">Stadstaxi tar dig dit du ska</h1>
+            <p class="hero__lead" data-i18n="hero_lead">
+              Ring om du vill ha svar direkt – annars kan du fylla i en kort bokningsförfrågan nedan så hör vi av oss.
+            </p>
+            <div class="hero__actions" role="group" data-i18n-aria-label="hero_contact_aria" aria-label="Snabbkontakt">
+              <a class="btn btn--primary btn--lg hero__cta-primary" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
+              <button
+                type="button"
+                class="btn btn--outline-accent btn--lg"
+                data-chat-trigger
+                data-open-chat
+                data-i18n-aria-label="chat_open_aria"
+                aria-haspopup="dialog"
+                aria-controls="contact-dialog"
+                aria-expanded="false"
+              >
+                <svg
+                  class="btn__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 018.4-8.4c2.24 0 4.35.88 5.93 2.47A8.46 8.46 0 0121 11.5z" />
+                </svg>
+                <span data-i18n="hero_chat">Chatt</span>
+              </button>
+              <button type="button" class="hero__book-link" data-open-booking data-i18n="hero_write">Boka skriftligt</button>
+            </div>
+          </div>
+          <figure class="hero__figure">
+            <img
+              src="https://images.unsplash.com/photo-1705844351809-c061130580f5?auto=format&amp;fit=crop&amp;w=1200&amp;h=900&amp;q=80"
+              width="1200"
+              height="900"
+              alt="Taxi på gata i Stockholm en kväll, Sverige."
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <figcaption class="hero__caption" data-i18n="hero_caption">
+              Taxikörning i svensk stad – lokal tjänst med nordiskt stadsliv runt knuten.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="facts" aria-labelledby="facts-title">
+        <div class="container">
+          <h2 id="facts-title" class="visually-hidden" data-i18n="facts_why">Varför Stadstaxi</h2>
+          <ul class="facts__grid">
+            <li class="fact-card">
+              <div class="fact-card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1773683225594-fe5e787b3d7b?auto=format&amp;fit=crop&amp;w=400&amp;h=260&amp;q=80"
+                  width="400"
+                  height="260"
+                  alt="Taxibil i nordisk stadsmiljö."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="fact-card__title" data-i18n="fact1_title">Dygnet runt</h3>
+              <p class="fact-card__text" data-i18n="fact1_text">Vi kör i stan och runt knuten – från snäva gränder till större vägar, när du behöver oss.</p>
+            </li>
+            <li class="fact-card">
+              <div class="fact-card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1762698092729-f16a0f497d49?auto=format&amp;fit=crop&amp;w=400&amp;h=260&amp;q=80"
+                  width="400"
+                  height="260"
+                  alt="Gul taxibil på stadsgata i kvällsljus."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="fact-card__title" data-i18n="fact2_title">Fasta priser</h3>
+              <p class="fact-card__text" data-i18n="fact2_text">Tydliga besked innan du kliver in – inga överraskningar. Se vår prislista nedan.</p>
+            </li>
+            <li class="fact-card">
+              <div class="fact-card__media">
+                <img
+                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=400&amp;h=260&amp;q=80"
+                  width="400"
+                  height="260"
+                  alt="Kortterminal för kontaktlös betalning i taxin."
+                  data-i18n-alt="fact3_img_alt"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="fact-card__title" data-i18n="fact3_title">Kort, Swish &amp; mer</h3>
+              <p class="fact-card__text" data-i18n="fact3_text">
+                Betala i bilen med kort, Swish eller Klarna där det finns – fråga gärna föraren om utbudet i just den bilen.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="booking-teaser" id="boka" aria-labelledby="booking-teaser-title">
+        <div class="container booking-teaser__inner">
+          <h2 id="booking-teaser-title" class="booking-teaser__title section-title" data-i18n="book_title">Boka taxi</h2>
+          <p class="booking-teaser__text" data-i18n="book_teaser_text" data-i18n-html="true"></p>
+          <div class="booking-teaser__actions">
+            <button type="button" class="btn btn--primary btn--lg" id="open-booking-dialog" data-open-booking data-i18n="book_open_cta">
+              Öppna bokningsformulär
+            </button>
+            <a class="btn btn--ghost btn--lg" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
+          </div>
+          <p class="booking-teaser__hint" data-i18n="book_teaser_hint"></p>
+        </div>
+      </section>
+
+      <section class="pricing" id="priser" aria-labelledby="priser-title">
+        <div class="container">
+          <h2 id="priser-title" class="section-title" data-i18n="price_title">Prislista</h2>
+          <p class="section-intro" data-i18n="price_intro">
+            Exempelpriser för utkast – uppdatera siffrorna så de stämmer med ert taxameterunderlag och lokala regler.
+          </p>
+
+          <ul class="price-cards" role="list">
+            <li class="price-card">
+              <h3 class="price-card__route">Flygplats – centrum</h3>
+              <p class="price-card__detail">Enkel resa, upp till 4 passagerare</p>
+              <p class="price-card__amount">från 549 kr</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__route">Inom tull</h3>
+              <p class="price-card__detail">Start + kilometer enligt taxameter</p>
+              <p class="price-card__amount">från 65 kr + km</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__route">Station / sjukhus</h3>
+              <p class="price-card__detail">Uppskattat pristak inom stadskärna</p>
+              <p class="price-card__amount">från 189 kr</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__route">Natt / helg</h3>
+              <p class="price-card__detail">Justerad taxa enligt schema</p>
+              <p class="price-card__amount">+15 %</p>
+            </li>
+          </ul>
+
+          <p class="pricing-disclaimer" data-i18n="price_disclaimer">
+            Slutpris kan påverkas av kötid, väntetid, avvikande rutt eller tillval. Vid tvekan – fråga alltid föraren eller vår dispatch innan resan.
+          </p>
+        </div>
+      </section>
+
+      <section class="trust" aria-labelledby="trust-title">
+        <div class="container trust__inner">
+          <h2 id="trust-title" class="section-title section-title--sm" data-i18n="trust_title">Trygghet &amp; service</h2>
+          <ul class="trust__list">
+            <li><strong>Öppettider:</strong> Beställning dygnet runt – bemanning enligt schema (uppdatera text).</li>
+            <li><strong>Auktorisation:</strong> Taxi med giltig licens och trafiktillstånd (ersätt med ert tillståndsnummer).</li>
+            <li data-i18n="trust_pay" data-i18n-html="true"></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="kontakt">
+      <div class="site-footer__shell">
+        <div class="site-footer__inner container">
+          <div class="site-footer__top">
+            <div class="site-footer__brand-col">
+              <h2 class="site-footer__brand">Stadstaxi</h2>
+              <p class="site-footer__tag" data-i18n="footer_tag">Liten firma – stor service.</p>
+              <div class="site-footer__connect">
+                <h3 class="site-footer__heading" data-i18n="social_follow">Följ oss</h3>
+                <ul class="social-list" role="list">
+                <li>
+                  <a
+                    class="social-list__link"
+                    href="https://www.instagram.com/stadstaxi.example/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n-aria-label="social_instagram_aria"
+                  >
+                    <img
+                      class="social-list__icon"
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@11.6.0/icons/instagram.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="social-list__link"
+                    href="https://www.facebook.com/stadstaxi.example"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n-aria-label="social_facebook_aria"
+                  >
+                    <img
+                      class="social-list__icon"
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@11.6.0/icons/facebook.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="social-list__link"
+                    href="https://www.linkedin.com/company/stadstaxi-example"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n-aria-label="social_linkedin_aria"
+                  >
+                    <img
+                      class="social-list__icon"
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@11.6.0/icons/linkedin.svg"
+                      width="22"
+                      height="22"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </li>
+                </ul>
+                <p class="site-footer__social-note" data-i18n="social_note">
+                  Platshållarlänkar – byt till era riktiga konton vid lansering.
+                </p>
+              </div>
+            </div>
+
+            <div class="site-footer__meta">
+              <div class="site-footer__meta-group">
+                <h3 class="site-footer__heading" data-i18n="footer_contact">Kontakt</h3>
+                <p>
+                  <span data-i18n="footer_phone">Telefon:</span>
+                  <a href="tel:+46701234567">070-123 45 67</a>
+                </p>
+                <p>
+                  <span data-i18n="footer_email">E-post:</span>
+                  <a href="mailto:info@stadstaxi.example">info@stadstaxi.example</a>
+                </p>
+              </div>
+              <div class="site-footer__meta-group">
+                <h3 class="site-footer__heading" data-i18n="footer_company">Bolag &amp; postadress</h3>
+                <address class="site-footer__address">
+                  Org.nr: 556XXX-XXXX<br />
+                  Exempelgatan 1<br />
+                  123 45 Stad<br />
+                  Sverige
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__foot">
+          <div class="container site-footer__foot-inner">
+            <nav class="site-footer__legal" data-i18n-aria-label="footer_legal_aria" aria-label="Juridisk information">
+              <ul class="footer-legal" role="list">
+                <li><a href="integritet.html" data-i18n="footer_privacy">Integritetspolicy</a></li>
+                <li><a href="villkor.html" data-i18n="footer_terms">Användarvillkor</a></li>
+                <li><a href="cookies.html" data-i18n="footer_cookies">Cookies</a></li>
+                <li><a href="tillganglighet.html" data-i18n="footer_accessibility">Tillgänglighet</a></li>
+                <li>
+                  <button type="button" class="footer-legal__btn" id="cookie-settings-btn" data-i18n="cookie_settings">
+                    Cookie-inställningar
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="site-footer__colophon">
+              <p class="site-footer__colophon-primary">
+                <span class="site-footer__copyright">&copy; <span id="year"></span> Stadstaxi</span>
+                <span class="site-footer__colophon-dot" aria-hidden="true">·</span>
+                <span class="site-footer__colophon-note" data-i18n="footer_copy">Utkast för intern test.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="cookie-consent"
+      class="cookie-consent"
+      hidden
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-consent-title"
+      aria-hidden="true"
+      data-i18n-aria-label="cookie_banner_region_aria"
+    >
+      <div class="cookie-consent__inner container">
+        <div class="cookie-consent__text">
+          <h2 id="cookie-consent-title" class="cookie-consent__title" data-i18n="cookie_banner_title">Cookies och analys</h2>
+          <p class="cookie-consent__lead" data-i18n="cookie_banner_lead">
+            Vi använder nödvändig lagring för språkval m.m. Om du godkänner kan vi också samla in anonym besöksstatistik för att förbättra sidan.
+          </p>
+          <p class="cookie-consent__more">
+            <a href="cookies.html" data-i18n="cookie_banner_read">Läs mer om cookies</a>
+          </p>
+        </div>
+        <div class="cookie-consent__actions">
+          <button type="button" class="btn btn--ghost" id="cookie-consent-reject" data-i18n="cookie_reject">Endast nödvändigt</button>
+          <button type="button" class="btn btn--primary" id="cookie-consent-accept" data-i18n="cookie_accept">Godkänn analys</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="contact-dock"
+      id="contact-dock"
+      data-i18n-aria-label="contact_dock_aria"
+      aria-label="Snabbkontakt: WhatsApp och chatt"
+    >
+      <a
+        class="contact-dock__fab contact-dock__fab--wa"
+        id="contact-wa"
+        href="https://wa.me/46701234567?text=Hej%20Stadstaxi"
+        data-whatsapp-link
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n-aria-label="wa_aria"
+      >
+        <svg class="contact-dock__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+      </a>
+      <button
+        type="button"
+        class="contact-dock__fab contact-dock__fab--chat"
+        id="chat-launcher"
+        data-chat-trigger
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        aria-controls="contact-dialog"
+        data-i18n-aria-label="chat_open_aria"
+      >
+        <svg class="contact-dock__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title">
+      <div class="contact-dialog__inner">
+        <header class="contact-dialog__header">
+          <h2 id="contact-dialog-title" class="contact-dialog__title" data-i18n="chat_title">Stadstaxi – snabbhjälp</h2>
+          <button type="button" class="contact-dialog__close" data-contact-dialog-close data-i18n-aria-label="chat_close_aria">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+        <p class="contact-dialog__lead" data-i18n="contact_dialog_lead">
+          Välj hur du vill nå oss. Livechatt (Chatwoot) aktiveras när ni lagt in websiteToken i stadstaxi-config.js.
+        </p>
+        <ul class="contact-dialog__actions">
+          <li>
+            <a class="btn btn--primary btn--block" href="tel:+46701234567" data-contact-dialog-close data-i18n="hero_call">Ring 070-123 45 67</a>
+          </li>
+          <li>
+            <a
+              class="btn btn--wa btn--block"
+              href="https://wa.me/46701234567?text=Hej%20Stadstaxi"
+              data-whatsapp-link
+              data-contact-dialog-close
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero_whatsapp"
+              >WhatsApp</a>
+          </li>
+          <li>
+            <button type="button" class="btn btn--ghost btn--block" data-open-booking data-contact-dialog-close data-i18n="nav_book">
+              Boka
+            </button>
+          </li>
+          <li>
+            <a class="btn btn--ghost btn--block" href="karriar.html" data-contact-dialog-close data-i18n="nav_careers">Karriär</a>
+          </li>
+          <li>
+            <a class="btn btn--ghost btn--block" href="mailto:info@stadstaxi.example" data-contact-dialog-close data-i18n="footer_email">E-post</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="booking-dialog-title">
+      <div class="booking-dialog__inner">
+        <header class="booking-dialog__header">
+          <h2 id="booking-dialog-title" class="booking-dialog__title" data-i18n="book_title">Boka taxi</h2>
+          <button type="button" class="booking-dialog__close" data-booking-dialog-close data-i18n-aria-label="book_dialog_close_aria" aria-label="Stäng">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+        <div class="booking-dialog__body">
+          <p class="booking-dialog__lead section-intro booking-lead" data-i18n="book_lead" data-i18n-html="true">
+            Du behöver inte ha alla svar klara. Skriv det du vet – <strong>resten löser vi när vi ringer</strong>. Bråttom? <a href="tel:+46701234567">Ring oss direkt</a> så slipper du formuläret helt.
+          </p>
+          <div id="booking-modal-root" class="booking-modal-root">
+            <div id="booking-flow">
+          <div class="booking-layout">
+            <div class="booking-panel" id="booking-panel">
+              <form class="booking-form booking-form--wizard" id="booking-form" novalidate>
+                <div class="booking-wizard" id="booking-wizard">
+                  <ol class="booking-wizard__track" data-i18n-aria-label="wiz_steps_aria" aria-label="Steg i bokningen">
+                    <li class="booking-wizard__track-item is-current" data-step-indicator="1" aria-current="step">
+                      <span class="booking-wizard__bubble" aria-hidden="true">1</span>
+                      <span class="booking-wizard__label" data-i18n="wiz_track1">Var &amp; när</span>
+                    </li>
+                    <li class="booking-wizard__track-item" data-step-indicator="2">
+                      <span class="booking-wizard__bubble" aria-hidden="true">2</span>
+                      <span class="booking-wizard__label" data-i18n="wiz_track2">Kontakt</span>
+                    </li>
+                    <li class="booking-wizard__track-item" data-step-indicator="3">
+                      <span class="booking-wizard__bubble" aria-hidden="true">3</span>
+                      <span class="booking-wizard__label" data-i18n="wiz_track3">Tillval</span>
+                    </li>
+                  </ol>
+                  <p class="booking-wizard__status" id="booking-wizard-status" aria-live="polite">
+                    Steg 1 av 3 – var ska vi hämta dig, och när?
+                  </p>
+
+                  <div class="booking-step" data-booking-step="1" role="group" aria-labelledby="booking-step-1-title">
+                    <h3 class="booking-step__title" id="booking-step-1-title" data-i18n="step1_title">Var och när</h3>
+                    <p class="booking-step__intro" data-i18n="step1_intro" data-i18n-html="true">
+                      Skriv adress som i Sverige vanligtvis anges: gata, nummer och gärna <strong>ort eller postnummer</strong> om du kan.
+                    </p>
+                    <div class="form-row">
+                      <label for="pickup"><span data-i18n="lbl_pickup">Hämtadress</span> <span class="req" aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="pickup"
+                        name="pickup"
+                        autocomplete="street-address"
+                        placeholder="T.ex. Storgatan 12, 212 34 Malmö"
+                        data-i18n-placeholder="ph_pickup"
+                        aria-describedby="pickup-hint geo-status"
+                      />
+                      <p class="field-hint" id="pickup-hint" data-i18n="hint_pickup">Med postnummer blir det enklare för föraren att hitta rätt i hitta.se och GPS.</p>
+                      <div class="form-row form-row--geo">
+                        <button
+                          type="button"
+                          class="btn btn--ghost btn--geo"
+                          id="btn-use-location"
+                          data-i18n="geo_btn"
+                          data-i18n-aria-label="geo_btn_aria"
+                        >
+                          Använd min plats
+                        </button>
+                        <p id="geo-status" class="geo-status" role="status" aria-live="polite" hidden></p>
+                      </div>
+                      <input type="hidden" id="pickup_lat" name="pickup_lat" value="" />
+                      <input type="hidden" id="pickup_lng" name="pickup_lng" value="" />
+                      <p class="field-error" id="pickup-error" role="alert" hidden></p>
+                    </div>
+                    <div class="form-row">
+                      <label for="postal"><span data-i18n="lbl_postal">Postnummer</span> <span class="optional" data-i18n="opt_optional">(valfritt)</span></label>
+                      <input
+                        type="text"
+                        id="postal"
+                        name="postal"
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                        maxlength="6"
+                        placeholder="123 45"
+                        data-i18n-placeholder="ph_postal"
+                        aria-describedby="postal-hint"
+                      />
+                      <p class="field-hint" id="postal-hint" data-i18n="hint_postal">Svenskt format: fem siffror, mellanslag valfritt.</p>
+                      <p class="field-error" id="postal-error" role="alert" hidden></p>
+                    </div>
+
+                    <fieldset class="form-row form-fieldset form-fieldset--when">
+                      <legend data-i18n="when_legend">När behöver du taxi?</legend>
+                      <label class="check check--radio">
+                        <input type="radio" name="when_type" id="when-snarast" value="snarast" checked />
+                        <span data-i18n="when_soon" data-i18n-html="true"><strong>Så snart som möjligt</strong> – vi tolkar det som närmaste tid och ringer upp dig.</span>
+                      </label>
+                      <label class="check check--radio">
+                        <input type="radio" name="when_type" id="when-tid" value="tid" />
+                        <span data-i18n="when_pick" data-i18n-html="true"><strong>Jag vill välja datum och klockslag</strong> (t.ex. flyg eller tåg)</span>
+                      </label>
+                    </fieldset>
+                    <div id="scheduled-fields" class="scheduled-fields" hidden>
+                      <div class="form-row form-row--split">
+                        <div>
+                          <label for="date"><span data-i18n="lbl_date">Datum</span> <span class="req" aria-hidden="true">*</span></label>
+                          <input type="date" id="date" name="date" />
+                          <p class="field-error" id="date-error" role="alert" hidden></p>
+                        </div>
+                        <div>
+                          <label for="time"><span data-i18n="lbl_time">Tid</span> <span class="req" aria-hidden="true">*</span></label>
+                          <input type="time" id="time" name="time" />
+                          <p class="field-error" id="time-error" role="alert" hidden></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="booking-wizard__actions">
+                      <button type="button" class="btn btn--primary btn--block booking-wizard__next" data-go-step="2" data-i18n="wiz_next1">
+                        Nästa: kontakt
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="booking-step" data-booking-step="2" role="group" aria-labelledby="booking-step-2-title" hidden>
+                    <h3 class="booking-step__title" id="booking-step-2-title" data-i18n="step2_title">Kontakt</h3>
+                    <p class="booking-step__intro" data-i18n="step2_intro">
+                      Vi använder bara detta för att ringa tillbaka och bekräfta körningen – som vanligt vid taxibokning i Sverige.
+                    </p>
+                    <div class="form-row form-row--split">
+                      <div>
+                        <label for="name"><span data-i18n="lbl_name">För- och efternamn</span> <span class="req" aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Anna Andersson" />
+                        <p class="field-error" id="name-error" role="alert" hidden></p>
+                      </div>
+                      <div>
+                        <label for="phone"><span data-i18n="lbl_phone">Mobil eller telefon</span> <span class="req" aria-hidden="true">*</span></label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          autocomplete="tel"
+                          inputmode="tel"
+                          placeholder="070-123 45 67"
+                          aria-describedby="phone-hint"
+                        />
+                        <p class="field-hint" id="phone-hint" data-i18n="hint_phone">Svenskt nummer (07…, 08…) eller +46. Vi SMS:ar inte utan att fråga först.</p>
+                        <p class="field-error" id="phone-error" role="alert" hidden></p>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <label for="passengers" data-i18n="lbl_passengers">Antal passagerare</label>
+                      <select id="passengers" name="passengers">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" data-i18n="passengers_more">5 eller fler</option>
+                      </select>
+                    </div>
+
+                    <div class="form-row form-row--remember">
+                      <label class="check">
+                        <input type="checkbox" id="remember-contact" name="remember_contact" />
+                        <span data-i18n="remember_contact" data-i18n-html="true">
+                          Spara <strong>namn och telefon</strong> lokalt i denna webbläsare (utkast, ingen server).
+                        </span>
+                      </label>
+                      <p class="field-hint field-hint--remember" id="remember-hint" data-i18n="remember_hint">
+                        Avmarkera raderas uppgifterna från enheten. Används inte för spårning mellan webbplatser.
+                      </p>
+                    </div>
+
+                    <div class="booking-wizard__actions booking-wizard__actions--split">
+                      <button type="button" class="btn btn--ghost booking-wizard__back" data-go-step="1" data-i18n="btn_back">Tillbaka</button>
+                      <button type="button" class="btn btn--primary booking-wizard__next" data-go-step="3" data-i18n="wiz_next2">Nästa: tillval</button>
+                    </div>
+                  </div>
+
+                  <div class="booking-step" data-booking-step="3" role="group" aria-labelledby="booking-step-3-title" hidden>
+                    <h3 class="booking-step__title" id="booking-step-3-title" data-i18n="step3_title">Tillval och övrigt</h3>
+                    <p class="booking-step__intro" data-i18n="step3_intro">Nästan klart – fyll i det som stämmer. Allt här är valfritt utom bekräftelsen längst ner.</p>
+
+                    <div class="form-row">
+                      <label for="destination"><span data-i18n="lbl_destination">Destination</span> <span class="optional" data-i18n="opt_optional">(valfritt)</span></label>
+                      <input
+                        type="text"
+                        id="destination"
+                        name="destination"
+                        autocomplete="off"
+                        placeholder="T.ex. flygplats, sjukhus, adress dit du ska"
+                        data-i18n-placeholder="ph_destination"
+                      />
+                    </div>
+
+                    <fieldset class="form-row form-fieldset">
+                      <legend data-i18n="legend_extras">Tillval</legend>
+                      <label class="check">
+                        <input type="checkbox" id="childseat" name="childseat" />
+                        <span data-i18n="chk_child">Barnstol önskas</span>
+                      </label>
+                      <label class="check">
+                        <input type="checkbox" id="luggage" name="luggage" />
+                        <span data-i18n="chk_luggage">Extra bagage / stor väska</span>
+                      </label>
+                      <label class="check">
+                        <input type="checkbox" id="invoice" name="invoice" />
+                        <span data-i18n="chk_invoice" data-i18n-html="true">Företag – jag vill ha <strong>faktura</strong> (ange org.nr i övrigt)</span>
+                      </label>
+                    </fieldset>
+
+                    <div class="form-row">
+                      <label for="message"><span data-i18n="lbl_message">Övrigt</span> <span class="optional" data-i18n="opt_optional">(valfritt)</span></label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="3"
+                        placeholder="T.ex. portkod, rullstol, tyst resa, husdjur i bur"
+                        data-i18n-placeholder="ph_message"
+                      ></textarea>
+                    </div>
+
+                    <div class="booking-summary" id="booking-summary" tabindex="-1" data-i18n-aria-label="summary_aria" aria-label="Sammanfattning av din förfrågan"></div>
+
+                    <p class="form-note" data-i18n="form_note" data-i18n-html="true">
+                      <span class="req" aria-hidden="true">*</span> obligatoriska uppgifter är ifyllda i stegen ovan. Utkastläge: ingen data skickas till server –
+                      <strong>ring oss efteråt</strong> för att bekräfta bokningen.
+                    </p>
+
+                    <div class="booking-wizard__actions booking-wizard__actions--split">
+                      <button type="button" class="btn btn--ghost booking-wizard__back" data-go-step="2" data-i18n="btn_back">Tillbaka</button>
+                      <button type="submit" class="btn btn--primary" data-i18n="btn_submit">Skicka förfrågan</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <aside class="booking-aside" aria-labelledby="booking-aside-call">
+              <div class="booking-aside__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1762698092729-f16a0f497d49?auto=format&amp;fit=crop&amp;w=560&amp;h=360&amp;q=80"
+                  width="560"
+                  height="360"
+                  alt="Taxibil på stadsgata – vi hjälper dig vidare."
+                  data-i18n-alt="aside_img_alt"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <a class="btn btn--primary btn--block" id="booking-aside-call" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
+            </aside>
+          </div>
+          </div>
+
+          <div class="thanks-panel" id="thanks-panel" hidden tabindex="-1" role="status" aria-live="polite">
+            <h2 class="thanks-panel__title" data-i18n="thanks_title">Tack – du är klar med din del</h2>
+            <p class="thanks-panel__text" data-i18n="thanks_text" data-i18n-html="true">
+              I detta utkast sparas inget automatiskt. <strong>Ring oss när du kan</strong> så bekräftar vi tillsammans tid och plats – då slipper du undra om något fastnat.
+            </p>
+            <a class="btn btn--primary btn--lg" href="tel:+46701234567" data-i18n="hero_call">Ring 070-123 45 67</a>
+            <button type="button" class="btn btn--ghost thanks-panel__reset" id="thanks-reset" data-i18n="thanks_reset">Ny förfrågan</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="sticky-call" role="region" data-i18n-aria-label="sticky_aria" aria-label="Snabbring">
+      <a class="btn btn--primary sticky-call__btn" href="tel:+46701234567">
+        <span class="sticky-call__icon" aria-hidden="true"></span>
+        <span data-i18n="sticky_ring">Ring Stadstaxi</span>
+      </a>
+      <a class="btn btn--ghost sticky-call__book" href="#boka" data-open-booking data-i18n-aria-label="sticky_book_aria" data-i18n="sticky_book">Boka</a>
+    </div>
+
+    <script src="stadstaxi-config.js"></script>
+    <script src="chatwoot-bootstrap.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="cookies-consent.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
