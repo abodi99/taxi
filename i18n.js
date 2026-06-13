@@ -10,17 +10,27 @@
 
   var DICT = {
     sv: {
-      doc_title: "Taxi & bokning | Stadstaxi",
+      doc_title: "Stadstaxi – taxibokning, prislista & telefon",
       meta_description:
-        "Boka taxi hos Stadstaxi – ring dygnet runt eller lämna en bokningsförfrågan. Se prislista och betala med kort eller Swish i bilen. Lokal taxitjänst för trygga resor i stan.",
+        "Boka taxi hos Stadstaxi: ring dygnet runt eller skicka en skriftlig bokningsförfrågan. Se prislista, betala med kort eller Swish i bilen. Lokal taxitjänst i Sverige.",
       skip: "Hoppa till innehåll",
       logo_aria: "Stadstaxi – till startsidan",
       nav_aria: "Huvudmeny",
       nav_home: "Hem",
       nav_book: "Boka",
       nav_prices: "Priser",
+      nav_about: "Om oss",
       nav_careers: "Karriär",
       nav_contact: "Kontakt",
+      about_title: "Om oss",
+      about_lead:
+        "Stadstaxi är en lokal taxitjänst med fokus på trygga resor i vardagen. Byt denna text mot er korta verksamhetsbeskrivning.",
+      about_mission_title: "Vårt uppdrag",
+      about_mission_text:
+        "Vi ska ta er från A till B med tydlig kommunikation, punktliga tider och respekt för varje resenär – i stan och närområdet.",
+      about_contact_title: "Så når ni oss",
+      about_contact_text:
+        'Skicka en bokningsförfrågan via formuläret eller <a href="tel:+46760207444">ring oss</a>. Funderar du på att köra eller jobba runt trafikledning? Läs mer under <a href="karriar.html">Karriär</a>.',
       contact_dialog_lead:
         "Välj hur du vill nå oss. När Chatwoot är aktiverat (websiteToken i stadstaxi-config.js) öppnas er livechatt i stället för denna ruta.",
       careers_title: "Karriär",
@@ -37,9 +47,9 @@
       careers_btn_mail: "Maila intresse",
       careers_btn_phone: "Ring oss",
       careers_img_alt: "Taxi i stadsmiljö – symbol för kollegialt arbete på väg.",
-      career_doc_title: "Karriär | Stadstaxi",
+      career_doc_title: "Karriär – jobb som taxiförare & intresseanmälan | Stadstaxi",
       career_meta_description:
-        "Sök jobb eller skicka intresseanmälan till Stadstaxi – förare och andra roller. Uppdatera efter ert rekryteringsupplägg.",
+        "Jobba hos Stadstaxi? Vi söker ibland taxiförare och medarbetare vid dispatch. Skicka intresseanmälan via formuläret eller ring oss.",
       career_back: "Till startsidan",
       career_form_title: "Intresseanmälan",
       career_form_name: "Namn",
@@ -58,31 +68,21 @@
       lang_da: "Dansk",
       lang_en: "English",
       hero_eyebrow: "Din lokala taxi",
-      hero_title: "Stadstaxi tar dig dit du ska",
+      hero_title:
+        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> tar dig dit du ska',
       hero_lead:
         "Ring om du vill ha svar direkt – annars fyller du i en kort bokningsförfrågan nedan så hör vi av oss.",
       hero_contact_aria: "Snabbkontakt",
-      hero_call: "Ring 070-123 45 67",
-      hero_write: "Boka skriftligt",
+      hero_call: "Ring 076-020 74 44",
+      hero_write: "Skicka förfrågan",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chatt",
       hero_caption: "Lokal taxi – här när du behöver oss.",
-      facts_why: "Varför Stadstaxi",
-      fact1_title: "Dygnet runt",
-      fact1_text:
-        "Vi kör i stan och runt knuten – från snäva gränder till större vägar, när du behöver oss.",
-      fact2_title: "Fasta priser",
-      fact2_text:
-        "Tydliga besked innan du kliver in – inga överraskningar. Se vår prislista nedan.",
-      fact3_title: "Kort, Swish & mer",
-      fact3_text:
-        "Betala i bilen med kort, Swish eller Klarna där det finns – fråga gärna föraren om utbudet i just den bilen.",
-      fact3_img_alt: "Kortterminal för kontaktlös betalning i taxin.",
       book_title: "Boka taxi",
       book_lead:
         "Du behöver inte ha alla svar klara. Fyll i det du vet – <strong>vi återkommer utifrån dina kontaktuppgifter</strong> när förfrågan kan tas emot.",
       book_teaser_text:
-        'Vill du boka skriftligt? Öppna formuläret – tre enkla steg. Bråttom? <a href="tel:+46701234567">Ring</a> så hjälper vi dig direkt.',
+        'Boka i tre enkla steg – öppna formuläret när det passar dig. Bråttom? <a href="tel:+46760207444">Ring</a> så hjälper vi dig direkt.',
       book_teaser_hint: "Samma upplägg som tidigare – formuläret visas i ett fönster så sidan blir enklare.",
       book_open_cta: "Öppna bokningsformulär",
       book_dialog_close_aria: "Stäng bokningsfönster",
@@ -151,17 +151,18 @@
         "Exempelpriser för utkast – uppdatera siffrorna så de stämmer med ert taxameterunderlag och lokala regler.",
       price_disclaimer:
         "Slutpris kan påverkas av kötid, väntetid, avvikande rutt eller tillval. Vid tvekan – fråga alltid föraren eller vår dispatch innan resan.",
-      trust_title: "Trygghet & service",
-      trust_pay:
-        "<strong>Betalning:</strong> Kort, Swish, Klarna (där avtal finns), Apple Pay / Google Pay om terminalen stödjer det, samt kontant. Frågor om kvitto eller betalning i taxin besvaras via kontaktuppgifterna i sidfoten.",
+      footer_hours_title: "Öppettider",
+      footer_hours_booking_label: "Beställning & kundtjänst",
+      footer_hours_booking_value: "Dygnet runt",
+      footer_pay_icons_aria:
+        "Betalningsalternativ: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay och kontant",
       footer_tag: "Liten firma – stor service.",
       footer_contact: "Kontakt",
       footer_phone: "Telefon:",
       footer_email: "E-post:",
       footer_company: "Bolag & postadress",
-      footer_copy: "Utkast för intern test.",
       sticky_aria: "Snabbring",
-      sticky_ring: "Ring Stadstaxi",
+      sticky_ring: "Ring oss",
       sticky_book: "Boka",
       sum_title: "Så här ser din förfrågan ut",
       sum_pickup: "Hämtplats:",
@@ -207,18 +208,15 @@
       chat_chip_book: "Boka taxi",
       chat_chip_prices: "Priser",
       chat_chip_call: "Ring dispatch",
-      chat_chip_careers: "Karriär",
       chat_chip_whatsapp: "WhatsApp",
       chat_reply_book:
         'Toppen – använd <a href="index.html#boka">bokningsformuläret</a> eller ring så guidar vi dig direkt.',
       chat_reply_prices:
         'Du hittar exempelpriser under <a href="index.html#priser">Prislista</a>. Vid osäkerhet – fråga i samband med bokning.',
       chat_reply_call:
-        'Ring <a href="tel:+46701234567">070-123 45 67</a> dygnet runt för snabbast hjälp.',
-      chat_reply_careers:
-        'Lämna en intresseanmälan på <a href="karriar.html">karriärsidan</a> eller maila <a href="mailto:jobb@stadstaxi.example?subject=Intresse%20jobb%20Stadstaxi">jobb@stadstaxi.example</a>.',
+        'Ring <a href="tel:+46760207444">076-020 74 44</a> dygnet runt för snabbast hjälp.',
       chat_reply_whatsapp:
-        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/46701234567?text=Hej%20Stadstaxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
+        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/46760207444?text=Hej%20Stadstaxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
       chat_placeholder: "Skriv här (utkast)…",
       chat_send: "Skicka",
       chat_thanks:
@@ -244,17 +242,27 @@
       cookie_accept: "Godkänn analys"
     },
     da: {
-      doc_title: "Taxi & booking | Stadstaxi",
+      doc_title: "Stadstaxi – taxibooking, prisliste & telefon",
       meta_description:
-        "Book taxi hos Stadstaxi – ring døgnet rundt eller send en forespørgsel. Se prisliste og betal med kort eller Swish i bilen. Lokalt taxiselskab.",
+        "Book taxi hos Stadstaxi: ring døgnet rundt eller send en skriftlig forespørgsel. Se prisliste, betal med kort eller Swish i bilen. Lokalt taxiselskab i Sverige.",
       skip: "Spring til indhold",
       logo_aria: "Stadstaxi – til forsiden",
       nav_aria: "Hovedmenu",
       nav_home: "Hjem",
       nav_book: "Book",
       nav_prices: "Priser",
+      nav_about: "Om os",
       nav_careers: "Karriere",
       nav_contact: "Kontakt",
+      about_title: "Om os",
+      about_lead:
+        "Stadstaxi er et lokalt taxiselskab med fokus på trygge kørsler i hverdagen. Udskift denne tekst med jeres korte virksomhedsbeskrivelse.",
+      about_mission_title: "Vores mission",
+      about_mission_text:
+        "Vi skal køre jer fra A til B med tydelig kommunikation, punktlighed og respekt for hver passager – i byen og nærområdet.",
+      about_contact_title: "Sådan kontakter I os",
+      about_contact_text:
+        'Send en bookingforespørgsel via formularen eller <a href="tel:+46760207444">ring til os</a>. Overvejer du at køre eller arbejde omkring dispatch? Læs mere under <a href="karriar.html">Karriere</a>.',
       contact_dialog_lead:
         "Vælg hvordan du vil kontakte os. Når Chatwoot er slået til (websiteToken i stadstaxi-config.js), åbner jeres livechat i stedet for denne boks.",
       careers_title: "Karriere",
@@ -271,9 +279,9 @@
       careers_btn_mail: "Send interesse",
       careers_btn_phone: "Ring os",
       careers_img_alt: "Taxi i bymiljø – illustrerer arbejde på vejen.",
-      career_doc_title: "Karriere | Stadstaxi",
+      career_doc_title: "Karriere – job som chauffør & interessehenvendelse | Stadstaxi",
       career_meta_description:
-        "Ansøg om job eller send en interessehenvendelse til Stadstaxi – chauffører og andre roller. Opdater efter jeres rekruttering.",
+        "Job hos Stadstaxi? Vi søger af og til chauffører og medarbejdere omkring dispatch. Send en interessehenvendelse via formularen eller ring.",
       career_back: "Til forsiden",
       career_form_title: "Interessehenvendelse",
       career_form_name: "Navn",
@@ -292,31 +300,21 @@
       lang_da: "Dansk",
       lang_en: "English",
       hero_eyebrow: "Din lokale taxi",
-      hero_title: "Stadstaxi kører dig, hvor du skal",
+      hero_title:
+        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> kører dig, hvor du skal',
       hero_lead:
         "Ring hvis du vil have svar med det samme – ellers udfylder du en kort bookingforespørgsel nedenfor, så hører du fra os.",
       hero_contact_aria: "Hurtig kontakt",
-      hero_call: "Ring 070-123 45 67",
-      hero_write: "Book skriftligt",
+      hero_call: "Ring 076-020 74 44",
+      hero_write: "Send forespørgsel",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chat",
       hero_caption: "Lokal taxi – klar når du har brug for os.",
-      facts_why: "Hvorfor Stadstaxi",
-      fact1_title: "Døgnet rundt",
-      fact1_text:
-        "Vi kører i byen og omegnen – når du har brug for os.",
-      fact2_title: "Faste priser",
-      fact2_text:
-        "Klare beskeder. Se vores prisliste nedenfor.",
-      fact3_title: "Kort, Swish m.m.",
-      fact3_text:
-        "Betal i bilen med kort, Swish eller Klarna hvor det findes – spørg chaufføren om udvalget i den pågældende bil.",
-      fact3_img_alt: "Kortterminal til kontaktløs betaling i taxien.",
       book_title: "Book taxi",
       book_lead:
         "Du behøver ikke have alle svar klar. Udfyld det, du ved – <strong>vi vender tilbage ud fra dine kontaktoplysninger</strong>, når forespørgslen kan modtages.",
       book_teaser_text:
-        'Vil du booke skriftligt? Åbn formularen – tre enkle trin. Travlt? <a href="tel:+46701234567">Ring</a>, så hjælper vi med det samme.',
+        'Book i tre enkle trin – åbn formularen, når det passer dig. Travlt? <a href="tel:+46760207444">Ring</a>, så hjælper vi med det samme.',
       book_teaser_hint: "Samme flow som før – formularen åbner i et vindue.",
       book_open_cta: "Åbn bookingformular",
       book_dialog_close_aria: "Luk booking",
@@ -385,17 +383,18 @@
         "Eksempelpriser i udkast – opdater beløb efter jeres taxameter og lokale regler.",
       price_disclaimer:
         "Slutpris kan påvirkes af kø, ventetid, afvigende rute eller tillæg. Spørg chaufføren ved tvivl.",
-      trust_title: "Tryghed & service",
-      trust_pay:
-        "<strong>Betaling:</strong> Kort, Swish, Klarna (hvor der er aftale), Apple Pay / Google Pay hvis terminalen understøtter det, samt kontanter. Spørgsmål om kvittering eller betaling i taxien besvares via kontaktoplysningerne i sidefoden.",
+      footer_hours_title: "Åbningstider",
+      footer_hours_booking_label: "Bestilling & kundeservice",
+      footer_hours_booking_value: "Døgnet rundt",
+      footer_pay_icons_aria:
+        "Betalingsmuligheder: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay og kontanter",
       footer_tag: "Lille firma – stor service.",
       footer_contact: "Kontakt",
       footer_phone: "Telefon:",
       footer_email: "E-mail:",
       footer_company: "Virksomhed & adresse",
-      footer_copy: "Udkast til intern test.",
       sticky_aria: "Hurtig ring",
-      sticky_ring: "Ring Stadstaxi",
+      sticky_ring: "Ring til os",
       sticky_book: "Book",
       sum_title: "Sådan ser din forespørgsel ud",
       sum_pickup: "Afhentning:",
@@ -441,18 +440,15 @@
       chat_chip_book: "Book taxi",
       chat_chip_prices: "Priser",
       chat_chip_call: "Ring dispatch",
-      chat_chip_careers: "Karriere",
       chat_chip_whatsapp: "WhatsApp",
       chat_reply_book:
         'Brug <a href="index.html#boka">bookingformularen</a> eller ring, så guider vi dig.',
       chat_reply_prices:
         'Se eksempelpriser under <a href="index.html#priser">Prisliste</a>. Ved tvivl – spørg når du booker.',
       chat_reply_call:
-        'Ring <a href="tel:+46701234567">070-123 45 67</a> døgnet rundt for hurtigst hjælp.',
-      chat_reply_careers:
-        'Udfyld vores <a href="karriar.html">karriereside</a> eller skriv til <a href="mailto:jobb@stadstaxi.example?subject=Job%20Stadstaxi">jobb@stadstaxi.example</a>.',
+        'Ring <a href="tel:+46760207444">076-020 74 44</a> døgnet rundt for hurtigst hjælp.',
       chat_reply_whatsapp:
-        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/46701234567?text=Hej%20Stadstaxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
+        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/46760207444?text=Hej%20Stadstaxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
       chat_placeholder: "Skriv her (udkast)…",
       chat_send: "Send",
       chat_thanks:
@@ -478,17 +474,27 @@
       cookie_accept: "Acceptér analyse"
     },
     en: {
-      doc_title: "Taxi & booking | Stadstaxi",
+      doc_title: "Stadstaxi – taxi booking, prices & phone",
       meta_description:
-        "Book a taxi with Stadstaxi – call anytime or send a booking request. See prices and pay by card or Swish in the car. Local taxi service.",
+        "Book a taxi with Stadstaxi: call anytime or send a written booking request. See prices, pay by card or Swish in the car. Local taxi service in Sweden.",
       skip: "Skip to content",
       logo_aria: "Stadstaxi – home",
       nav_aria: "Main menu",
       nav_home: "Home",
       nav_book: "Book",
       nav_prices: "Prices",
+      nav_about: "About us",
       nav_careers: "Careers",
       nav_contact: "Contact",
+      about_title: "About us",
+      about_lead:
+        "Stadstaxi is a local taxi service focused on safe everyday journeys. Replace this with your short company description.",
+      about_mission_title: "Our mission",
+      about_mission_text:
+        "We get you from A to B with clear communication, punctual timing, and respect for every passenger – in town and nearby.",
+      about_contact_title: "How to reach us",
+      about_contact_text:
+        'Send a booking request through the form or <a href="tel:+46760207444">call us</a>. Thinking about driving or working around dispatch? Read more on <a href="karriar.html">Careers</a>.',
       contact_dialog_lead:
         "Choose how to reach us. When Chatwoot is enabled (websiteToken in stadstaxi-config.js), your live chat opens instead of this box.",
       careers_title: "Careers",
@@ -505,9 +511,9 @@
       careers_btn_mail: "Email your interest",
       careers_btn_phone: "Call us",
       careers_img_alt: "Taxi in an urban setting – work on the road.",
-      career_doc_title: "Careers | Stadstaxi",
+      career_doc_title: "Careers – taxi driver jobs & expression of interest | Stadstaxi",
       career_meta_description:
-        "Apply for a job or send an expression of interest to Stadstaxi – drivers and other roles. Update for your real hiring process.",
+        "Work with Stadstaxi? We sometimes hire taxi drivers and dispatch-related roles. Send an expression of interest via the form or call us.",
       career_back: "Back to home",
       career_form_title: "Expression of interest",
       career_form_name: "Name",
@@ -526,31 +532,21 @@
       lang_da: "Dansk",
       lang_en: "English",
       hero_eyebrow: "Your local taxi",
-      hero_title: "Stadstaxi gets you where you need to go",
+      hero_title:
+        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> gets you where you need to go',
       hero_lead:
         "Call if you want an answer right away – otherwise fill in a short booking request below and we’ll get back to you.",
       hero_contact_aria: "Quick contact",
-      hero_call: "Call 070-123 45 67",
-      hero_write: "Book in writing",
+      hero_call: "Call 076-020 74 44",
+      hero_write: "Book online",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chat",
       hero_caption: "Local taxi – here when you need us.",
-      facts_why: "Why Stadstaxi",
-      fact1_title: "Around the clock",
-      fact1_text:
-        "We drive in town and nearby – narrow streets to main roads, whenever you need us.",
-      fact2_title: "Fixed prices",
-      fact2_text:
-        "Clear information. See our price list below.",
-      fact3_title: "Card, Swish & more",
-      fact3_text:
-        "Pay in the car by card, Swish or Klarna where available—ask the driver what that vehicle accepts.",
-      fact3_img_alt: "Card terminal for contactless payment in the taxi.",
       book_title: "Book a taxi",
       book_lead:
         "You don’t need every answer ready. Fill in what you know – <strong>we’ll follow up using your contact details</strong> when the request can be received.",
       book_teaser_text:
-        'Prefer to book in writing? Open the form – three quick steps. In a hurry? <a href="tel:+46701234567">Call us</a> and we’ll help right away.',
+        'Book in three quick steps – open the form whenever it suits you. In a hurry? <a href="tel:+46760207444">Call us</a> and we’ll help right away.',
       book_teaser_hint: "Same steps as before – the form opens in a window so the page stays simple.",
       book_open_cta: "Open booking form",
       book_dialog_close_aria: "Close booking",
@@ -619,17 +615,18 @@
         "Example prices for this draft – update amounts to match your meter and local rules.",
       price_disclaimer:
         "Final price may depend on queue time, waiting, route or extras. Ask the driver if unsure.",
-      trust_title: "Safety & service",
-      trust_pay:
-        "<strong>Payment:</strong> Card, Swish, Klarna (where contracted), Apple Pay / Google Pay if the terminal supports it, plus cash. For receipts or paying in the taxi, use the contact details in the footer.",
+      footer_hours_title: "Opening hours",
+      footer_hours_booking_label: "Bookings & customer care",
+      footer_hours_booking_value: "Open 24 hours a day",
+      footer_pay_icons_aria:
+        "Payment options: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay, and cash",
       footer_tag: "Small company – big service.",
       footer_contact: "Contact",
       footer_phone: "Phone:",
       footer_email: "Email:",
       footer_company: "Company & address",
-      footer_copy: "Draft for internal testing.",
       sticky_aria: "Quick call",
-      sticky_ring: "Call Stadstaxi",
+      sticky_ring: "Call us",
       sticky_book: "Book",
       sum_title: "Your request at a glance",
       sum_pickup: "Pickup:",
@@ -675,18 +672,15 @@
       chat_chip_book: "Book a taxi",
       chat_chip_prices: "Prices",
       chat_chip_call: "Call dispatch",
-      chat_chip_careers: "Careers",
       chat_chip_whatsapp: "WhatsApp",
       chat_reply_book:
         'Great – use the <a href="index.html#boka">booking form</a> or call us and we’ll guide you.',
       chat_reply_prices:
         'Example prices are under <a href="index.html#priser">Prices</a>. If unsure, ask when you book.',
       chat_reply_call:
-        'Call <a href="tel:+46701234567">070-123 45 67</a> anytime for the fastest help.',
-      chat_reply_careers:
-        'Use our <a href="karriar.html">careers page</a> to apply, or email <a href="mailto:jobb@stadstaxi.example?subject=Job%20interest%20Stadstaxi">jobb@stadstaxi.example</a>.',
+        'Call <a href="tel:+46760207444">076-020 74 44</a> anytime for the fastest help.',
       chat_reply_whatsapp:
-        'Use the green WhatsApp button on this page, or <a href="https://wa.me/46701234567?text=Hi%20Stadstaxi" rel="noopener noreferrer">open WhatsApp</a>.',
+        'Use the green WhatsApp button on this page, or <a href="https://wa.me/46760207444?text=Hi%20Stadstaxi" rel="noopener noreferrer">open WhatsApp</a>.',
       chat_placeholder: "Type here (draft)…",
       chat_send: "Send",
       chat_thanks:
@@ -732,6 +726,19 @@
     document.title = careerPage ? t("career_doc_title") : t("doc_title");
     var md = document.getElementById("meta-description");
     if (md) md.setAttribute("content", careerPage ? t("career_meta_description") : t("meta_description"));
+
+    var socialTitle = careerPage ? t("career_doc_title") : t("doc_title");
+    var socialDesc = careerPage ? t("career_meta_description") : t("meta_description");
+    var ogLocale = lang === "da" ? "da_DK" : lang === "en" ? "en_US" : "sv_SE";
+    function setMetaQuery(sel, content) {
+      var el = document.querySelector(sel);
+      if (el) el.setAttribute("content", content);
+    }
+    setMetaQuery('meta[property="og:title"]', socialTitle);
+    setMetaQuery('meta[property="og:description"]', socialDesc);
+    setMetaQuery('meta[property="og:locale"]', ogLocale);
+    setMetaQuery('meta[name="twitter:title"]', socialTitle);
+    setMetaQuery('meta[name="twitter:description"]', socialDesc);
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -784,6 +791,10 @@
     var list = document.getElementById("lang-dropdown-list");
     if (!root || !toggle || !list) return;
 
+    list.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+    root.classList.remove("is-open");
+
     var flagEl = root.querySelector("[data-lang-current-flag]");
     var codeEl = root.querySelector("[data-lang-current-code]");
     if (flagEl) flagEl.textContent = FLAG_BY_LANG[lang] || FLAG_BY_LANG.sv;
@@ -793,51 +804,52 @@
     toggle.setAttribute("aria-label", t("lang_aria") + " – " + t(nameKey));
 
     root.querySelectorAll(".lang-dropdown__option[data-set-lang]").forEach(function (btn) {
-      var l = btn.getAttribute("data-set-lang");
-      btn.setAttribute("aria-selected", l === lang ? "true" : "false");
-      var tk = LANG_TITLE_KEY[l];
-      if (tk) btn.setAttribute("title", t(tk));
+      var ls = btn.getAttribute("data-set-lang");
+      if (ls === lang) btn.setAttribute("aria-current", "true");
+      else btn.removeAttribute("aria-current");
     });
-
-    list.hidden = true;
-    toggle.setAttribute("aria-expanded", "false");
-    root.classList.remove("is-open");
   }
 
   function wireLangDropdown() {
     var root = document.getElementById("lang-dropdown");
+    if (!root || root.dataset.langDropdownWired === "1") return;
+    root.dataset.langDropdownWired = "1";
+
     var toggle = document.getElementById("lang-dropdown-toggle");
     var list = document.getElementById("lang-dropdown-list");
-    if (!root || !toggle || !list) return;
+    if (!toggle || !list) return;
 
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var open = !list.hidden;
-      if (open) {
-        list.hidden = true;
-        toggle.setAttribute("aria-expanded", "false");
-        root.classList.remove("is-open");
-      } else {
-        list.hidden = false;
-        toggle.setAttribute("aria-expanded", "true");
-        root.classList.add("is-open");
-      }
-    });
-
-    document.addEventListener("click", function (e) {
-      if (list.hidden) return;
-      if (!root.contains(e.target)) {
-        list.hidden = true;
-        toggle.setAttribute("aria-expanded", "false");
-        root.classList.remove("is-open");
-      }
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key !== "Escape" || list.hidden) return;
+    function close() {
       list.hidden = true;
       toggle.setAttribute("aria-expanded", "false");
       root.classList.remove("is-open");
+    }
+
+    function open() {
+      list.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+      root.classList.add("is-open");
+    }
+
+    function isOpen() {
+      return toggle.getAttribute("aria-expanded") === "true";
+    }
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (isOpen()) close();
+      else open();
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!isOpen()) return;
+      if (!root.contains(e.target)) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (!isOpen()) return;
+      close();
       toggle.focus();
     });
   }
@@ -848,12 +860,12 @@
         setLang(btn.getAttribute("data-set-lang"));
       });
     });
-    wireLangDropdown();
   }
 
   function init() {
     applyDom();
     wireLangSwitch();
+    wireLangDropdown();
   }
 
   if (document.readyState === "loading") {

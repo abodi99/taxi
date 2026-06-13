@@ -7,7 +7,7 @@ window.STADSTAXI.chatwoot = {
   websiteToken: "",
   baseUrl: "https://app.chatwoot.com"
 };
-window.STADSTAXI.whatsappUrl = "https://wa.me/46701234567?text=Hej%20Stadstaxi";
+window.STADSTAXI.whatsappUrl = "https://wa.me/46760207444?text=Hej%20Stadstaxi";
 
 /**
  * Webbanalys (valfritt): sätt measurementId till ert GA4-id (t.ex. "G-XXXXXXXX") efter samtycke.

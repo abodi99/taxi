@@ -1,0 +1,5 @@
+# Stadstaxi – tillåt indexering av publika sidor (utkastsidor med noindex styrs via HTML).
+User-agent: *
+Allow: /
+
+Sitemap: https://www.stadstaxi.se/sitemap.xml
