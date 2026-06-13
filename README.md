@@ -11,6 +11,10 @@ python3 -m http.server 8080
 
 Öppna sedan `http://localhost:8080` i webbläsaren. Du kan också dubbelklicka på `index.html` för en snabb visning (vissa funktioner fungerar bäst via en lokal server).
 
+### Mobil visar fel tills inkognito (cache)
+
+Vanlig **webbläsarcache** (särskilt på mobil) kan låsa in gamla `styles.css` / `i18n.js` efter deploy. **Inkognito** har tom cache → därför ser det rätt ut där. Efter uppladdning: rensa webbplatsdata för domänen, eller vänta tills cache går ut. I HTML används `?v=…` på stylesheet och skript – **höj siffran** (t.ex. `?v=3` → `?v=4`) vid varje större deploy så tvingas nya filer ner.
+
 ## Platshållare att uppdatera innan produktion
 
 Sök och ersätt i [`index.html`](index.html), [`karriar.html`](karriar.html) (och vid behov i denna README):
