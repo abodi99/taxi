@@ -1,5 +1,5 @@
 /**
- * Stadstaxi – UI-översättningar (sv / danska / engelska).
+ * Stad Taxi – UI-översättningar (sv / danska / engelska).
  * Alla strängar från betrodd källa (egen kod). HTML i strängar endast för kända nycklar.
  */
 (function () {
@@ -10,11 +10,11 @@
 
   var DICT = {
     sv: {
-      doc_title: "Stadstaxi – taxibokning, prislista & telefon",
+      doc_title: "Stad Taxi – ring eller boka taxi i Helsingborg",
       meta_description:
-        "Boka taxi hos Stadstaxi: ring dygnet runt eller skicka en skriftlig bokningsförfrågan. Se prislista, betala med kort eller Swish i bilen. Lokal taxitjänst i Sverige.",
+        "Ring 042-200 777 eller boka taxi hos Stad Taxi i Helsingborg. Fast pris till flygplatser och städer – dygnet runt.",
       skip: "Hoppa till innehåll",
-      logo_aria: "Stadstaxi – till startsidan",
+      logo_aria: "Stad Taxi – till startsidan",
       nav_aria: "Huvudmeny",
       nav_home: "Hem",
       nav_book: "Boka",
@@ -24,7 +24,7 @@
       nav_contact: "Kontakt",
       about_title: "Om oss",
       about_lead:
-        "Stadstaxi är en lokal taxitjänst med fokus på trygga resor i vardagen. Byt denna text mot er korta verksamhetsbeskrivning.",
+        "Stad Taxi är en lokal taxitjänst med fokus på trygga resor i vardagen. Byt denna text mot er korta verksamhetsbeskrivning.",
       about_mission_title: "Vårt uppdrag",
       about_mission_text:
         "Vi ska ta er från A till B med tydlig kommunikation, punktliga tider och respekt för varje resenär – i stan och närområdet.",
@@ -47,9 +47,9 @@
       careers_btn_mail: "Maila intresse",
       careers_btn_phone: "Ring oss",
       careers_img_alt: "Taxi i stadsmiljö – symbol för kollegialt arbete på väg.",
-      career_doc_title: "Karriär – jobb som taxiförare & intresseanmälan | Stadstaxi",
+      career_doc_title: "Karriär – jobb som taxiförare & intresseanmälan | Stad Taxi",
       career_meta_description:
-        "Jobba hos Stadstaxi? Vi söker ibland taxiförare och medarbetare vid dispatch. Skicka intresseanmälan via formuläret eller ring oss.",
+        "Jobba hos Stad Taxi? Vi söker ibland taxiförare och medarbetare vid dispatch. Skicka intresseanmälan via formuläret eller ring oss.",
       career_back: "Till startsidan",
       career_form_title: "Intresseanmälan",
       career_form_name: "Namn",
@@ -62,30 +62,43 @@
       career_err_required: "Fyll i alla obligatoriska fält.",
       career_err_email: "Ange en giltig e-postadress.",
       ring: "Ring",
+      header_call: "Ring",
       menu: "Meny",
       lang_aria: "Språk",
       lang_sv: "Svenska",
       lang_da: "Dansk",
       lang_en: "English",
-      hero_eyebrow: "Din lokala taxi",
       hero_title:
-        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> tar dig dit du ska',
-      hero_lead:
-        "Fyll i en kort bokningsförfrågan nedan – eller tryck Kontakta oss längst ner om du vill ringa.",
+        'Välkommen till <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
+      hero_lead: "Taxi i Helsingborg och Skåne – dygnet runt.",
+      hero_call_label: "Ring eller boka online",
+      hero_phone_display: "042-200 777",
+      hero_call_btn: "Ring nu",
       hero_contact_aria: "Snabbkontakt",
-      hero_call: "Ring 076-020 74 44",
+      hero_call: "Ring 042-200 777",
       hero_write: "Skicka förfrågan",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chatt",
       hero_caption: "Lokal taxi – här när du behöver oss.",
       book_title: "Boka taxi",
+      book_cta_text: "Fyll i formuläret så återkommer vi direkt – eller ring om det är bråttom.",
       book_lead:
-        "Du behöver inte ha alla svar klara. Fyll i det du vet – <strong>vi återkommer utifrån dina kontaktuppgifter</strong> när förfrågan kan tas emot.",
-      book_teaser_text:
-        "Boka i tre enkla steg – öppna formuläret när det passar dig.",
-      book_teaser_hint: "Samma upplägg som tidigare – formuläret visas i ett fönster så sidan blir enklare.",
-      book_open_cta: "Öppna bokningsformulär",
+        'Fyll i formuläret – vi återkommer direkt. Vill du åka nu? Ring <a href="tel:+4642200777" data-contact-phone><span data-contact-phone-display>042-200 777</span></a>.',
+      book_email_subject: "Bokningsförfrågan – Stad Taxi",
+      book_sending: "Skickar …",
+      book_send_error: "Kunde inte skicka just nu. Ring oss på 042-200 777 i stället.",
+      book_open_cta: "Boka taxi",
       book_dialog_close_aria: "Stäng bokningsfönster",
+      book_dialog_close_btn: "Stäng",
+      lbl_from: "Från",
+      lbl_to: "Till",
+      lbl_email: "E-post",
+      ph_email: "namn@example.com",
+      lbl_extras: "Övrigt",
+      ph_extras: "Flygnummer / barnstol",
+      when_immediate: "Omgående",
+      err_email_required: "Ange e-postadress.",
+      err_email: "Ange en giltig e-postadress.",
       wiz_track1: "Var & när",
       wiz_track2: "Kontakt",
       wiz_track3: "Tillval",
@@ -117,11 +130,11 @@
       step2_title: "Kontakt",
       step2_intro:
         "Vi använder bara detta för att ringa tillbaka och bekräfta körningen – som vanligt vid taxibokning i Sverige.",
-      lbl_name: "För- och efternamn",
-      lbl_phone: "Mobil eller telefon",
+      lbl_name: "Namn",
+      lbl_phone: "Telefonnummer",
       hint_phone:
         "Svenskt nummer (07…, 08…) eller +46. Vi SMS:ar inte utan att fråga först.",
-      lbl_passengers: "Antal passagerare",
+      lbl_passengers: "Antal personer",
       passengers_more: "5 eller fler",
       btn_back: "Tillbaka",
       wiz_next2: "Nästa: tillval",
@@ -129,6 +142,8 @@
       step3_intro:
         "Nästan klart – fyll i det som stämmer. Allt här är valfritt utom bekräftelsen längst ner.",
       lbl_destination: "Destination",
+      lbl_when: "När",
+      ph_when: "T.ex. idag kl. 14 eller imorgon 08:00",
       ph_destination: "T.ex. flygplats, sjukhus, adress dit du ska",
       legend_extras: "Tillval",
       chk_child: "Barnstol önskas",
@@ -139,24 +154,46 @@
       ph_message: "T.ex. portkod, rullstol, tyst resa, husdjur i bur",
       summary_aria: "Sammanfattning av din förfrågan",
       form_note:
-        '<span class="req" aria-hidden="true">*</span> obligatoriska uppgifter är ifyllda i stegen ovan. Utkastläge: ingen data skickas till server – <strong>bokning slutförs enligt den rutin ni sätter upp</strong> när flödet går i skarp drift.',
-      btn_submit: "Skicka förfrågan",
-      aside_img_alt: "Taxibil på stadsgata – vi hjälper dig vidare.",
-      thanks_title: "Tack – du är klar med din del",
-      thanks_text:
-        "I detta utkast sparas inget automatiskt. <strong>Vi hör av oss</strong> så fort vi kan. Vill du ändra något – välj <strong>Ny förfrågan</strong> nedan.",
-      thanks_reset: "Ny förfrågan",
-      price_title: "Prislista",
+        "När du skickar öppnas din e-postapp med en sammanfattning – granska och skicka till oss.",
+      btn_submit: "Boka taxi",
+      aside_img_alt: "Taxi på stadsgata.",
+      thanks_title: "Tack!",
+      thanks_text: "Vi har tagit emot din bokning och återkommer så snart vi kan.",
+      thanks_reset: "Ny bokning",
+      features_title: "Varför välja Stad Taxi?",
+      feature_safety_title: "Säkerhet framför allt",
+      feature_safety_text:
+        "Trygga resor med erfarna förare och tydliga rutiner – varje gång.",
+      feature_local_title: "Lokal expertis",
+      feature_local_text:
+        "Förare som kan Helsingborg och Skåne – snabbast väg till din destination.",
+      feature_drivers_title: "Professionella förare",
+      feature_drivers_text:
+        "Vänligt bemötande och punktlig service, oavsett tid på dygnet.",
+      feature_247_title: "Dygnet runt",
+      feature_247_text: "Ring när du behöver oss – vi svarar och hjälper dig vidare direkt.",
+      cta_band_title: "Redo att åka?",
+      cta_band_text:
+        "Ring oss direkt – det går snabbast. Du kan också skicka en bokningsförfrågan online.",
+      price_title: "Priser från Helsingborg",
       price_intro:
-        "Exempelpriser för utkast – uppdatera siffrorna så de stämmer med ert taxameterunderlag och lokala regler.",
+        "Fast pris på populära sträckor. Ring oss för offert på andra destinationer.",
+      price_route_kastrup: "Helsingborg – Kastrup (Köpenhamns flygplats)",
+      price_route_sturup: "Helsingborg – Sturup (Malmö flygplats)",
+      price_route_angelholm: "Helsingborg – Ängelholm & flygplats",
+      price_route_hoganas: "Helsingborg – Höganäs",
+      price_route_landskrona: "Helsingborg – Landskrona",
+      price_route_malmo: "Helsingborg – Malmö",
+      price_route_lund: "Helsingborg – Lund",
       price_disclaimer:
-        "Slutpris kan påverkas av kötid, väntetid, avvikande rutt eller tillval. Vid tvekan – fråga alltid föraren eller vår dispatch innan resan.",
+        "Priserna gäller enkel resa. Kontakta oss vid fler passagerare, väntetid eller särskilda önskemål.",
       footer_hours_title: "Öppettider",
       footer_hours_booking_label: "Beställning & kundtjänst",
       footer_hours_booking_value: "Dygnet runt",
       footer_pay_icons_aria:
         "Betalningsalternativ: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay och kontant",
-      footer_tag: "Liten firma – stor service.",
+      footer_tag: "Taxi i Helsingborg och Skåne – dygnet runt.",
+      footer_org: "Org.nr",
       footer_contact: "Kontakt",
       footer_phone: "Telefon:",
       footer_email: "E-post:",
@@ -189,12 +226,13 @@
       remember_hint:
         "Avmarkera raderas uppgifterna från enheten. Används inte för spårning mellan webbplatser.",
       sum_coords: "Ungefärlig plats (GPS):",
-      err_pickup: "Ange hämtadress.",
+      err_pickup: "Ange var du vill bli hämtad.",
+      err_destination: "Ange vart du ska.",
       err_postal: "Ange postnummer med fem siffror (t.ex. 123 45).",
       err_date: "Välj datum.",
       err_time: "Välj tid.",
       err_time_past: "Välj en tid som inte redan passerat idag.",
-      err_name: "Ange för- och efternamn.",
+      err_name: "Ange namn.",
       err_phone: "Ange telefonnummer.",
       err_phone_fmt:
         "Ange ett giltigt nummer (minst 8 siffror, t.ex. 070 eller +46).",
@@ -219,7 +257,7 @@
       chat_reply_call:
         'Ring <a href="tel:+46760207444">076-020 74 44</a> dygnet runt för snabbast hjälp.',
       chat_reply_whatsapp:
-        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/46760207444?text=Hej%20Stadstaxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
+        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/46760207444?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
       chat_placeholder: "Skriv här (utkast)…",
       chat_send: "Skicka",
       chat_thanks:
@@ -245,11 +283,11 @@
       cookie_accept: "Godkänn analys"
     },
     da: {
-      doc_title: "Stadstaxi – taxibooking, prisliste & telefon",
+      doc_title: "Stad Taxi – taxibooking, prisliste & telefon",
       meta_description:
-        "Book taxi hos Stadstaxi: ring døgnet rundt eller send en skriftlig forespørgsel. Se prisliste, betal med kort eller Swish i bilen. Lokalt taxiselskab i Sverige.",
+        "Book taxi hos Stad Taxi: ring døgnet rundt eller send en skriftlig forespørgsel. Se prisliste, betal med kort eller Swish i bilen. Lokalt taxiselskab i Sverige.",
       skip: "Spring til indhold",
-      logo_aria: "Stadstaxi – til forsiden",
+      logo_aria: "Stad Taxi – til forsiden",
       nav_aria: "Hovedmenu",
       nav_home: "Hjem",
       nav_book: "Book",
@@ -259,7 +297,7 @@
       nav_contact: "Kontakt",
       about_title: "Om os",
       about_lead:
-        "Stadstaxi er et lokalt taxiselskab med fokus på trygge kørsler i hverdagen. Udskift denne tekst med jeres korte virksomhedsbeskrivelse.",
+        "Stad Taxi er et lokalt taxiselskab med fokus på trygge kørsler i hverdagen. Udskift denne tekst med jeres korte virksomhedsbeskrivelse.",
       about_mission_title: "Vores mission",
       about_mission_text:
         "Vi skal køre jer fra A til B med tydelig kommunikation, punktlighed og respekt for hver passager – i byen og nærområdet.",
@@ -282,9 +320,9 @@
       careers_btn_mail: "Send interesse",
       careers_btn_phone: "Ring os",
       careers_img_alt: "Taxi i bymiljø – illustrerer arbejde på vejen.",
-      career_doc_title: "Karriere – job som chauffør & interessehenvendelse | Stadstaxi",
+      career_doc_title: "Karriere – job som chauffør & interessehenvendelse | Stad Taxi",
       career_meta_description:
-        "Job hos Stadstaxi? Vi søger af og til chauffører og medarbejdere omkring dispatch. Send en interessehenvendelse via formularen eller ring.",
+        "Job hos Stad Taxi? Vi søger af og til chauffører og medarbejdere omkring dispatch. Send en interessehenvendelse via formularen eller ring.",
       career_back: "Til forsiden",
       career_form_title: "Interessehenvendelse",
       career_form_name: "Navn",
@@ -304,7 +342,7 @@
       lang_en: "English",
       hero_eyebrow: "Din lokale taxi",
       hero_title:
-        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> kører dig, hvor du skal',
+        'Velkommen til <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
       hero_lead:
         "Udfyld en kort bookingforespørgsel nedenfor – eller tryk Kontakt os nederst til højre, hvis du vil ringe.",
       hero_contact_aria: "Hurtig kontakt",
@@ -314,13 +352,27 @@
       hero_chat: "Chat",
       hero_caption: "Lokal taxi – klar når du har brug for os.",
       book_title: "Book taxi",
+      book_cta_text: "Udfyld formularen – vi vender tilbage hurtigt. Ring hvis det haster.",
       book_lead:
         "Du behøver ikke have alle svar klar. Udfyld det, du ved – <strong>vi vender tilbage ud fra dine kontaktoplysninger</strong>, når forespørgslen kan modtages.",
+      book_email_subject: "Bookingforespørgsel – Stad Taxi",
+      book_sending: "Sender …",
+      book_send_error: "Kunne ikke sende lige nu. Ring os på 042-200 777 i stedet.",
       book_teaser_text:
         "Book i tre enkle trin – åbn formularen, når det passer dig.",
       book_teaser_hint: "Samme flow som før – formularen åbner i et vindue.",
-      book_open_cta: "Åbn bookingformular",
+      book_open_cta: "Book taxi",
       book_dialog_close_aria: "Luk booking",
+      book_dialog_close_btn: "Luk",
+      lbl_from: "Fra",
+      lbl_to: "Til",
+      lbl_email: "E-mail",
+      ph_email: "navn@example.com",
+      lbl_extras: "Øvrigt",
+      ph_extras: "Flynummer / barnesæde",
+      when_immediate: "Straks",
+      err_email_required: "Angiv e-mailadresse.",
+      err_email: "Angiv en gyldig e-mailadresse.",
       wiz_track1: "Hvor & hvornår",
       wiz_track2: "Kontakt",
       wiz_track3: "Valg",
@@ -352,11 +404,11 @@
       step2_title: "Kontakt",
       step2_intro:
         "Vi bruger kun dette til at ringe tilbage og bekræfte kørslen – som ved taxibooking i Sverige.",
-      lbl_name: "For- og efternavn",
-      lbl_phone: "Mobil eller telefon",
+      lbl_name: "Navn",
+      lbl_phone: "Telefonnummer",
       hint_phone:
         "Svensk nummer (07…, 08…) eller +46. Vi SMS'er ikke uden at spørge.",
-      lbl_passengers: "Antal passagerer",
+      lbl_passengers: "Antal personer",
       passengers_more: "5 eller flere",
       btn_back: "Tilbage",
       wiz_next2: "Næste: valg",
@@ -375,7 +427,7 @@
       summary_aria: "Opsummering af din forespørgsel",
       form_note:
         '<span class="req" aria-hidden="true">*</span> obligatoriske felter er udfyldt i trinene ovenfor. Udkast: ingen data sendes til server – <strong>booking afsluttes efter den rutine, I sætter op</strong>, når flowet går i drift.',
-      btn_submit: "Send forespørgsel",
+      btn_submit: "Book taxi",
       aside_img_alt: "Taxa på bygade – vi hjælper dig videre.",
       thanks_title: "Tak – din del er gjort",
       thanks_text:
@@ -424,12 +476,13 @@
       remember_hint:
         "Fjern markeringen for at slette på enheden. Bruges ikke til sporing på tværs af websites.",
       sum_coords: "Omtrentlig placering (GPS):",
-      err_pickup: "Angiv afhentningsadresse.",
+      err_pickup: "Angiv hvor du vil hentes.",
+      err_destination: "Angiv hvor du skal hen.",
       err_postal: "Angiv postnummer med fem cifre (fx 123 45).",
       err_date: "Vælg dato.",
       err_time: "Vælg tid.",
       err_time_past: "Vælg et tidspunkt der ikke allerede er passeret i dag.",
-      err_name: "Angiv for- og efternavn.",
+      err_name: "Angiv navn.",
       err_phone: "Angiv telefonnummer.",
       err_phone_fmt:
         "Angiv et gyldigt nummer (mindst 8 cifre, fx 070 eller +46).",
@@ -454,7 +507,7 @@
       chat_reply_call:
         'Ring <a href="tel:+46760207444">076-020 74 44</a> døgnet rundt for hurtigst hjælp.',
       chat_reply_whatsapp:
-        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/46760207444?text=Hej%20Stadstaxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
+        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/46760207444?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
       chat_placeholder: "Skriv her (udkast)…",
       chat_send: "Send",
       chat_thanks:
@@ -480,11 +533,11 @@
       cookie_accept: "Acceptér analyse"
     },
     en: {
-      doc_title: "Stadstaxi – taxi booking, prices & phone",
+      doc_title: "Stad Taxi – taxi booking, prices & phone",
       meta_description:
-        "Book a taxi with Stadstaxi: call anytime or send a written booking request. See prices, pay by card or Swish in the car. Local taxi service in Sweden.",
+        "Book a taxi with Stad Taxi: call anytime or send a written booking request. See prices, pay by card or Swish in the car. Local taxi service in Sweden.",
       skip: "Skip to content",
-      logo_aria: "Stadstaxi – home",
+      logo_aria: "Stad Taxi – home",
       nav_aria: "Main menu",
       nav_home: "Home",
       nav_book: "Book",
@@ -494,7 +547,7 @@
       nav_contact: "Contact",
       about_title: "About us",
       about_lead:
-        "Stadstaxi is a local taxi service focused on safe everyday journeys. Replace this with your short company description.",
+        "Stad Taxi is a local taxi service focused on safe everyday journeys. Replace this with your short company description.",
       about_mission_title: "Our mission",
       about_mission_text:
         "We get you from A to B with clear communication, punctual timing, and respect for every passenger – in town and nearby.",
@@ -517,9 +570,9 @@
       careers_btn_mail: "Email your interest",
       careers_btn_phone: "Call us",
       careers_img_alt: "Taxi in an urban setting – work on the road.",
-      career_doc_title: "Careers – taxi driver jobs & expression of interest | Stadstaxi",
+      career_doc_title: "Careers – taxi driver jobs & expression of interest | Stad Taxi",
       career_meta_description:
-        "Work with Stadstaxi? We sometimes hire taxi drivers and dispatch-related roles. Send an expression of interest via the form or call us.",
+        "Work with Stad Taxi? We sometimes hire taxi drivers and dispatch-related roles. Send an expression of interest via the form or call us.",
       career_back: "Back to home",
       career_form_title: "Expression of interest",
       career_form_name: "Name",
@@ -539,7 +592,7 @@
       lang_en: "English",
       hero_eyebrow: "Your local taxi",
       hero_title:
-        '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> gets you where you need to go',
+        'Welcome to <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
       hero_lead:
         "Fill in a short booking request below – or tap Contact us at the bottom if you want to call.",
       hero_contact_aria: "Quick contact",
@@ -549,13 +602,27 @@
       hero_chat: "Chat",
       hero_caption: "Local taxi – here when you need us.",
       book_title: "Book a taxi",
+      book_cta_text: "Fill in the form and we'll get back to you quickly – or call if it's urgent.",
       book_lead:
         "You don’t need every answer ready. Fill in what you know – <strong>we’ll follow up using your contact details</strong> when the request can be received.",
+      book_email_subject: "Booking request – Stad Taxi",
+      book_sending: "Sending …",
+      book_send_error: "Could not send right now. Please call us on 042-200 777 instead.",
       book_teaser_text:
         "Book in three quick steps – open the form whenever it suits you.",
       book_teaser_hint: "Same steps as before – the form opens in a window so the page stays simple.",
-      book_open_cta: "Open booking form",
+      book_open_cta: "Book taxi",
       book_dialog_close_aria: "Close booking",
+      book_dialog_close_btn: "Close",
+      lbl_from: "From",
+      lbl_to: "To",
+      lbl_email: "Email",
+      ph_email: "name@example.com",
+      lbl_extras: "Notes",
+      ph_extras: "Flight number / child seat",
+      when_immediate: "Immediate",
+      err_email_required: "Enter your email address.",
+      err_email: "Enter a valid email address.",
       wiz_track1: "Where & when",
       wiz_track2: "Contact",
       wiz_track3: "Extras",
@@ -587,11 +654,11 @@
       step2_title: "Contact",
       step2_intro:
         "We only use this to call you back and confirm the ride – as usual for taxi bookings in Sweden.",
-      lbl_name: "First and last name",
-      lbl_phone: "Mobile or phone",
+      lbl_name: "Name",
+      lbl_phone: "Phone number",
       hint_phone:
         "Swedish number (07…, 08…) or +46. We won’t text without asking.",
-      lbl_passengers: "Number of passengers",
+      lbl_passengers: "Number of people",
       passengers_more: "5 or more",
       btn_back: "Back",
       wiz_next2: "Next: extras",
@@ -610,7 +677,7 @@
       summary_aria: "Summary of your request",
       form_note:
         '<span class="req" aria-hidden="true">*</span> required fields were completed in the steps above. Draft: no data is sent to a server yet – <strong>how the booking is finalised follows the process you set up</strong> when you go live.',
-      btn_submit: "Send request",
+      btn_submit: "Book taxi",
       aside_img_alt: "Taxi on a city street – we’ll help you get sorted.",
       thanks_title: "Thanks – you’re done on your side",
       thanks_text:
@@ -659,12 +726,13 @@
       remember_hint:
         "Uncheck to remove from this device. Not used for cross-site tracking.",
       sum_coords: "Approximate location (GPS):",
-      err_pickup: "Enter pickup address.",
+      err_pickup: "Enter where you want to be picked up.",
+      err_destination: "Enter your destination.",
       err_postal: "Enter a five-digit postcode (e.g. 123 45).",
       err_date: "Choose a date.",
       err_time: "Choose a time.",
       err_time_past: "Choose a time that has not already passed today.",
-      err_name: "Enter first and last name.",
+      err_name: "Enter your name.",
       err_phone: "Enter phone number.",
       err_phone_fmt:
         "Enter a valid number (at least 8 digits, e.g. 070 or +46).",
@@ -689,7 +757,7 @@
       chat_reply_call:
         'Call <a href="tel:+46760207444">076-020 74 44</a> anytime for the fastest help.',
       chat_reply_whatsapp:
-        'Use the green WhatsApp button on this page, or <a href="https://wa.me/46760207444?text=Hi%20Stadstaxi" rel="noopener noreferrer">open WhatsApp</a>.',
+        'Use the green WhatsApp button on this page, or <a href="https://wa.me/46760207444?text=Hi%20Stad%20Taxi" rel="noopener noreferrer">open WhatsApp</a>.',
       chat_placeholder: "Type here (draft)…",
       chat_send: "Send",
       chat_thanks:

@@ -1,4 +1,4 @@
-# Stadstaxi – tillåt indexering av publika sidor (utkastsidor med noindex styrs via HTML).
+# Stad Taxi – tillåt indexering av publika sidor (utkastsidor med noindex styrs via HTML).
 User-agent: *
 Allow: /
 

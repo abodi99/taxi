@@ -1,4 +1,4 @@
-# Stadstaxi – webbutkast
+# Stad Taxi – webbutkast
 
 Statisk landningssida (mobil först): ring-CTA, bokningsformulär med validering och tack-vy **utan server** (ingen data skickas).
 
@@ -27,7 +27,7 @@ Sök och ersätt i [`index.html`](index.html), [`karriar.html`](karriar.html) (o
 | Org.nr | `556XXX-XXXX` | Ert organisationsnummer |
 | Adress | `Exempelgatan 1, 123 45 Stad` | Postadress |
 | **SEO: kanonisk URL** | `https://www.stadstaxi.se/` | `<link rel="canonical">`, `og:url`, JSON-LD `url` – byt till er riktiga domän |
-| **SEO: delningsbild** | `https://www.stadstaxi.se/images/hero-stockholm.png` i `og:image` / `twitter:image` (även `karriar.html`) + JSON-LD `image` | Vid behov: separat **1200×630** `og.jpg` för maximal kompatibilitet i flöden; uppdatera URL + `og:image:width`/`height` |
+| **SEO: delningsbild** | `https://www.stadstaxi.se/images/hero-helsingborg.png` i `og:image` / `twitter:image` (även `karriar.html`) + JSON-LD `image` | Vid behov: separat **1200×630** `og.jpg` för maximal kompatibilitet i flöden; uppdatera URL + `og:image:width`/`height` |
 | Prislista | kort under **Prislista** | Zoner och belopp enligt taxa/regler |
 | **Öppettider** | Sidfot (`footer_hours_*` i `i18n.js`) | Uppdatera om ni får begränsade tider; nu satt till dygnet runt |
 | **Betalningsikoner** | Sidfot (Visa, MC, Swish, Klarna, Apple Pay, Google Pay, kontant) | Ta bort ikoner ni inte erbjuder; följ respektive varumärkesriktlinjer |

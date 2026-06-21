@@ -50,10 +50,10 @@
     var lang = window.stadstaxiLang && window.stadstaxiLang.getLang ? window.stadstaxiLang.getLang() : "sv";
     var subj =
       lang === "en"
-        ? "Job interest – Stadstaxi"
+        ? "Job interest – Stad Taxi"
         : lang === "da"
-          ? "Job – Stadstaxi"
-          : "Intresse jobb – Stadstaxi";
+          ? "Job – Stad Taxi"
+          : "Intresse jobb – Stad Taxi";
 
     var body =
       tr("career_form_name") +
