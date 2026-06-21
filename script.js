@@ -580,27 +580,12 @@
       }
     }
 
-    document.querySelectorAll("[data-open-chat]").forEach(function (el) {
+    document.querySelectorAll("[data-chat-trigger]").forEach(function (el) {
       el.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (chatwootAvailable()) {
-          openHelp();
-          return;
-        }
-        if (dialog && dialog.open) {
-          closeHelp();
-          return;
-        }
-        openHelp();
-      });
-    });
-
-    if (launcher) {
-      launcher.addEventListener("click", function (e) {
         e.preventDefault();
         toggleHelp();
       });
-    }
+    });
 
     closeEls.forEach(function (btn) {
       btn.addEventListener("click", function () {

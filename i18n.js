@@ -32,7 +32,7 @@
       about_contact_text:
         'Skicka en bokningsförfrågan via formuläret eller <a href="tel:+46760207444">ring oss</a>. Funderar du på att köra eller jobba runt trafikledning? Läs mer under <a href="karriar.html">Karriär</a>.',
       contact_dialog_lead:
-        "Välj hur du vill nå oss. När Chatwoot är aktiverat (websiteToken i stadstaxi-config.js) öppnas er livechatt i stället för denna ruta.",
+        "Ring oss, boka taxi, skriv på WhatsApp eller skicka e-post – välj hur du vill nå oss.",
       careers_title: "Karriär",
       careers_lead:
         "Vi söker ibland nya kollegor – både förare med rätt behörighet och vissa roller runt dispatch. Här är en kort bild av hur det kan vara att jobba hos oss (ersätt med era faktiska krav och process).",
@@ -71,7 +71,7 @@
       hero_title:
         '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> tar dig dit du ska',
       hero_lead:
-        "Ring om du vill ha svar direkt – annars fyller du i en kort bokningsförfrågan nedan så hör vi av oss.",
+        "Fyll i en kort bokningsförfrågan nedan – eller tryck Kontakta oss längst ner om du vill ringa.",
       hero_contact_aria: "Snabbkontakt",
       hero_call: "Ring 076-020 74 44",
       hero_write: "Skicka förfrågan",
@@ -82,7 +82,7 @@
       book_lead:
         "Du behöver inte ha alla svar klara. Fyll i det du vet – <strong>vi återkommer utifrån dina kontaktuppgifter</strong> när förfrågan kan tas emot.",
       book_teaser_text:
-        'Boka i tre enkla steg – öppna formuläret när det passar dig. Bråttom? <a href="tel:+46760207444">Ring</a> så hjälper vi dig direkt.',
+        "Boka i tre enkla steg – öppna formuläret när det passar dig.",
       book_teaser_hint: "Samma upplägg som tidigare – formuläret visas i ett fönster så sidan blir enklare.",
       book_open_cta: "Öppna bokningsformulär",
       book_dialog_close_aria: "Stäng bokningsfönster",
@@ -198,11 +198,14 @@
       err_phone: "Ange telefonnummer.",
       err_phone_fmt:
         "Ange ett giltigt nummer (minst 8 siffror, t.ex. 070 eller +46).",
-      contact_dock_aria: "Snabbkontakt: WhatsApp och chatt",
+      contact_launch: "Kontakta oss",
+      contact_hint:
+        "Vill du ringa eller boka taxi? Använd knappen Kontakta oss längst ner till höger.",
+      contact_dock_aria: "Flytande knapp: Kontakta oss",
       wa_aria: "Skriv till oss på WhatsApp",
-      chat_open_aria: "Öppna chatt",
-      chat_close_aria: "Stäng chatt",
-      chat_title: "Stadstaxi – snabbhjälp",
+      chat_open_aria: "Öppna kontakt – ring, boka eller e-post",
+      chat_close_aria: "Stäng kontakt",
+      chat_title: "Kontakta oss",
       chat_welcome:
         "Hej! Jag är en enkel hjälpbot på sidan (utkast). Välj ett alternativ nedan eller skriv ett kort meddelande – vid brådska ringer du säkrast oss.",
       chat_chip_book: "Boka taxi",
@@ -264,7 +267,7 @@
       about_contact_text:
         'Send en bookingforespørgsel via formularen eller <a href="tel:+46760207444">ring til os</a>. Overvejer du at køre eller arbejde omkring dispatch? Læs mere under <a href="karriar.html">Karriere</a>.',
       contact_dialog_lead:
-        "Vælg hvordan du vil kontakte os. Når Chatwoot er slået til (websiteToken i stadstaxi-config.js), åbner jeres livechat i stedet for denne boks.",
+        "Ring til os, book taxi, skriv på WhatsApp eller send e-mail – vælg hvordan du vil kontakte os.",
       careers_title: "Karriere",
       careers_lead:
         "Vi leder af og til efter nye kolleger – både chauffører med de rigtige papirer og visse roller omkring dispatch. Her er et kort indtryk (udskift med jeres faktiske krav og proces).",
@@ -303,7 +306,7 @@
       hero_title:
         '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> kører dig, hvor du skal',
       hero_lead:
-        "Ring hvis du vil have svar med det samme – ellers udfylder du en kort bookingforespørgsel nedenfor, så hører du fra os.",
+        "Udfyld en kort bookingforespørgsel nedenfor – eller tryk Kontakt os nederst til højre, hvis du vil ringe.",
       hero_contact_aria: "Hurtig kontakt",
       hero_call: "Ring 076-020 74 44",
       hero_write: "Send forespørgsel",
@@ -314,7 +317,7 @@
       book_lead:
         "Du behøver ikke have alle svar klar. Udfyld det, du ved – <strong>vi vender tilbage ud fra dine kontaktoplysninger</strong>, når forespørgslen kan modtages.",
       book_teaser_text:
-        'Book i tre enkle trin – åbn formularen, når det passer dig. Travlt? <a href="tel:+46760207444">Ring</a>, så hjælper vi med det samme.',
+        "Book i tre enkle trin – åbn formularen, når det passer dig.",
       book_teaser_hint: "Samme flow som før – formularen åbner i et vindue.",
       book_open_cta: "Åbn bookingformular",
       book_dialog_close_aria: "Luk booking",
@@ -430,11 +433,14 @@
       err_phone: "Angiv telefonnummer.",
       err_phone_fmt:
         "Angiv et gyldigt nummer (mindst 8 cifre, fx 070 eller +46).",
-      contact_dock_aria: "Hurtig kontakt: WhatsApp og chat",
+      contact_launch: "Kontakt os",
+      contact_hint:
+        "Vil du ringe eller booke taxi? Brug knappen Kontakt os nederst til højre.",
+      contact_dock_aria: "Flydende knap: Kontakt os",
       wa_aria: "Skriv til os på WhatsApp",
-      chat_open_aria: "Åbn chat",
-      chat_close_aria: "Luk chat",
-      chat_title: "Stadstaxi – hurtig hjælp",
+      chat_open_aria: "Åbn kontakt – ring, book eller e-mail",
+      chat_close_aria: "Luk kontakt",
+      chat_title: "Kontakt os",
       chat_welcome:
         "Hej! Jeg er en simpel hjælpebot på siden (udkast). Vælg et alternativ nedenfor eller skriv en kort besked – ved hast ring direkte.",
       chat_chip_book: "Book taxi",
@@ -496,7 +502,7 @@
       about_contact_text:
         'Send a booking request through the form or <a href="tel:+46760207444">call us</a>. Thinking about driving or working around dispatch? Read more on <a href="karriar.html">Careers</a>.',
       contact_dialog_lead:
-        "Choose how to reach us. When Chatwoot is enabled (websiteToken in stadstaxi-config.js), your live chat opens instead of this box.",
+        "Call us, book a taxi, message on WhatsApp, or email – choose how you want to reach us.",
       careers_title: "Careers",
       careers_lead:
         "We sometimes look for new colleagues – licensed drivers and certain dispatch-related roles. Here’s a short snapshot (replace with your real requirements and hiring process).",
@@ -535,7 +541,7 @@
       hero_title:
         '<span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> gets you where you need to go',
       hero_lead:
-        "Call if you want an answer right away – otherwise fill in a short booking request below and we’ll get back to you.",
+        "Fill in a short booking request below – or tap Contact us at the bottom if you want to call.",
       hero_contact_aria: "Quick contact",
       hero_call: "Call 076-020 74 44",
       hero_write: "Book online",
@@ -546,7 +552,7 @@
       book_lead:
         "You don’t need every answer ready. Fill in what you know – <strong>we’ll follow up using your contact details</strong> when the request can be received.",
       book_teaser_text:
-        'Book in three quick steps – open the form whenever it suits you. In a hurry? <a href="tel:+46760207444">Call us</a> and we’ll help right away.',
+        "Book in three quick steps – open the form whenever it suits you.",
       book_teaser_hint: "Same steps as before – the form opens in a window so the page stays simple.",
       book_open_cta: "Open booking form",
       book_dialog_close_aria: "Close booking",
@@ -662,11 +668,14 @@
       err_phone: "Enter phone number.",
       err_phone_fmt:
         "Enter a valid number (at least 8 digits, e.g. 070 or +46).",
-      contact_dock_aria: "Quick contact: WhatsApp and chat",
+      contact_launch: "Contact us",
+      contact_hint:
+        "Want to call or book a taxi? Use the Contact us button at the bottom right.",
+      contact_dock_aria: "Floating button: Contact us",
       wa_aria: "Message us on WhatsApp",
-      chat_open_aria: "Open chat",
-      chat_close_aria: "Close chat",
-      chat_title: "Stadstaxi – quick help",
+      chat_open_aria: "Open contact – call, book, or email",
+      chat_close_aria: "Close contact",
+      chat_title: "Contact us",
       chat_welcome:
         "Hi! I’m a simple on-page helper (draft). Pick an option below or type a short message – for urgent trips, calling is fastest.",
       chat_chip_book: "Book a taxi",

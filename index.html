@@ -13,7 +13,7 @@
     <title>Stadstaxi – taxibokning, prislista &amp; telefon</title>
     <link rel="canonical" href="https://www.stadstaxi.se/" />
     <!-- Höj ?v= i stylesheet/script-URL:er vid deploy om mobilen visar gammal layout (cache). -->
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=11" />
     <link rel="icon" href="images/logo-stadstaxi.png?v=2" type="image/png" sizes="any" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
@@ -100,29 +100,17 @@
               aria-hidden="true"
             />
           </a>
-          <button
-            type="button"
-            class="nav-toggle"
-            id="nav-toggle"
-            aria-expanded="false"
-            aria-controls="site-nav"
-          >
-            <span class="nav-toggle__bar" aria-hidden="true"></span>
-            <span class="nav-toggle__bar" aria-hidden="true"></span>
-            <span class="nav-toggle__bar" aria-hidden="true"></span>
-            <span class="visually-hidden" data-i18n="menu">Meny</span>
-          </button>
         </div>
         <nav class="site-nav" id="site-nav" data-i18n-aria-label="nav_aria">
           <ul class="site-nav__list">
             <li><a href="#hem" data-i18n="nav_home">Hem</a></li>
-            <li><a href="#boka" data-open-booking data-i18n="nav_book">Boka</a></li>
+            <li><a href="#boka" data-i18n="nav_book">Boka</a></li>
             <li><a href="#priser" data-i18n="nav_prices">Priser</a></li>
             <li><a href="#om-oss" data-i18n="nav_about">Om oss</a></li>
             <li><a href="#kontakt" data-i18n="nav_contact">Kontakt</a></li>
           </ul>
         </nav>
-        <div class="site-header__actions">
+        <div class="site-header__tools">
           <div class="lang-dropdown" id="lang-dropdown">
             <button
               type="button"
@@ -170,7 +158,18 @@
               </li>
             </ul>
           </div>
-          <a class="btn btn--small btn--call site-header__call" href="tel:+46760207444" data-i18n="ring">Ring</a>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="visually-hidden" data-i18n="menu">Meny</span>
+          </button>
         </div>
       </div>
     </header>
@@ -179,44 +178,17 @@
       <section class="hero hero--simple hero--home-photo" id="hem" aria-labelledby="hero-title">
         <div class="container hero__grid">
           <div class="hero__copy">
-            <p class="hero__eyebrow" data-i18n="hero_eyebrow">Din lokala taxi</p>
             <h1 id="hero-title" class="hero__title" data-i18n="hero_title" data-i18n-html="true">
               <span class="hero__title-accent">Stads</span><span class="hero__title-accent">taxi</span> tar dig dit du ska
             </h1>
             <p class="hero__lead" data-i18n="hero_lead">
-              Ring om du vill ha svar direkt – annars kan du fylla i en kort bokningsförfrågan nedan så hör vi av oss.
+              Fyll i en kort bokningsförfrågan nedan – eller tryck Kontakta oss längst ner om du vill ringa.
             </p>
-            <div class="hero__actions" role="group" data-i18n-aria-label="hero_contact_aria" aria-label="Snabbkontakt">
-              <a class="btn btn--primary btn--lg hero__cta-primary" href="tel:+46760207444" data-i18n="hero_call">Ring 076-020 74 44</a>
-              <button
-                type="button"
-                class="btn btn--outline-accent btn--lg"
-                data-chat-trigger
-                data-open-chat
-                data-i18n-aria-label="chat_open_aria"
-                aria-haspopup="dialog"
-                aria-controls="contact-dialog"
-                aria-expanded="false"
-              >
-                <svg
-                  class="btn__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 018.4-8.4c2.24 0 4.35.88 5.93 2.47A8.46 8.46 0 0121 11.5z" />
-                </svg>
-                <span data-i18n="hero_chat">Chatt</span>
+            <div class="hero__actions">
+              <button type="button" class="btn btn--primary btn--lg hero__cta-primary" data-open-booking data-i18n="book_open_cta">
+                Öppna bokningsformulär
               </button>
-              <button type="button" class="hero__book-link" data-open-booking data-i18n="hero_write">Skicka förfrågan</button>
             </div>
-            <p class="hero__caption hero__caption--home" data-i18n="hero_caption">
-              Taxikörning i svensk stad – lokal tjänst med nordiskt stadsliv runt knuten.
-            </p>
           </div>
         </div>
       </section>
@@ -229,7 +201,6 @@
             <button type="button" class="btn btn--primary btn--lg" id="open-booking-dialog" data-open-booking data-i18n="book_open_cta">
               Öppna bokningsformulär
             </button>
-            <a class="btn btn--ghost btn--lg" href="tel:+46760207444" data-i18n="hero_call">Ring 076-020 74 44</a>
           </div>
           <p class="booking-teaser__hint" data-i18n="book_teaser_hint"></p>
         </div>
@@ -620,27 +591,11 @@
       class="contact-dock"
       id="contact-dock"
       data-i18n-aria-label="contact_dock_aria"
-      aria-label="Snabbkontakt: WhatsApp och chatt"
+      aria-label="Snabbkontakt"
     >
-      <a
-        class="contact-dock__fab contact-dock__fab--wa"
-        id="contact-wa"
-        href="https://wa.me/46760207444?text=Hej%20Stadstaxi"
-        data-whatsapp-link
-        target="_blank"
-        rel="noopener noreferrer"
-        data-i18n-aria-label="wa_aria"
-      >
-        <svg class="contact-dock__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path
-            fill="currentColor"
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-          />
-        </svg>
-      </a>
       <button
         type="button"
-        class="contact-dock__fab contact-dock__fab--chat"
+        class="contact-dock__launch"
         id="chat-launcher"
         data-chat-trigger
         aria-expanded="false"
@@ -648,42 +603,45 @@
         aria-controls="contact-dialog"
         data-i18n-aria-label="chat_open_aria"
       >
-        <svg class="contact-dock__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <svg class="contact-dock__launch-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round" />
         </svg>
+        <span class="contact-dock__launch-label" data-i18n="contact_launch">Kontakta oss</span>
       </button>
     </div>
 
     <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title">
       <div class="contact-dialog__inner">
         <header class="contact-dialog__header">
-          <h2 id="contact-dialog-title" class="contact-dialog__title" data-i18n="chat_title">Stadstaxi – snabbhjälp</h2>
+          <h2 id="contact-dialog-title" class="contact-dialog__title" data-i18n="chat_title">Kontakta oss</h2>
           <button type="button" class="contact-dialog__close" data-contact-dialog-close data-i18n-aria-label="chat_close_aria">
             <span aria-hidden="true">&times;</span>
           </button>
         </header>
         <p class="contact-dialog__lead" data-i18n="contact_dialog_lead">
-          Välj hur du vill nå oss. Livechatt (Chatwoot) aktiveras när ni lagt in websiteToken i stadstaxi-config.js.
+          Ring oss, boka taxi, skriv på WhatsApp eller skicka e-post – välj hur du vill nå oss.
         </p>
         <ul class="contact-dialog__actions">
           <li>
             <a class="btn btn--primary btn--block" href="tel:+46760207444" data-contact-dialog-close data-i18n="hero_call">Ring 076-020 74 44</a>
           </li>
           <li>
+            <button type="button" class="btn btn--ghost btn--block" data-open-booking data-contact-dialog-close data-i18n="nav_book">
+              Boka
+            </button>
+          </li>
+          <li>
             <a
               class="btn btn--wa btn--block"
               href="https://wa.me/46760207444?text=Hej%20Stadstaxi"
               data-whatsapp-link
-              data-contact-dialog-close
               target="_blank"
               rel="noopener noreferrer"
+              data-contact-dialog-close
               data-i18n="hero_whatsapp"
-              >WhatsApp</a>
-          </li>
-          <li>
-            <button type="button" class="btn btn--ghost btn--block" data-open-booking data-contact-dialog-close data-i18n="nav_book">
-              Boka
-            </button>
+            >
+              WhatsApp
+            </a>
           </li>
           <li>
             <a class="btn btn--ghost btn--block" href="mailto:info@stadstaxi.example" data-contact-dialog-close data-i18n="footer_email">E-post</a>
@@ -939,17 +897,9 @@
       </div>
     </dialog>
 
-    <div class="sticky-call" role="region" data-i18n-aria-label="sticky_aria" aria-label="Snabbring">
-      <a class="btn btn--primary sticky-call__btn" href="tel:+46760207444">
-        <span class="sticky-call__icon" aria-hidden="true"></span>
-        <span class="sticky-call__label" data-i18n="sticky_ring">Ring oss</span>
-      </a>
-      <a class="btn btn--ghost sticky-call__book" href="#boka" data-open-booking data-i18n-aria-label="sticky_book_aria" data-i18n="sticky_book">Boka</a>
-    </div>
-
     <script src="stadstaxi-config.js?v=2"></script>
     <script src="chatwoot-bootstrap.js?v=2" defer></script>
-    <script src="i18n.js?v=2" defer></script>
+    <script src="i18n.js?v=4" defer></script>
     <script src="cookies-consent.js?v=2" defer></script>
     <script src="script.js?v=2" defer></script>
   </body>
