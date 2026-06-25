@@ -68,9 +68,12 @@
       lang_sv: "Svenska",
       lang_da: "Dansk",
       lang_en: "English",
+      hero_eyebrow: "Välkommen till",
       hero_title:
-        'Välkommen till <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
-      hero_lead: "Taxi i Helsingborg och Skåne – dygnet runt.",
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi i Helsingborg</span>',
+      hero_location: "Taxi i Helsingborg",
+      hero_lead:
+        "Ring 042-200 777 – taxi i Helsingborg och Skåne. Fast pris till Kastrup, Sturup och Malmö. Dygnet runt.",
       hero_call_label: "Ring eller boka online",
       hero_phone_display: "042-200 777",
       hero_call_btn: "Ring nu",
@@ -340,11 +343,12 @@
       lang_sv: "Svenska",
       lang_da: "Dansk",
       lang_en: "English",
-      hero_eyebrow: "Din lokale taxi",
+      hero_eyebrow: "Velkommen til",
       hero_title:
-        'Velkommen til <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi i Helsingborg</span>',
+      hero_location: "Taxi i Helsingborg",
       hero_lead:
-        "Udfyld en kort bookingforespørgsel nedenfor – eller tryk Kontakt os nederst til højre, hvis du vil ringe.",
+        "Ring 042-200 777 – taxi i Helsingborg og Skåne. Fast pris til Kastrup, Sturup og Malmø. Døgnet rundt.",
       hero_contact_aria: "Hurtig kontakt",
       hero_call: "Ring 076-020 74 44",
       hero_write: "Send forespørgsel",
@@ -590,11 +594,12 @@
       lang_sv: "Svenska",
       lang_da: "Dansk",
       lang_en: "English",
-      hero_eyebrow: "Your local taxi",
+      hero_eyebrow: "Welcome to",
       hero_title:
-        'Welcome to <span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span>',
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi in Helsingborg</span>',
+      hero_location: "Taxi in Helsingborg",
       hero_lead:
-        "Fill in a short booking request below – or tap Contact us at the bottom if you want to call.",
+        "Call 042-200 777 – taxi in Helsingborg and Skåne. Fixed prices to Kastrup, Sturup and Malmö. Around the clock.",
       hero_contact_aria: "Quick contact",
       hero_call: "Call 076-020 74 44",
       hero_write: "Book online",
