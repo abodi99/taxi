@@ -10,9 +10,10 @@
 
   var DICT = {
     sv: {
-      doc_title: "Stad Taxi – ring eller boka taxi i Helsingborg",
+      doc_title: "Stad Taxi Helsingborg – taxi till Kastrup, Malmö & flygplatser",
       meta_description:
-        "Ring 042-200 777 eller boka taxi hos Stad Taxi i Helsingborg. Fast pris till flygplatser och städer – dygnet runt.",
+        "Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt.",
+      logo_alt: "Stad Taxi – logotyp",
       skip: "Hoppa till innehåll",
       logo_aria: "Stad Taxi – till startsidan",
       nav_aria: "Huvudmeny",
@@ -190,12 +191,25 @@
       price_route_lund: "Helsingborg – Lund",
       price_disclaimer:
         "Priserna gäller enkel resa. Kontakta oss vid fler passagerare, väntetid eller särskilda önskemål.",
+      faq_title: "Vanliga frågor om taxi i Helsingborg",
+      faq_q1: "Hur bokar jag taxi hos Stad Taxi?",
+      faq_a1:
+        "Ring 042-200 777 eller klicka på Boka taxi och fyll i formuläret – vi återkommer så snart vi kan.",
+      faq_q2: "Vilka destinationer har ni fast pris till?",
+      faq_a2:
+        "Fast pris från Helsingborg till Kastrup, Sturup, Ängelholm, Höganäs, Landskrona, Malmö och Lund. Se prislistan ovan.",
+      faq_q3: "Kan jag ringa dygnet runt?",
+      faq_a3: "Ja, vi tar emot samtal och bokningar dygnet runt på 042-200 777.",
+      faq_q4: "Var kör Stad Taxi?",
+      faq_a4:
+        "Vi utgår från Helsingborg och kör i Helsingborg, Skåne och till flygplatser och städer i regionen.",
       footer_hours_title: "Öppettider",
       footer_hours_booking_label: "Beställning & kundtjänst",
       footer_hours_booking_value: "Dygnet runt",
       footer_pay_icons_aria:
         "Betalningsalternativ: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay och kontant",
       footer_tag: "Taxi i Helsingborg och Skåne – dygnet runt.",
+      footer_area: "Taxi i Helsingborg och Skåne",
       footer_org: "Org.nr",
       footer_contact: "Kontakt",
       footer_phone: "Telefon:",
@@ -286,9 +300,10 @@
       cookie_accept: "Godkänn analys"
     },
     da: {
-      doc_title: "Stad Taxi – taxibooking, prisliste & telefon",
+      doc_title: "Stad Taxi Helsingborg – taxi til Kastrup, Malmö og lufthavne",
       meta_description:
-        "Book taxi hos Stad Taxi: ring døgnet rundt eller send en skriftlig forespørgsel. Se prisliste, betal med kort eller Swish i bilen. Lokalt taxiselskab i Sverige.",
+        "Stad Taxi i Helsingborg – ring 042-200 777 døgnet rundt. Fast pris taxi til Kastrup, Sturup, Malmö, Lund og Ängelholm. Book online eller ring direkte.",
+      logo_alt: "Stad Taxi – logo",
       skip: "Spring til indhold",
       logo_aria: "Stad Taxi – til forsiden",
       nav_aria: "Hovedmenu",
@@ -442,12 +457,25 @@
         "Eksempelpriser i udkast – opdater beløb efter jeres taxameter og lokale regler.",
       price_disclaimer:
         "Slutpris kan påvirkes af kø, ventetid, afvigende rute eller tillæg. Spørg chaufføren ved tvivl.",
+      faq_title: "Ofte stillede spørgsmål om taxi i Helsingborg",
+      faq_q1: "Hvordan booker jeg taxi hos Stad Taxi?",
+      faq_a1:
+        "Ring 042-200 777 eller klik på Book taxi og udfyld formularen – vi vender tilbage hurtigst muligt.",
+      faq_q2: "Hvilke destinationer har I fast pris til?",
+      faq_a2:
+        "Fast pris fra Helsingborg til Kastrup, Sturup, Ängelholm, Höganäs, Landskrona, Malmö og Lund. Se prislisten ovenfor.",
+      faq_q3: "Kan jeg ringe døgnet rundt?",
+      faq_a3: "Ja, vi tager imod opkald og bookinger døgnet rundt på 042-200 777.",
+      faq_q4: "Hvor kører Stad Taxi?",
+      faq_a4:
+        "Vi kører fra Helsingborg i Helsingborg, Skåne og til lufthavne og byer i regionen.",
       footer_hours_title: "Åbningstider",
       footer_hours_booking_label: "Bestilling & kundeservice",
       footer_hours_booking_value: "Døgnet rundt",
       footer_pay_icons_aria:
         "Betalingsmuligheder: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay og kontanter",
-      footer_tag: "Lille firma – stor service.",
+      footer_tag: "Taxi i Helsingborg og Skåne – døgnet rundt.",
+      footer_area: "Taxi i Helsingborg og Skåne",
       footer_contact: "Kontakt",
       footer_phone: "Telefon:",
       footer_email: "E-mail:",
@@ -537,9 +565,10 @@
       cookie_accept: "Acceptér analyse"
     },
     en: {
-      doc_title: "Stad Taxi – taxi booking, prices & phone",
+      doc_title: "Stad Taxi Helsingborg – taxi to Kastrup, Malmö & airports",
       meta_description:
-        "Book a taxi with Stad Taxi: call anytime or send a written booking request. See prices, pay by card or Swish in the car. Local taxi service in Sweden.",
+        "Stad Taxi in Helsingborg – call 042-200 777 around the clock. Fixed-price taxi to Kastrup, Sturup, Malmö, Lund and Ängelholm. Book online or call directly.",
+      logo_alt: "Stad Taxi – logo",
       skip: "Skip to content",
       logo_aria: "Stad Taxi – home",
       nav_aria: "Main menu",
@@ -693,12 +722,25 @@
         "Example prices for this draft – update amounts to match your meter and local rules.",
       price_disclaimer:
         "Final price may depend on queue time, waiting, route or extras. Ask the driver if unsure.",
+      faq_title: "Frequently asked questions about taxi in Helsingborg",
+      faq_q1: "How do I book a taxi with Stad Taxi?",
+      faq_a1:
+        "Call 042-200 777 or click Book taxi and fill in the form – we will get back to you as soon as we can.",
+      faq_q2: "Which destinations have fixed prices?",
+      faq_a2:
+        "Fixed prices from Helsingborg to Kastrup, Sturup, Ängelholm, Höganäs, Landskrona, Malmö and Lund. See the price list above.",
+      faq_q3: "Can I call at any time?",
+      faq_a3: "Yes, we accept calls and bookings around the clock on 042-200 777.",
+      faq_q4: "Where does Stad Taxi operate?",
+      faq_a4:
+        "We are based in Helsingborg and serve Helsingborg, Skåne and airports and towns in the region.",
       footer_hours_title: "Opening hours",
       footer_hours_booking_label: "Bookings & customer care",
       footer_hours_booking_value: "Open 24 hours a day",
       footer_pay_icons_aria:
         "Payment options: Visa, Mastercard, Swish, Klarna, Apple Pay, Google Pay, and cash",
-      footer_tag: "Small company – big service.",
+      footer_tag: "Taxi in Helsingborg and Skåne – around the clock.",
+      footer_area: "Taxi in Helsingborg and Skåne",
       footer_contact: "Contact",
       footer_phone: "Phone:",
       footer_email: "Email:",

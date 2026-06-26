@@ -6,14 +6,16 @@
     <meta
       id="meta-description"
       name="description"
-      content="Ring 042-200 777 eller boka taxi hos Stad Taxi i Helsingborg. Fast pris till flygplatser och städer – dygnet runt."
+      content="Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt."
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#004899" />
-    <title>Stad Taxi – ring eller boka taxi i Helsingborg</title>
+    <meta name="geo.region" content="SE-M" />
+    <meta name="geo.placename" content="Helsingborg" />
+    <title>Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser</title>
     <link rel="canonical" href="https://www.stadstaxi.se/" />
     <!-- Höj ?v= i stylesheet/script-URL:er vid deploy om mobilen visar gammal layout (cache). -->
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=20" />
     <link rel="preload" as="image" href="images/hero-helsingborg-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
     <link rel="preload" as="image" href="images/hero-helsingborg.png" media="(min-width: 768px)" fetchpriority="high" />
     <link rel="icon" href="images/logo-stadstaxi.png?v=2" type="image/png" sizes="any" />
@@ -22,10 +24,10 @@
     <meta property="og:site_name" content="Stad Taxi" />
     <meta property="og:locale" content="sv_SE" />
     <meta property="og:url" content="https://www.stadstaxi.se/" />
-    <meta property="og:title" content="Stad Taxi – ring eller boka taxi i Helsingborg" />
+    <meta property="og:title" content="Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser" />
     <meta
       property="og:description"
-      content="Ring 042-200 777 eller boka taxi hos Stad Taxi i Helsingborg. Fast pris till flygplatser och städer – dygnet runt."
+      content="Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt."
     />
     <meta
       property="og:image"
@@ -36,10 +38,10 @@
     <meta property="og:image:alt" content="Svart taxibil i Helsingborg vid solnedgång – Stad Taxi 042-200 777." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stad Taxi – ring eller boka taxi i Helsingborg" />
+    <meta name="twitter:title" content="Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser" />
     <meta
       name="twitter:description"
-      content="Ring eller boka taxi i Helsingborg. Fast pris till Kastrup, Sturup, Malmö m.fl."
+      content="Ring 042-200 777 – fast pris taxi från Helsingborg till Kastrup, Sturup, Malmö, Lund och Ängelholm. Dygnet runt."
     />
     <meta
       name="twitter:image"
@@ -55,33 +57,173 @@
             "@id": "https://www.stadstaxi.se/#website",
             "url": "https://www.stadstaxi.se/",
             "name": "Stad Taxi",
+            "description": "Taxi i Helsingborg och Skåne – fast pris till flygplatser och städer. Ring 042-200 777 dygnet runt.",
             "inLanguage": ["sv", "da", "en"],
-            "publisher": { "@id": "https://www.stadstaxi.se/#stadstaxi" }
+            "publisher": { "@id": "https://www.stadstaxi.se/#stadstaxi" },
+            "potentialAction": [
+              {
+                "@type": "ReserveAction",
+                "name": "Boka taxi",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.stadstaxi.se/#boka",
+                  "actionPlatform": [
+                    "https://schema.org/DesktopWebPlatform",
+                    "https://schema.org/MobileWebPlatform"
+                  ]
+                }
+              },
+              {
+                "@type": "CommunicateAction",
+                "name": "Ring Stad Taxi",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "tel:+4642200777",
+                  "actionPlatform": [
+                    "https://schema.org/DesktopWebPlatform",
+                    "https://schema.org/MobileWebPlatform"
+                  ]
+                }
+              }
+            ]
           },
           {
-            "@type": "TaxiService",
+            "@type": ["TaxiService", "LocalBusiness"],
             "@id": "https://www.stadstaxi.se/#stadstaxi",
             "name": "Stad Taxi",
+            "description": "Lokal taxiservice i Helsingborg med fast pris till Kastrup, Sturup, Malmö, Lund, Ängelholm, Höganäs och Landskrona. Bokning dygnet runt på 042-200 777.",
             "url": "https://www.stadstaxi.se/",
             "logo": "https://www.stadstaxi.se/images/logo-stadstaxi.png",
-            "image": "https://www.stadstaxi.se/images/hero-helsingborg.png",
+            "image": [
+              "https://www.stadstaxi.se/images/hero-helsingborg.png",
+              "https://www.stadstaxi.se/images/logo-stadstaxi.png"
+            ],
             "telephone": "+4642200777",
             "taxID": "7612012745",
+            "priceRange": "$$",
+            "currenciesAccepted": "SEK",
+            "paymentAccepted": "Kontant, kreditkort, Swish",
             "areaServed": [
               { "@type": "City", "name": "Helsingborg" },
               { "@type": "AdministrativeArea", "name": "Skåne" }
             ],
-            "openingHours": "Mo-Su 00:00-24:00",
-            "priceRange": "$$",
-            "currenciesAccepted": "SEK",
-            "paymentAccepted": "Kontant, kreditkort, Swish, Klarna där avtal finns, Apple Pay, Google Pay",
+            "serviceType": "Taxi",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Fast pris från Helsingborg",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Kastrup",
+                  "price": "2499",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Köpenhamns flygplats (Kastrup)" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Sturup",
+                  "price": "1600",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Malmö flygplats (Sturup)" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Ängelholm",
+                  "price": "695",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Ängelholm" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Höganäs",
+                  "price": "600",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Höganäs" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Landskrona",
+                  "price": "700",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Landskrona" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Malmö",
+                  "price": "1495",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Malmö" }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Taxi Helsingborg – Lund",
+                  "price": "1200",
+                  "priceCurrency": "SEK",
+                  "itemOffered": { "@type": "Service", "name": "Taxi Helsingborg till Lund" }
+                }
+              ]
+            },
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+4642200777",
-              "contactType": "customer service",
-              "areaServed": "SE",
+              "contactType": "reservations",
+              "areaServed": "Helsingborg",
               "availableLanguage": ["Swedish", "Danish", "English"]
             }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.stadstaxi.se/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Hur bokar jag taxi hos Stad Taxi i Helsingborg?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ring 042-200 777 eller klicka på Boka taxi på sidan och fyll i formuläret. Vi återkommer så snart vi kan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Vilka destinationer har Stad Taxi fast pris till från Helsingborg?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fast pris gäller till Kastrup, Sturup, Ängelholm, Höganäs, Landskrona, Malmö och Lund. Se prislistan på sidan för aktuella belopp."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kan jag ringa Stad Taxi dygnet runt?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja, Stad Taxi i Helsingborg tar emot samtal och bokningar dygnet runt på 042-200 777."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Var kör Stad Taxi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Stad Taxi utgår från Helsingborg och kör i Helsingborg, Skåne och till flygplatser och städer i regionen."
+                }
+              }
+            ]
           }
         ]
       }
@@ -99,9 +241,9 @@
               src="images/logo-stadstaxi.png"
               width="1024"
               height="1024"
-              alt=""
+              alt="Stad Taxi – logotyp"
+              data-i18n-alt="logo_alt"
               decoding="async"
-              aria-hidden="true"
             />
           </a>
         </div>
@@ -266,6 +408,38 @@
         </div>
       </section>
 
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="container faq__inner">
+          <h2 id="faq-title" class="section-title faq__title" data-i18n="faq_title">Vanliga frågor om taxi i Helsingborg</h2>
+          <dl class="faq__list">
+            <div class="faq__item">
+              <dt class="faq__question" data-i18n="faq_q1">Hur bokar jag taxi hos Stad Taxi?</dt>
+              <dd class="faq__answer" data-i18n="faq_a1">
+                Ring 042-200 777 eller klicka på Boka taxi och fyll i formuläret – vi återkommer så snart vi kan.
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question" data-i18n="faq_q2">Vilka destinationer har ni fast pris till?</dt>
+              <dd class="faq__answer" data-i18n="faq_a2">
+                Fast pris från Helsingborg till Kastrup, Sturup, Ängelholm, Höganäs, Landskrona, Malmö och Lund. Se prislistan ovan.
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question" data-i18n="faq_q3">Kan jag ringa dygnet runt?</dt>
+              <dd class="faq__answer" data-i18n="faq_a3">
+                Ja, vi tar emot samtal och bokningar dygnet runt på 042-200 777.
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question" data-i18n="faq_q4">Var kör Stad Taxi?</dt>
+              <dd class="faq__answer" data-i18n="faq_a4">
+                Vi utgår från Helsingborg och kör i Helsingborg, Skåne och till flygplatser och städer i regionen.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section class="book-cta" id="boka" aria-labelledby="boka-title">
         <div class="container book-cta__inner">
           <h2 id="boka-title" class="section-title book-cta__title" data-i18n="book_title">Boka taxi</h2>
@@ -291,7 +465,8 @@
                     src="images/logo-stadstaxi.png"
                     width="1024"
                     height="1024"
-                    alt=""
+                    alt="Stad Taxi"
+                    data-i18n-alt="logo_alt"
                     loading="lazy"
                     decoding="async"
                   />
@@ -305,7 +480,7 @@
 
             <div class="site-footer__meta">
               <div class="site-footer__meta-columns">
-                <div class="site-footer__meta-group">
+                <address class="site-footer__meta-group">
                   <h3 class="site-footer__heading" data-i18n="footer_contact">Kontakt</h3>
                   <p class="site-footer__phone-line">
                     <a class="site-footer__phone" href="tel:+4642200777" data-contact-phone>
@@ -313,7 +488,8 @@
                     </a>
                   </p>
                   <p class="site-footer__hours" data-i18n="footer_hours_booking_value">Dygnet runt</p>
-                </div>
+                  <p class="site-footer__area" data-i18n="footer_area">Taxi i Helsingborg och Skåne</p>
+                </address>
               </div>
             </div>
           </div>
@@ -472,7 +648,7 @@
     </dialog>
 
     <script src="stadstaxi-config.js?v=5"></script>
-    <script src="i18n.js?v=11" defer></script>
+    <script src="i18n.js?v=12" defer></script>
     <script src="cookies-consent.js?v=2" defer></script>
     <script src="script.js?v=4" defer></script>
     <script src="booking.js?v=2" defer></script>
