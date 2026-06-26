@@ -25,7 +25,7 @@ Uppdatera [`stadstaxi-config.js`](stadstaxi-config.js):
 
 ## SEO vid go-live
 
-1. **Domän**: Ersätt `https://www.stadstaxi.se/` i `index.html`, `robots.txt`, `sitemap.xml` och JSON-LD om er adress skiljer sig.
+1. **Domän**: Kanonisk URL är `https://stadtaxi.se/` i `index.html`, `robots.txt`, `sitemap.xml` och JSON-LD.
 2. **Open Graph**: Uppdatera `og:image` vid behov (helst 1200×630 för delning).
 3. **Strukturerad data**: JSON-LD `TaxiService` på startsidan – fyll i `PostalAddress` om ni har besöksadress.
 4. **`robots.txt`** och **`sitemap.xml`** ska serveras från webbrot.
