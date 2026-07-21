@@ -15,5 +15,7 @@ window.STADSTAXI.analytics = {
   /** Google-tagg (container) – laddas först efter cookie-godkännande */
   googleTagId: "GT-T5MFV4LS",
   /** Google Ads – konvertering / remarketing */
-  adsId: "AW-18304182555"
+  adsId: "AW-18304182555",
+  /** Google Ads – konvertering när bokningsformulär skickats */
+  bookingConversionSendTo: "AW-18304182555/KNuTCOT0pNQcEJvSjphE"
 };

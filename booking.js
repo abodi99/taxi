@@ -179,12 +179,20 @@
     });
   }
 
+  function trackBookingConversion() {
+    var cfg = (window.STADSTAXI && window.STADSTAXI.analytics) || {};
+    var sendTo = String(cfg.bookingConversionSendTo || "").trim();
+    if (!sendTo || typeof window.gtag !== "function") return;
+    window.gtag("event", "conversion", { send_to: sendTo });
+  }
+
   function showThanksView() {
     if (flow) flow.hidden = true;
     if (thanks) {
       thanks.hidden = false;
       thanks.focus({ preventScroll: true });
     }
+    trackBookingConversion();
   }
 
   function resetBookingView() {
