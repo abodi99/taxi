@@ -179,26 +179,57 @@
     });
   }
 
-  function gtagReportConversion(url) {
-    var cfg = (window.STADSTAXI && window.STADSTAXI.analytics) || {};
-    var sendTo = String(cfg.bookingConversionSendTo || "AW-18304182555/KNuTCOT0pNQcEJvSjphE").trim();
-    var callback = function () {
-      if (typeof url !== "undefined") {
-        window.location = url;
-      }
+  function gtagReportConversion(sendTo, url) {
+    var navigated = false;
+    var go = function () {
+      if (navigated || typeof url === "undefined" || !url) return;
+      navigated = true;
+      window.location = url;
     };
-    if (typeof window.gtag === "function") {
+    if (typeof window.gtag === "function" && sendTo) {
       window.gtag("event", "conversion", {
         send_to: sendTo,
-        event_callback: callback
+        event_callback: go
       });
-    } else if (typeof url !== "undefined") {
-      window.location = url;
+      if (url) window.setTimeout(go, 1500);
+    } else {
+      go();
     }
     return false;
   }
 
-  window.gtag_report_conversion = gtagReportConversion;
+  function bookingConversionSendTo() {
+    var cfg = (window.STADSTAXI && window.STADSTAXI.analytics) || {};
+    return String(cfg.bookingConversionSendTo || "AW-18304182555/KNuTCOT0pNQcEJvSjphE").trim();
+  }
+
+  function callConversionSendTo() {
+    var cfg = (window.STADSTAXI && window.STADSTAXI.analytics) || {};
+    return String(cfg.callConversionSendTo || "AW-18304182555/IW6ACNmEntQcEJvSjphE").trim();
+  }
+
+  /** Bokningsformulär – klick på skicka */
+  window.gtag_report_conversion = function (url) {
+    return gtagReportConversion(bookingConversionSendTo(), url);
+  };
+
+  /** Ring-knapp – klick på tel-länk */
+  window.gtag_report_call_conversion = function (url) {
+    return gtagReportConversion(callConversionSendTo(), url);
+  };
+
+  function wireCallConversionLinks() {
+    document.querySelectorAll('a[href^="tel:"], a[data-contact-phone]').forEach(function (link) {
+      if (link.dataset.callConversionWired) return;
+      link.dataset.callConversionWired = "1";
+      link.addEventListener("click", function (e) {
+        var href = link.getAttribute("href") || "";
+        if (href.indexOf("tel:") !== 0) return;
+        e.preventDefault();
+        gtagReportConversion(callConversionSendTo(), href);
+      });
+    });
+  }
 
   function showThanksView() {
     if (flow) flow.hidden = true;
@@ -280,7 +311,7 @@
     var submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) {
       submitBtn.addEventListener("click", function () {
-        gtagReportConversion();
+        gtagReportConversion(bookingConversionSendTo());
       });
     }
 
@@ -349,9 +380,11 @@
   applySiteConfig();
   wireBookingDialog();
   wireForm();
+  wireCallConversionLinks();
 
   document.addEventListener("stadstaxi:lang", function () {
     applySiteConfig();
+    wireCallConversionLinks();
     var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
     if (submitBtn && !submitBtn.disabled) submitBtn.textContent = tr("btn_submit");
   });

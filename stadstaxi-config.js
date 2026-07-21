@@ -17,5 +17,7 @@ window.STADSTAXI.analytics = {
   /** Google Ads – konvertering / remarketing */
   adsId: "AW-18304182555",
   /** Google Ads – klick-konvertering på bokningsknapp (Boka taxi) */
-  bookingConversionSendTo: "AW-18304182555/KNuTCOT0pNQcEJvSjphE"
+  bookingConversionSendTo: "AW-18304182555/KNuTCOT0pNQcEJvSjphE",
+  /** Google Ads – klick-konvertering på ring-knapp (042-200 777) */
+  callConversionSendTo: "AW-18304182555/IW6ACNmEntQcEJvSjphE"
 };
