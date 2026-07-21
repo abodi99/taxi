@@ -181,10 +181,10 @@
 
   var conversionLocks = {};
 
-  function gtagReportConversion(sendTo, url) {
+  function gtagReportConversion(sendTo, url, transactionId) {
     var lockKey = String(sendTo || "default");
     var now = Date.now();
-    /* Hindra dubbel/trippel-firing vid samma klick (bubbling, flera taggar, Tag Assistant) */
+    /* Hindra dubbel/trippel-firing vid samma klick (bubbling, flera lyssnare, Tag Assistant) */
     if (conversionLocks[lockKey] && now - conversionLocks[lockKey] < 2500) {
       if (url) window.location = url;
       return false;
@@ -198,10 +198,13 @@
       window.location = url;
     };
     if (typeof window.gtag === "function" && sendTo) {
-      window.gtag("event", "conversion", {
+      var payload = {
         send_to: sendTo,
         event_callback: go
-      });
+      };
+      /* Unikt id hjälper Google Ads deduplicera om samma event når Ads flera vägar */
+      if (transactionId) payload.transaction_id = String(transactionId);
+      window.gtag("event", "conversion", payload);
       if (url) window.setTimeout(go, 1500);
     } else {
       go();
@@ -322,6 +325,9 @@
 
   function wireForm() {
     if (!form) return;
+    /* En enda submit-lyssnare – undvik 3× om booking.js laddas/wire:as flera gånger */
+    if (window.__stadstaxiBookingFormWired) return;
+    window.__stadstaxiBookingFormWired = true;
 
     if (immediate) {
       immediate.addEventListener("change", toggleDatetimeFields);
@@ -330,11 +336,6 @@
     setMinDate();
 
     var submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.addEventListener("click", function () {
-        gtagReportConversion(bookingConversionSendTo());
-      });
-    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -359,6 +360,9 @@
         ? tr("when_immediate")
         : fieldValue("book-date") + " " + fieldValue("book-time");
 
+      var conversionTxnId =
+        "book-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
+
       sendBooking({
         _subject: tr("book_email_subject"),
         _captcha: "false",
@@ -373,6 +377,8 @@
         Övrigt: fieldValue("book-message") || "–"
       })
         .then(function () {
+          /* En conversion per lyckad bokning – inte på rått knappt-klick */
+          gtagReportConversion(bookingConversionSendTo(), undefined, conversionTxnId);
           showThanksView();
           if (statusEl) statusEl.hidden = true;
         })
