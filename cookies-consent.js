@@ -67,8 +67,16 @@
 
     if (!window.__stadstaxiGAConfigured) {
       window.__stadstaxiGAConfigured = true;
-      if (googleTagId) window.gtag("config", googleTagId);
-      if (adsId) window.gtag("config", adsId);
+      /*
+       * Konfigurera BARA Google-taggen (GT-…). Den har redan AW-18304182555 som destination.
+       * gtag('config', GT) + gtag('config', AW) samtidigt ger ofta 2–3 “Ringklick”-rader
+       * i Tag Assistant för samma enda conversion-event.
+       */
+      if (googleTagId) {
+        window.gtag("config", googleTagId);
+      } else if (adsId) {
+        window.gtag("config", adsId);
+      }
     }
   }
 
