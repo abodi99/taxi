@@ -46,9 +46,10 @@
         <section class="legal-page__section" aria-labelledby="cookies-analys">
           <h2 id="cookies-analys" class="legal-page__h2">Webbanalys (valfritt)</h2>
           <p>
-            Om ni aktiverar Google Analytics 4 laddas analysskript <strong>först efter</strong> att besökaren valt ”Godkänn analys”. Id för
-            mätning sätts i <code>stadstaxi-config.js</code> under <code>window.STADSTAXI.analytics.measurementId</code> (t.ex.
-            <code>G-XXXXXXXX</code>). Lämna fältet tomt om analys inte ska användas alls.
+            Om ni aktiverar Google-tagg / Google Ads laddas skripten <strong>först efter</strong> att besökaren valt ”Godkänn analys”.
+            ID:n sätts i <code>stadstaxi-config.js</code> under <code>window.STADSTAXI.analytics</code>
+            (<code>googleTagId</code>, t.ex. <code>GT-…</code>, och <code>adsId</code>, t.ex. <code>AW-…</code>).
+            Lämna fälten tomma om analys/annonsering inte ska användas alls.
           </p>
           <p>
             Google kan behandla data enligt sina villkor; ni ansvarar för att ert upplägg följer gällande lag (t.ex. GDPR) och att
@@ -96,8 +97,8 @@
       </div>
     </div>
 
-    <script src="stadstaxi-config.js?v=2"></script>
+    <script src="stadstaxi-config.js?v=6"></script>
     <script src="i18n.js?v=2" defer></script>
-    <script src="cookies-consent.js?v=2" defer></script>
+    <script src="cookies-consent.js?v=3" defer></script>
   </body>
 </html>

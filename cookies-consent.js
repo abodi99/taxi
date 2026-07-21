@@ -1,6 +1,6 @@
 /**
  * Cookie-samtycke: nödvändigt lagras alltid (språk m.m. via befintlig i18n).
- * Analys (Google Analytics 4) laddas endast om användaren godkänner och measurementId är satt i stadstaxi-config.js.
+ * Google-tagg + Google Ads laddas endast om användaren godkänner och ID:n är satta i stadstaxi-config.js.
  */
 (function () {
   "use strict";
@@ -26,20 +26,27 @@
     } catch (e2) {}
   }
 
-  function loadGoogleAnalytics() {
-    var id = (getCfg().measurementId || "").trim();
-    if (!id || window.__stadstaxiGALoaded) return;
+  function loadGoogleTags() {
+    var cfg = getCfg();
+    var googleTagId = String(cfg.googleTagId || cfg.measurementId || "").trim();
+    var adsId = String(cfg.adsId || "").trim();
+    var primaryId = googleTagId || adsId;
+    if (!primaryId || window.__stadstaxiGALoaded) return;
     window.__stadstaxiGALoaded = true;
+
     var script = document.createElement("script");
     script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(primaryId);
     document.head.appendChild(script);
+
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
     window.gtag("js", new Date());
-    window.gtag("config", id);
+
+    if (googleTagId) window.gtag("config", googleTagId);
+    if (adsId) window.gtag("config", adsId);
   }
 
   function showBanner() {
@@ -64,7 +71,7 @@
     var prev = getConsent();
     setConsent("analytics");
     hideBanner();
-    loadGoogleAnalytics();
+    loadGoogleTags();
     if (prev === "essential" && window.gtag) {
       /* om användaren bytte från nej till ja utan omladdning */
     }
@@ -103,7 +110,7 @@
 
     var consent = getConsent();
     if (consent === "analytics") {
-      loadGoogleAnalytics();
+      loadGoogleTags();
       return;
     }
     if (consent === "essential") {
