@@ -292,12 +292,12 @@
       footer_accessibility: "Tillgänglighet",
       cookie_settings: "Cookie-inställningar",
       cookie_banner_region_aria: "Information om cookies och val",
-      cookie_banner_title: "Cookies och analys",
+      cookie_banner_title: "Cookies och marknadsföring",
       cookie_banner_lead:
-        "Vi använder nödvändig lagring för språkval m.m. Om du godkänner kan vi också samla in anonym besöksstatistik för att förbättra sidan.",
+        "Vi använder nödvändiga cookies för att sidan ska fungera. Om du godkänner kan vi också använda cookies för statistik och marknadsföring (t.ex. Google Ads) enligt dina val.",
       cookie_banner_read: "Läs mer om cookies",
-      cookie_reject: "Endast nödvändigt",
-      cookie_accept: "Godkänn analys"
+      cookie_reject: "Neka",
+      cookie_accept: "Godkänn alla"
     },
     da: {
       doc_title: "Stad Taxi Helsingborg – taxi til Kastrup, Malmö og lufthavne",
@@ -557,12 +557,12 @@
       footer_accessibility: "Tilgængelighed",
       cookie_settings: "Cookie-indstillinger",
       cookie_banner_region_aria: "Information om cookies og valg",
-      cookie_banner_title: "Cookies og analyse",
+      cookie_banner_title: "Cookies og markedsføring",
       cookie_banner_lead:
-        "Vi bruger nødvendig lagring til sprogvalg m.m. Hvis du accepterer, kan vi også indsamle anonym besøgsstatistik for at forbedre siden.",
+        "Vi bruger nødvendige cookies, så siden virker. Hvis du accepterer, kan vi også bruge cookies til statistik og markedsføring (f.eks. Google Ads) efter dit valg.",
       cookie_banner_read: "Læs mere om cookies",
-      cookie_reject: "Kun nødvendige",
-      cookie_accept: "Acceptér analyse"
+      cookie_reject: "Afvis",
+      cookie_accept: "Acceptér alle"
     },
     en: {
       doc_title: "Stad Taxi Helsingborg – taxi to Kastrup, Malmö & airports",
@@ -822,12 +822,12 @@
       footer_accessibility: "Accessibility",
       cookie_settings: "Cookie settings",
       cookie_banner_region_aria: "Cookie information and choices",
-      cookie_banner_title: "Cookies and analytics",
+      cookie_banner_title: "Cookies and marketing",
       cookie_banner_lead:
-        "We use essential storage for language preferences and similar. If you accept, we may also collect anonymous visit statistics to improve the site.",
+        "We use essential cookies so the site works. If you accept, we may also use cookies for analytics and marketing (e.g. Google Ads) according to your choice.",
       cookie_banner_read: "Read more about cookies",
-      cookie_reject: "Essential only",
-      cookie_accept: "Accept analytics"
+      cookie_reject: "Reject",
+      cookie_accept: "Accept all"
     }
   };
 

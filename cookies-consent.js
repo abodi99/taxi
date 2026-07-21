@@ -1,6 +1,7 @@
 /**
- * Cookie-samtycke: nödvändigt lagras alltid (språk m.m. via befintlig i18n).
- * Google-tagg + Google Ads laddas endast om användaren godkänner och ID:n är satta i stadstaxi-config.js.
+ * Cookie-samtycke + Google Consent Mode v2 (GDPR / EU).
+ * Standard: denied. Vid godkännande: granted för ads + analytics.
+ * Google-taggar laddas alltid (cookieless pings vid nekad), cookies först efter samtycke.
  */
 (function () {
   "use strict";
@@ -26,27 +27,49 @@
     } catch (e2) {}
   }
 
+  function ensureGtag() {
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== "function") {
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+    }
+  }
+
+  function updateConsent(granted) {
+    ensureGtag();
+    var state = granted ? "granted" : "denied";
+    window.gtag("consent", "update", {
+      ad_storage: state,
+      ad_user_data: state,
+      ad_personalization: state,
+      analytics_storage: state
+    });
+  }
+
   function loadGoogleTags() {
     var cfg = getCfg();
     var googleTagId = String(cfg.googleTagId || cfg.measurementId || "").trim();
     var adsId = String(cfg.adsId || "").trim();
     var primaryId = googleTagId || adsId;
-    if (!primaryId || window.__stadstaxiGALoaded) return;
-    window.__stadstaxiGALoaded = true;
+    if (!primaryId) return;
 
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(primaryId);
-    document.head.appendChild(script);
+    ensureGtag();
 
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () {
-      window.dataLayer.push(arguments);
-    };
-    window.gtag("js", new Date());
+    if (!window.__stadstaxiGALoaded) {
+      window.__stadstaxiGALoaded = true;
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(primaryId);
+      document.head.appendChild(script);
+      window.gtag("js", new Date());
+    }
 
-    if (googleTagId) window.gtag("config", googleTagId);
-    if (adsId) window.gtag("config", adsId);
+    if (!window.__stadstaxiGAConfigured) {
+      window.__stadstaxiGAConfigured = true;
+      if (googleTagId) window.gtag("config", googleTagId);
+      if (adsId) window.gtag("config", adsId);
+    }
   }
 
   function showBanner() {
@@ -68,22 +91,17 @@
   }
 
   function onAccept() {
-    var prev = getConsent();
     setConsent("analytics");
     hideBanner();
+    updateConsent(true);
     loadGoogleTags();
-    if (prev === "essential" && window.gtag) {
-      /* om användaren bytte från nej till ja utan omladdning */
-    }
   }
 
   function onReject() {
-    var prev = getConsent();
     setConsent("essential");
     hideBanner();
-    if (prev === "analytics" && window.__stadstaxiGALoaded) {
-      window.location.reload();
-    }
+    updateConsent(false);
+    loadGoogleTags();
   }
 
   function init() {
@@ -110,13 +128,18 @@
 
     var consent = getConsent();
     if (consent === "analytics") {
+      updateConsent(true);
       loadGoogleTags();
       return;
     }
     if (consent === "essential") {
+      updateConsent(false);
+      loadGoogleTags();
       return;
     }
 
+    /* Väntar på val – taggar laddas med default denied (Consent Mode) */
+    loadGoogleTags();
     showBanner();
   }
 
