@@ -179,7 +179,18 @@
     });
   }
 
+  var conversionLocks = {};
+
   function gtagReportConversion(sendTo, url) {
+    var lockKey = String(sendTo || "default");
+    var now = Date.now();
+    /* Hindra dubbel/trippel-firing vid samma klick (bubbling, flera taggar, Tag Assistant) */
+    if (conversionLocks[lockKey] && now - conversionLocks[lockKey] < 2500) {
+      if (url) window.location = url;
+      return false;
+    }
+    conversionLocks[lockKey] = now;
+
     var navigated = false;
     var go = function () {
       if (navigated || typeof url === "undefined" || !url) return;
@@ -218,17 +229,27 @@
     return gtagReportConversion(callConversionSendTo(), url);
   };
 
+  /**
+   * En enda delegerad lyssnare (capture) för alla tel:-länkar.
+   * Undviker 3× firing från bubblande klick / flera knappar / upprepade wire-anrop.
+   */
   function wireCallConversionLinks() {
-    document.querySelectorAll('a[href^="tel:"], a[data-contact-phone]').forEach(function (link) {
-      if (link.dataset.callConversionWired) return;
-      link.dataset.callConversionWired = "1";
-      link.addEventListener("click", function (e) {
+    if (window.__stadstaxiCallConversionWired) return;
+    window.__stadstaxiCallConversionWired = true;
+    document.addEventListener(
+      "click",
+      function (e) {
+        var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+        if (!link) return;
         var href = link.getAttribute("href") || "";
         if (href.indexOf("tel:") !== 0) return;
         e.preventDefault();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        else e.stopPropagation();
         gtagReportConversion(callConversionSendTo(), href);
-      });
-    });
+      },
+      true
+    );
   }
 
   function showThanksView() {
@@ -384,7 +405,6 @@
 
   document.addEventListener("stadstaxi:lang", function () {
     applySiteConfig();
-    wireCallConversionLinks();
     var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
     if (submitBtn && !submitBtn.disabled) submitBtn.textContent = tr("btn_submit");
   });
