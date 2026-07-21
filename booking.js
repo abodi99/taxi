@@ -179,12 +179,26 @@
     });
   }
 
-  function trackBookingConversion() {
+  function gtagReportConversion(url) {
     var cfg = (window.STADSTAXI && window.STADSTAXI.analytics) || {};
-    var sendTo = String(cfg.bookingConversionSendTo || "").trim();
-    if (!sendTo || typeof window.gtag !== "function") return;
-    window.gtag("event", "conversion", { send_to: sendTo });
+    var sendTo = String(cfg.bookingConversionSendTo || "AW-18304182555/KNuTCOT0pNQcEJvSjphE").trim();
+    var callback = function () {
+      if (typeof url !== "undefined") {
+        window.location = url;
+      }
+    };
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: sendTo,
+        event_callback: callback
+      });
+    } else if (typeof url !== "undefined") {
+      window.location = url;
+    }
+    return false;
   }
+
+  window.gtag_report_conversion = gtagReportConversion;
 
   function showThanksView() {
     if (flow) flow.hidden = true;
@@ -192,7 +206,6 @@
       thanks.hidden = false;
       thanks.focus({ preventScroll: true });
     }
-    trackBookingConversion();
   }
 
   function resetBookingView() {
@@ -264,6 +277,13 @@
     toggleDatetimeFields();
     setMinDate();
 
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.addEventListener("click", function () {
+        gtagReportConversion();
+      });
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!validateForm()) {
@@ -272,7 +292,6 @@
         return;
       }
 
-      var submitBtn = form.querySelector('button[type="submit"]');
       var statusEl = document.getElementById("book-status");
       if (submitBtn) {
         submitBtn.disabled = true;
