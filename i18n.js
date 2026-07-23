@@ -31,37 +31,9 @@
         "Vi ska ta er från A till B med tydlig kommunikation, punktliga tider och respekt för varje resenär – i stan och närområdet.",
       about_contact_title: "Så når ni oss",
       about_contact_text:
-        'Skicka en bokningsförfrågan via formuläret eller <a href="tel:+46760207444">ring oss</a>. Funderar du på att köra eller jobba runt trafikledning? Läs mer under <a href="karriar.html">Karriär</a>.',
+        'Skicka en bokningsförfrågan via formuläret eller <a href="tel:+4642200777">ring oss</a>. Behöver du åka? Använd <a href="index.html#boka">bokningsformuläret</a>.',
       contact_dialog_lead:
         "Ring oss, boka taxi, skriv på WhatsApp eller skicka e-post – välj hur du vill nå oss.",
-      careers_title: "Karriär",
-      careers_lead:
-        "Vi söker ibland nya kollegor – både förare med rätt behörighet och vissa roller runt dispatch. Här är en kort bild av hur det kan vara att jobba hos oss (ersätt med era faktiska krav och process).",
-      careers_li1:
-        "Taxiyrket: flexibla pass, kollegor som hjälper varandra och möte med människor varje dag.",
-      careers_li2:
-        "Vi värdesätter punktlighet, säkerhet och ett lugnt bemötande – oavsett om du kör eller jobbar i luren.",
-      careers_li3:
-        "Intresseanmälan sker via formuläret på den här sidan eller per telefon – formellt rekryteringsflöde lägger ni till vid behov.",
-      careers_note:
-        "Vi diskriminerar inte. Krav på taxiförarlegitimation och trafiktillstånd följer svensk lag – uppdatera texten med ert läge.",
-      careers_btn_mail: "Maila intresse",
-      careers_btn_phone: "Ring oss",
-      careers_img_alt: "Taxi i stadsmiljö – symbol för kollegialt arbete på väg.",
-      career_doc_title: "Karriär – jobb som taxiförare & intresseanmälan | Stad Taxi",
-      career_meta_description:
-        "Jobba hos Stad Taxi? Vi söker ibland taxiförare och medarbetare vid dispatch. Skicka intresseanmälan via formuläret eller ring oss.",
-      career_back: "Till startsidan",
-      career_form_title: "Intresseanmälan",
-      career_form_name: "Namn",
-      career_form_email: "E-post",
-      career_form_phone: "Telefon",
-      career_form_message: "Meddelande",
-      career_form_hint:
-        "När du skickar öppnas din e-postapp med en förifylld adress – komplettera gärna i mailet. Vid skarp drift kan formuläret kopplas till ert rekryteringssystem.",
-      career_form_submit: "Skicka via e-post",
-      career_err_required: "Fyll i alla obligatoriska fält.",
-      career_err_email: "Ange en giltig e-postadress.",
       ring: "Ring",
       header_call: "Ring",
       menu: "Meny",
@@ -272,9 +244,9 @@
       chat_reply_prices:
         'Du hittar exempelpriser under <a href="index.html#priser">Prislista</a>. Vid osäkerhet – fråga i samband med bokning.',
       chat_reply_call:
-        'Ring <a href="tel:+46760207444">076-020 74 44</a> dygnet runt för snabbast hjälp.',
+        'Ring <a href="tel:+4642200777">042-200 777</a> dygnet runt för snabbast hjälp.',
       chat_reply_whatsapp:
-        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/46760207444?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
+        'Använd den gröna WhatsApp-knappen här på sidan, eller <a href="https://wa.me/4642200777?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">öppna WhatsApp direkt</a>.',
       chat_placeholder: "Skriv här (utkast)…",
       chat_send: "Skicka",
       chat_thanks:
@@ -321,37 +293,9 @@
         "Vi skal køre jer fra A til B med tydelig kommunikation, punktlighed og respekt for hver passager – i byen og nærområdet.",
       about_contact_title: "Sådan kontakter I os",
       about_contact_text:
-        'Send en bookingforespørgsel via formularen eller <a href="tel:+46760207444">ring til os</a>. Overvejer du at køre eller arbejde omkring dispatch? Læs mere under <a href="karriar.html">Karriere</a>.',
+        'Send en bookingforespørgsel via formularen eller <a href="tel:+4642200777">ring til os</a>. Skal du bruge en taxa? Brug <a href="index.html#boka">bookingsformularen</a>.',
       contact_dialog_lead:
         "Ring til os, book taxi, skriv på WhatsApp eller send e-mail – vælg hvordan du vil kontakte os.",
-      careers_title: "Karriere",
-      careers_lead:
-        "Vi leder af og til efter nye kolleger – både chauffører med de rigtige papirer og visse roller omkring dispatch. Her er et kort indtryk (udskift med jeres faktiske krav og proces).",
-      careers_li1:
-        "Taxiarbejde: fleksible vagter, kollegaer der hjælper hinanden og mødet med mennesker hver dag.",
-      careers_li2:
-        "Vi værdsætter punktlighed, sikkerhed og en rolig tone – uanset om du kører eller sidder i telefonen.",
-      careers_li3:
-        "I dette udkast viser du interesse via formularet på denne side eller telefon – formelt rekrutteringsflow tilføjer I efter behov.",
-      careers_note:
-        "Vi diskriminerer ikke. Krav til kørekort, legitimation og tilladelser følger gældende regler – opdater teksten til jeres situation.",
-      careers_btn_mail: "Send interesse",
-      careers_btn_phone: "Ring os",
-      careers_img_alt: "Taxi i bymiljø – illustrerer arbejde på vejen.",
-      career_doc_title: "Karriere – job som chauffør & interessehenvendelse | Stad Taxi",
-      career_meta_description:
-        "Job hos Stad Taxi? Vi søger af og til chauffører og medarbejdere omkring dispatch. Send en interessehenvendelse via formularen eller ring.",
-      career_back: "Til forsiden",
-      career_form_title: "Interessehenvendelse",
-      career_form_name: "Navn",
-      career_form_email: "E-mail",
-      career_form_phone: "Telefon",
-      career_form_message: "Besked",
-      career_form_hint:
-        "Når du sender, åbnes din mail med forudfyldt adresse – tilføj gerne mere i mailen. Senere kan formularen kobles til jeres rekrutteringssystem.",
-      career_form_submit: "Send via e-mail",
-      career_err_required: "Udfyld alle obligatoriske felter.",
-      career_err_email: "Angiv en gyldig e-mailadresse.",
       ring: "Ring",
       menu: "Menu",
       lang_aria: "Sprog",
@@ -365,7 +309,7 @@
       hero_lead:
         "Ring 042-200 777 – taxi i Helsingborg og Skåne. Fast pris til Kastrup, Sturup og Malmø. Døgnet rundt.",
       hero_contact_aria: "Hurtig kontakt",
-      hero_call: "Ring 076-020 74 44",
+      hero_call: "Ring 042-200 777",
       hero_write: "Send forespørgsel",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chat",
@@ -537,9 +481,9 @@
       chat_reply_prices:
         'Se eksempelpriser under <a href="index.html#priser">Prisliste</a>. Ved tvivl – spørg når du booker.',
       chat_reply_call:
-        'Ring <a href="tel:+46760207444">076-020 74 44</a> døgnet rundt for hurtigst hjælp.',
+        'Ring <a href="tel:+4642200777">042-200 777</a> døgnet rundt for hurtigst hjælp.',
       chat_reply_whatsapp:
-        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/46760207444?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
+        'Brug den grønne WhatsApp-knap på siden, eller <a href="https://wa.me/4642200777?text=Hej%20Stad%20Taxi" rel="noopener noreferrer">åbn WhatsApp</a>.',
       chat_placeholder: "Skriv her (udkast)…",
       chat_send: "Send",
       chat_thanks:
@@ -586,37 +530,9 @@
         "We get you from A to B with clear communication, punctual timing, and respect for every passenger – in town and nearby.",
       about_contact_title: "How to reach us",
       about_contact_text:
-        'Send a booking request through the form or <a href="tel:+46760207444">call us</a>. Thinking about driving or working around dispatch? Read more on <a href="karriar.html">Careers</a>.',
+        'Send a booking request through the form or <a href="tel:+4642200777">call us</a>. Need a ride? Use the <a href="index.html#boka">booking form</a>.',
       contact_dialog_lead:
         "Call us, book a taxi, message on WhatsApp, or email – choose how you want to reach us.",
-      careers_title: "Careers",
-      careers_lead:
-        "We sometimes look for new colleagues – licensed drivers and certain dispatch-related roles. Here’s a short snapshot (replace with your real requirements and hiring process).",
-      careers_li1:
-        "Taxi work: flexible shifts, colleagues who help each other, and meeting people every day.",
-      careers_li2:
-        "We value punctuality, safety, and a calm tone – whether you drive or work the phones.",
-      careers_li3:
-        "In this draft you can apply using the form on this page or by phone – add a formal recruitment flow when you’re ready.",
-      careers_note:
-        "We do not discriminate. Driver licensing and permit rules follow Swedish law – update this text for your situation.",
-      careers_btn_mail: "Email your interest",
-      careers_btn_phone: "Call us",
-      careers_img_alt: "Taxi in an urban setting – work on the road.",
-      career_doc_title: "Careers – taxi driver jobs & expression of interest | Stad Taxi",
-      career_meta_description:
-        "Work with Stad Taxi? We sometimes hire taxi drivers and dispatch-related roles. Send an expression of interest via the form or call us.",
-      career_back: "Back to home",
-      career_form_title: "Expression of interest",
-      career_form_name: "Name",
-      career_form_email: "Email",
-      career_form_phone: "Phone",
-      career_form_message: "Message",
-      career_form_hint:
-        "When you send, your email app opens with a pre-filled message – add any details there. Later you can connect this form to your ATS.",
-      career_form_submit: "Send via email",
-      career_err_required: "Please fill in all required fields.",
-      career_err_email: "Enter a valid email address.",
       ring: "Call",
       menu: "Menu",
       lang_aria: "Language",
@@ -630,7 +546,7 @@
       hero_lead:
         "Call 042-200 777 – taxi in Helsingborg and Skåne. Fixed prices to Kastrup, Sturup and Malmö. Around the clock.",
       hero_contact_aria: "Quick contact",
-      hero_call: "Call 076-020 74 44",
+      hero_call: "Call 042-200 777",
       hero_write: "Book online",
       hero_whatsapp: "WhatsApp",
       hero_chat: "Chat",
@@ -802,9 +718,9 @@
       chat_reply_prices:
         'Example prices are under <a href="index.html#priser">Prices</a>. If unsure, ask when you book.',
       chat_reply_call:
-        'Call <a href="tel:+46760207444">076-020 74 44</a> anytime for the fastest help.',
+        'Call <a href="tel:+4642200777">042-200 777</a> anytime for the fastest help.',
       chat_reply_whatsapp:
-        'Use the green WhatsApp button on this page, or <a href="https://wa.me/46760207444?text=Hi%20Stad%20Taxi" rel="noopener noreferrer">open WhatsApp</a>.',
+        'Use the green WhatsApp button on this page, or <a href="https://wa.me/4642200777?text=Hi%20Stad%20Taxi" rel="noopener noreferrer">open WhatsApp</a>.',
       chat_placeholder: "Type here (draft)…",
       chat_send: "Send",
       chat_thanks:
@@ -845,14 +761,13 @@
   }
 
   function applyDom() {
-    var careerPage = document.documentElement.getAttribute("data-page") === "career";
     document.documentElement.lang = lang === "da" ? "da" : lang === "en" ? "en" : "sv";
-    document.title = careerPage ? t("career_doc_title") : t("doc_title");
+    document.title = t("doc_title");
     var md = document.getElementById("meta-description");
-    if (md) md.setAttribute("content", careerPage ? t("career_meta_description") : t("meta_description"));
+    if (md) md.setAttribute("content", t("meta_description"));
 
-    var socialTitle = careerPage ? t("career_doc_title") : t("doc_title");
-    var socialDesc = careerPage ? t("career_meta_description") : t("meta_description");
+    var socialTitle = t("doc_title");
+    var socialDesc = t("meta_description");
     var ogLocale = lang === "da" ? "da_DK" : lang === "en" ? "en_US" : "sv_SE";
     function setMetaQuery(sel, content) {
       var el = document.querySelector(sel);

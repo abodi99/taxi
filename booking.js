@@ -227,9 +227,13 @@
     return gtagReportConversion(bookingConversionSendTo(), url);
   };
 
+  function newCallTransactionId() {
+    return "call-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
+  }
+
   /** Ring-knapp – klick på tel-länk */
   window.gtag_report_call_conversion = function (url) {
-    return gtagReportConversion(callConversionSendTo(), url);
+    return gtagReportConversion(callConversionSendTo(), url, newCallTransactionId());
   };
 
   /**
@@ -249,7 +253,7 @@
         e.preventDefault();
         if (e.stopImmediatePropagation) e.stopImmediatePropagation();
         else e.stopPropagation();
-        gtagReportConversion(callConversionSendTo(), href);
+        gtagReportConversion(callConversionSendTo(), href, newCallTransactionId());
       },
       true
     );
