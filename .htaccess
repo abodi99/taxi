@@ -1,0 +1,6 @@
+# Canonical host: apex (matches <link rel="canonical">)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.stadtaxi\.se$ [NC]
+  RewriteRule ^ https://stadtaxi.se%{REQUEST_URI} [R=301,L]
+</IfModule>
