@@ -6,13 +6,13 @@
     <meta
       id="meta-description"
       name="description"
-      content="Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt."
+      content="Ring 042-200 777 – Stad Taxi Helsingborg. Fast pris till Kastrup, Sturup, Malmö, Lund &amp; Ängelholm. Boka online eller ring."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#004899" />
     <meta name="geo.region" content="SE-M" />
     <meta name="geo.placename" content="Helsingborg" />
-    <title>Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser</title>
+    <title>Stad Taxi Helsingborg – Kastrup, Malmö &amp; flygplatser</title>
     <link rel="canonical" href="https://stadtaxi.se/" />
     <!-- Google Consent Mode v2 – måste ligga före alla Google-taggar -->
     <script>
@@ -33,37 +33,37 @@
       gtag("set", "url_passthrough", true);
     </script>
     <!-- Höj ?v= i stylesheet/script-URL:er vid deploy om mobilen visar gammal layout (cache). -->
-    <link rel="stylesheet" href="styles.css?v=20" />
+    <link rel="stylesheet" href="styles.css?v=26" />
     <link rel="preload" as="image" href="images/hero-helsingborg-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="images/hero-helsingborg.png" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/hero-helsingborg.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" />
     <link rel="icon" href="images/logo-stadstaxi.png?v=2" type="image/png" sizes="any" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Stad Taxi" />
     <meta property="og:locale" content="sv_SE" />
     <meta property="og:url" content="https://stadtaxi.se/" />
-    <meta property="og:title" content="Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser" />
+    <meta property="og:title" content="Stad Taxi Helsingborg – Kastrup, Malmö &amp; flygplatser" />
     <meta
       property="og:description"
-      content="Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt."
+      content="Ring 042-200 777 – Stad Taxi Helsingborg. Fast pris till Kastrup, Sturup, Malmö, Lund &amp; Ängelholm. Boka online eller ring."
     />
     <meta
       property="og:image"
-      content="https://stadtaxi.se/images/hero-helsingborg.png"
+      content="https://stadtaxi.se/images/hero-helsingborg.webp"
     />
     <meta property="og:image:width" content="1672" />
     <meta property="og:image:height" content="941" />
     <meta property="og:image:alt" content="Svart taxibil i Helsingborg vid solnedgång – Stad Taxi 042-200 777." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stad Taxi Helsingborg – taxi till Kastrup, Malmö &amp; flygplatser" />
+    <meta name="twitter:title" content="Stad Taxi Helsingborg – Kastrup, Malmö &amp; flygplatser" />
     <meta
       name="twitter:description"
-      content="Ring 042-200 777 – fast pris taxi från Helsingborg till Kastrup, Sturup, Malmö, Lund och Ängelholm. Dygnet runt."
+      content="Ring 042-200 777 – fast pris från Helsingborg till Kastrup, Sturup, Malmö, Lund &amp; Ängelholm."
     />
     <meta
       name="twitter:image"
-      content="https://stadtaxi.se/images/hero-helsingborg.png"
+      content="https://stadtaxi.se/images/hero-helsingborg.webp"
     />
 
     <script type="application/ld+json">
@@ -120,11 +120,28 @@
             "taxID": "7612012745",
             "priceRange": "$$",
             "currenciesAccepted": "SEK",
-            "paymentAccepted": "Kontant, kreditkort, Swish",
+            "paymentAccepted": "Kontant, kreditkort, Swish, Klarna, Apple Pay, Google Pay",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Helsingborg",
+              "addressRegion": "Skåne",
+              "addressCountry": "SE"
+            },
             "areaServed": [
               { "@type": "City", "name": "Helsingborg" },
+              { "@type": "City", "name": "Ängelholm" },
+              { "@type": "City", "name": "Höganäs" },
+              { "@type": "City", "name": "Landskrona" },
+              { "@type": "City", "name": "Bjuv" },
+              { "@type": "City", "name": "Åstorp" },
+              { "@type": "City", "name": "Viken" },
               { "@type": "AdministrativeArea", "name": "Skåne" }
             ],
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 56.0465,
+              "longitude": 12.6945
+            },
             "serviceType": "Taxi",
             "openingHoursSpecification": [
               {
@@ -343,6 +360,7 @@
         <div class="hero__media" aria-hidden="true">
           <picture>
             <source media="(max-width: 767px)" srcset="images/hero-helsingborg-mobile.webp" type="image/webp" />
+            <source media="(min-width: 768px)" srcset="images/hero-helsingborg.webp" type="image/webp" />
             <img
               class="hero__photo"
               src="images/hero-helsingborg.png"
@@ -359,7 +377,7 @@
             <p class="hero__eyebrow" data-i18n="hero_eyebrow">Välkommen till</p>
             <h1 id="hero-title" class="hero__title" data-i18n="hero_title" data-i18n-html="true">
               <span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span>
-              <span class="hero__title-location">Taxi i Helsingborg</span>
+              <span class="hero__title-location">i Helsingborg</span>
             </h1>
             <p class="hero__lead" data-i18n="hero_lead">
               Ring 042-200 777 – taxi i Helsingborg och Skåne. Fast pris till Kastrup, Sturup och Malmö. Dygnet runt.
@@ -423,6 +441,40 @@
           <aside class="pricing-disclaimer" data-i18n="price_disclaimer">
             Priserna gäller enkel resa. Kontakta oss vid fler passagerare, väntetid eller särskilda önskemål.
           </aside>
+        </div>
+      </section>
+
+      <section class="local-seo" id="omraden" aria-labelledby="omraden-title">
+        <div class="container local-seo__inner">
+          <header class="local-seo__header">
+            <h2 id="omraden-title" class="section-title">Taxi i Helsingborg &amp; flygtaxi</h2>
+            <p class="section-intro">
+              Stad Taxi utgår från Helsingborg. Ring <a href="tel:+4642200777">042-200 777</a> för lokal körning
+              eller flygtaxi till Kastrup och Sturup.
+            </p>
+          </header>
+          <div class="local-seo__grid">
+            <article class="local-seo__card">
+              <h3 class="local-seo__card-title">Taxi Helsingborg</h3>
+              <p>
+                Vi kör i Helsingborg och närområdet: Ängelholm, Höganäs, Landskrona, Bjuv, Åstorp och Viken.
+                Snabbast är att ringa – vi svarar och hämtar dig.
+              </p>
+            </article>
+            <article class="local-seo__card">
+              <h3 class="local-seo__card-title">Flygtaxi Kastrup &amp; Sturup</h3>
+              <p>
+                Fast pris från Helsingborg till Köpenhamns flygplats (Kastrup) och Malmö Airport (Sturup).
+                Se prislistan ovan eller ring för bokning.
+              </p>
+            </article>
+            <article class="local-seo__card">
+              <h3 class="local-seo__card-title">Betalning</h3>
+              <p>
+                Ni kan betala med Swish, Klarna, kort (Visa/Mastercard), Apple Pay, Google Pay eller kontant.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -569,7 +621,7 @@
     <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="booking-dialog-title">
       <div class="booking-dialog__inner">
         <header class="booking-dialog__header">
-          <h2 id="booking-dialog-title" class="booking-dialog__title" data-i18n="book_title">Boka taxi</h2>
+          <h2 id="booking-dialog-title" class="booking-dialog__title" data-i18n="book_dialog_title">Bokningsförfrågan</h2>
           <button type="button" class="booking-dialog__close" data-booking-dialog-close data-i18n-aria-label="book_dialog_close_aria" aria-label="Stäng">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -578,15 +630,65 @@
           <div id="booking-flow">
             <form class="booking-form booking-form--dialog" id="booking-form" novalidate>
               <div class="form-row">
-                <label for="book-from"><span data-i18n="lbl_from">Från</span> <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="book-from" name="from" autocomplete="street-address" required />
-                <p class="field-error" id="book-from-error" role="alert" hidden></p>
+                <label for="book-to-dest"
+                  ><span data-i18n="lbl_to">Destination</span> <span class="req" aria-hidden="true">*</span></label
+                >
+                <select id="book-to-dest" name="to_dest">
+                  <option value="" selected disabled data-i18n="book_dest_placeholder">Välj vart du ska</option>
+                </select>
+                <p class="field-error" id="book-to-dest-error" role="alert" hidden></p>
               </div>
-              <div class="form-row">
-                <label for="book-to"><span data-i18n="lbl_to">Till</span> <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="book-to" name="to" autocomplete="off" required />
-                <p class="field-error" id="book-to-error" role="alert" hidden></p>
+
+              <div id="book-fixed-block" hidden>
+                <p class="field-hint book-fixed-hint" data-i18n="book_fixed_hint">
+                  Fastpris gäller från Helsingborg-området.
+                </p>
+                <div class="book-price-preview" id="book-price-preview" hidden role="status" aria-live="polite">
+                  <p class="book-price-preview__route" id="book-price-route"></p>
+                  <p class="book-price-preview__sum" id="book-price-sum"></p>
+                  <p class="book-price-preview__note" data-i18n="book_price_note">
+                    Priset bekräftas när vi ringer upp dig. Kö, väntetid eller tillägg kan påverka slutpris.
+                  </p>
+                </div>
+                <div class="form-row">
+                  <label for="book-from"
+                    ><span data-i18n="lbl_from">Hämtadress</span> <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="book-from"
+                    name="from"
+                    autocomplete="street-address"
+                    placeholder="Gata och nummer"
+                    data-i18n-placeholder="ph_from"
+                  />
+                  <p class="field-hint" data-i18n="book_from_hint">T.ex. Drottninggatan 12</p>
+                  <p class="field-error" id="book-from-error" role="alert" hidden></p>
+                </div>
               </div>
+
+              <div id="book-other-block" hidden>
+                <div class="form-row">
+                  <label for="book-from-other"
+                    ><span data-i18n="lbl_from_other">Från</span> <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <input type="text" id="book-from-other" name="from_other" autocomplete="street-address" placeholder="Ort / adress" data-i18n-placeholder="ph_from_other" />
+                  <p class="field-error" id="book-from-other-error" role="alert" hidden></p>
+                </div>
+                <div class="form-row">
+                  <label for="book-to"
+                    ><span data-i18n="lbl_to_other">Till</span> <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <input type="text" id="book-to" name="to" autocomplete="off" placeholder="Ort / adress" data-i18n-placeholder="ph_to_other" />
+                  <p class="field-error" id="book-to-error" role="alert" hidden></p>
+                </div>
+                <div class="book-price-preview book-price-preview--quote" id="book-price-quote" role="status">
+                  <p class="book-price-preview__label" data-i18n="book_price_quote">
+                    Vi ringer dig med pris.
+                  </p>
+                </div>
+              </div>
+
               <div class="form-row form-row--split">
                 <div>
                   <label for="book-name"><span data-i18n="lbl_name">Namn</span> <span class="req" aria-hidden="true">*</span></label>
@@ -657,7 +759,10 @@
           </div>
           <div class="booking-dialog__thanks" id="booking-thanks" hidden tabindex="-1" role="status" aria-live="polite">
             <h3 class="booking-dialog__thanks-title" data-i18n="thanks_title">Tack!</h3>
-            <p class="booking-dialog__thanks-text" data-i18n="thanks_text">Vi har tagit emot din bokning och återkommer så snart vi kan.</p>
+            <p class="booking-dialog__thanks-text" data-i18n="thanks_text">
+              Vi har tagit emot din bokningsförfrågan. Vi ringer dig snart på numret du angav – du kan också få svar via e-post.
+            </p>
+            <p class="booking-dialog__thanks-phone" id="booking-thanks-phone" hidden></p>
             <button type="button" class="btn btn--ghost" id="booking-thanks-reset" data-i18n="thanks_reset">Ny bokning</button>
             <button type="button" class="btn btn--primary" data-booking-dialog-close data-i18n="book_dialog_close_btn">Stäng</button>
           </div>
@@ -665,10 +770,10 @@
       </div>
     </dialog>
 
-    <script src="stadstaxi-config.js?v=8"></script>
-    <script src="i18n.js?v=14" defer></script>
+    <script src="stadstaxi-config.js?v=10"></script>
+    <script src="i18n.js?v=20" defer></script>
     <script src="cookies-consent.js?v=5" defer></script>
     <script src="script.js?v=4" defer></script>
-    <script src="booking.js?v=8" defer></script>
+    <script src="booking.js?v=14" defer></script>
   </body>
 </html>

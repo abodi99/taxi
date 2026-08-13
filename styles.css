@@ -1782,6 +1782,51 @@ textarea[aria-invalid="true"] {
   color: var(--color-text-muted);
 }
 
+.local-seo {
+  padding: clamp(2.5rem, 6vw, var(--section-y)) var(--space);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.local-seo__inner {
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+.local-seo__header {
+  margin-bottom: clamp(1.5rem, 3.5vw, 2rem);
+  text-align: center;
+}
+
+.local-seo__header .section-intro {
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+.local-seo__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .local-seo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.local-seo__card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.local-seo__card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
 .price-table {
   list-style: none;
   margin: 0 0 clamp(1.5rem, 3vw, 2rem);
@@ -1988,6 +2033,73 @@ textarea[aria-invalid="true"] {
 .booking-form--dialog textarea {
   width: 100%;
   font-size: 1rem;
+}
+
+.book-price-preview__route {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.book-fixed-hint {
+  margin: 0 0 0.75rem;
+}
+
+.booking-form__route-hint {
+  margin: 0 0 1rem;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--color-text);
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 10px;
+}
+
+.booking-form__route-hint strong {
+  font-weight: 700;
+}
+
+.book-price-preview {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-bg-soft);
+  text-align: left;
+}
+
+.book-price-preview__label {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.book-price-preview__sum {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.book-price-preview__note {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.book-price-preview--quote .book-price-preview__label {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.booking-dialog__thanks-phone {
+  margin: 0.75rem 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .booking-dialog__thanks {

@@ -10,9 +10,9 @@
 
   var DICT = {
     sv: {
-      doc_title: "Stad Taxi Helsingborg – taxi till Kastrup, Malmö & flygplatser",
+      doc_title: "Stad Taxi Helsingborg – Kastrup, Malmö & flygplatser",
       meta_description:
-        "Stad Taxi i Helsingborg – ring 042-200 777 dygnet runt. Fast pris taxi till Kastrup, Sturup, Malmö, Lund och Ängelholm. Boka online eller ring direkt.",
+        "Ring 042-200 777 – Stad Taxi Helsingborg. Fast pris till Kastrup, Sturup, Malmö, Lund & Ängelholm. Boka online eller ring.",
       logo_alt: "Stad Taxi – logotyp",
       skip: "Hoppa till innehåll",
       logo_aria: "Stad Taxi – till startsidan",
@@ -43,8 +43,8 @@
       lang_en: "English",
       hero_eyebrow: "Välkommen till",
       hero_title:
-        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi i Helsingborg</span>',
-      hero_location: "Taxi i Helsingborg",
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">i Helsingborg</span>',
+      hero_location: "i Helsingborg",
       hero_lead:
         "Ring 042-200 777 – taxi i Helsingborg och Skåne. Fast pris till Kastrup, Sturup och Malmö. Dygnet runt.",
       hero_call_label: "Ring eller boka online",
@@ -57,6 +57,7 @@
       hero_chat: "Chatt",
       hero_caption: "Lokal taxi – här när du behöver oss.",
       book_title: "Boka taxi",
+      book_dialog_title: "Bokningsförfrågan",
       book_cta_text: "Fyll i formuläret så återkommer vi direkt – eller ring om det är bråttom.",
       book_lead:
         'Fyll i formuläret – vi återkommer direkt. Vill du åka nu? Ring <a href="tel:+4642200777" data-contact-phone><span data-contact-phone-display>042-200 777</span></a>.',
@@ -66,8 +67,23 @@
       book_open_cta: "Boka taxi",
       book_dialog_close_aria: "Stäng bokningsfönster",
       book_dialog_close_btn: "Stäng",
-      lbl_from: "Från",
-      lbl_to: "Till",
+      book_dest_placeholder: "Välj vart du ska",
+      book_dest_other: "Annan resa (vi återkommer med pris)",
+      book_dest_group_fixed: "Fastpris från Helsingborg",
+      book_fixed_hint: "Fastpris gäller från Helsingborg-området.",
+      book_other_hint: "Vi ringer dig med pris.",
+      book_from_hint: "T.ex. Drottninggatan 12",
+      book_price_label: "Fast pris",
+      book_price_note:
+        "Priset bekräftas när vi ringer upp dig. Kö, väntetid eller tillägg kan påverka slutpris.",
+      book_price_quote: "Vi ringer dig med pris.",
+      lbl_from: "Hämtadress",
+      ph_from: "Gata och nummer",
+      lbl_from_other: "Från",
+      ph_from_other: "Ort / adress",
+      lbl_to: "Destination",
+      lbl_to_other: "Till",
+      ph_to_other: "Ort / adress",
       lbl_email: "E-post",
       ph_email: "namn@example.com",
       lbl_extras: "Övrigt",
@@ -134,7 +150,9 @@
       btn_submit: "Boka taxi",
       aside_img_alt: "Taxi på stadsgata.",
       thanks_title: "Tack!",
-      thanks_text: "Vi har tagit emot din bokning och återkommer så snart vi kan.",
+      thanks_text:
+        "Vi har tagit emot din bokningsförfrågan. Vi ringer dig snart på numret du angav – du kan också få svar via e-post.",
+      thanks_phone_prefix: "Vi ringer:",
       thanks_reset: "Ny bokning",
       features_title: "Varför välja Stad Taxi?",
       feature_safety_title: "Säkerhet framför allt",
@@ -272,9 +290,9 @@
       cookie_accept: "Godkänn alla"
     },
     da: {
-      doc_title: "Stad Taxi Helsingborg – taxi til Kastrup, Malmö og lufthavne",
+      doc_title: "Stad Taxi Helsingborg – Kastrup, Malmö & lufthavne",
       meta_description:
-        "Stad Taxi i Helsingborg – ring 042-200 777 døgnet rundt. Fast pris taxi til Kastrup, Sturup, Malmö, Lund og Ängelholm. Book online eller ring direkte.",
+        "Ring 042-200 777 – Stad Taxi Helsingborg. Fast pris til Kastrup, Sturup, Malmö, Lund & Ängelholm. Book online eller ring.",
       logo_alt: "Stad Taxi – logo",
       skip: "Spring til indhold",
       logo_aria: "Stad Taxi – til forsiden",
@@ -304,8 +322,8 @@
       lang_en: "English",
       hero_eyebrow: "Velkommen til",
       hero_title:
-        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi i Helsingborg</span>',
-      hero_location: "Taxi i Helsingborg",
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">i Helsingborg</span>',
+      hero_location: "i Helsingborg",
       hero_lead:
         "Ring 042-200 777 – taxi i Helsingborg og Skåne. Fast pris til Kastrup, Sturup og Malmø. Døgnet rundt.",
       hero_contact_aria: "Hurtig kontakt",
@@ -315,6 +333,7 @@
       hero_chat: "Chat",
       hero_caption: "Lokal taxi – klar når du har brug for os.",
       book_title: "Book taxi",
+      book_dialog_title: "Bookingforespørgsel",
       book_cta_text: "Udfyld formularen – vi vender tilbage hurtigt. Ring hvis det haster.",
       book_lead:
         "Du behøver ikke have alle svar klar. Udfyld det, du ved – <strong>vi vender tilbage ud fra dine kontaktoplysninger</strong>, når forespørgslen kan modtages.",
@@ -327,8 +346,23 @@
       book_open_cta: "Book taxi",
       book_dialog_close_aria: "Luk booking",
       book_dialog_close_btn: "Luk",
-      lbl_from: "Fra",
-      lbl_to: "Til",
+      book_dest_placeholder: "Vælg hvor du skal hen",
+      book_dest_other: "Anden tur (vi vender tilbage med pris)",
+      book_dest_group_fixed: "Fastpris fra Helsingborg",
+      book_fixed_hint: "Fastpris gælder fra Helsingborg-området.",
+      book_other_hint: "Vi ringer dig med pris.",
+      book_from_hint: "Fx Drottninggatan 12",
+      book_price_label: "Fast pris",
+      book_price_note:
+        "Prisen bekræftes, når vi ringer dig op. Kø, ventetid eller tillæg kan påvirke slutpris.",
+      book_price_quote: "Vi ringer dig med pris.",
+      lbl_from: "Afhentningsadresse",
+      ph_from: "Gade og nummer",
+      lbl_from_other: "Fra",
+      ph_from_other: "By / adresse",
+      lbl_to: "Destination",
+      lbl_to_other: "Til",
+      ph_to_other: "By / adresse",
       lbl_email: "E-mail",
       ph_email: "navn@example.com",
       lbl_extras: "Øvrigt",
@@ -392,9 +426,10 @@
         '<span class="req" aria-hidden="true">*</span> obligatoriske felter er udfyldt i trinene ovenfor. Udkast: ingen data sendes til server – <strong>booking afsluttes efter den rutine, I sætter op</strong>, når flowet går i drift.',
       btn_submit: "Book taxi",
       aside_img_alt: "Taxa på bygade – vi hjælper dig videre.",
-      thanks_title: "Tak – din del er gjort",
+      thanks_title: "Tak!",
       thanks_text:
-        "I dette udkast gemmes intet automatisk. <strong>Vi hører fra dig</strong>, så snart vi kan. Vil du rette noget, vælger du <strong>Ny forespørgsel</strong> nedenfor.",
+        "Vi har modtaget din bookingforespørgsel. Vi ringer dig snart på nummeret, du angav – du kan også få svar på e-mail.",
+      thanks_phone_prefix: "Vi ringer:",
       thanks_reset: "Ny forespørgsel",
       price_title: "Prisliste",
       price_intro:
@@ -509,9 +544,9 @@
       cookie_accept: "Acceptér alle"
     },
     en: {
-      doc_title: "Stad Taxi Helsingborg – taxi to Kastrup, Malmö & airports",
+      doc_title: "Stad Taxi Helsingborg – Kastrup, Malmö & airports",
       meta_description:
-        "Stad Taxi in Helsingborg – call 042-200 777 around the clock. Fixed-price taxi to Kastrup, Sturup, Malmö, Lund and Ängelholm. Book online or call directly.",
+        "Call 042-200 777 – Stad Taxi Helsingborg. Fixed prices to Kastrup, Sturup, Malmö, Lund & Ängelholm. Book online or call.",
       logo_alt: "Stad Taxi – logo",
       skip: "Skip to content",
       logo_aria: "Stad Taxi – home",
@@ -541,8 +576,8 @@
       lang_en: "English",
       hero_eyebrow: "Welcome to",
       hero_title:
-        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">Taxi in Helsingborg</span>',
-      hero_location: "Taxi in Helsingborg",
+        '<span class="hero__title-brand"><span class="hero__title-accent">Stad</span> <span class="hero__title-accent">Taxi</span></span><span class="hero__title-location">in Helsingborg</span>',
+      hero_location: "in Helsingborg",
       hero_lead:
         "Call 042-200 777 – taxi in Helsingborg and Skåne. Fixed prices to Kastrup, Sturup and Malmö. Around the clock.",
       hero_contact_aria: "Quick contact",
@@ -552,6 +587,7 @@
       hero_chat: "Chat",
       hero_caption: "Local taxi – here when you need us.",
       book_title: "Book a taxi",
+      book_dialog_title: "Booking request",
       book_cta_text: "Fill in the form and we'll get back to you quickly – or call if it's urgent.",
       book_lead:
         "You don’t need every answer ready. Fill in what you know – <strong>we’ll follow up using your contact details</strong> when the request can be received.",
@@ -564,8 +600,23 @@
       book_open_cta: "Book taxi",
       book_dialog_close_aria: "Close booking",
       book_dialog_close_btn: "Close",
-      lbl_from: "From",
-      lbl_to: "To",
+      book_dest_placeholder: "Choose where you’re going",
+      book_dest_other: "Other trip (we’ll call with a quote)",
+      book_dest_group_fixed: "Fixed price from Helsingborg",
+      book_fixed_hint: "Fixed prices apply from the Helsingborg area.",
+      book_other_hint: "We’ll call you with a price.",
+      book_from_hint: "E.g. Drottninggatan 12",
+      book_price_label: "Fixed price",
+      book_price_note:
+        "Price is confirmed when we call you. Queues, waiting time or extras may affect the final price.",
+      book_price_quote: "We’ll call you with a price.",
+      lbl_from: "Pickup address",
+      ph_from: "Street and number",
+      lbl_from_other: "From",
+      ph_from_other: "City / address",
+      lbl_to: "Destination",
+      lbl_to_other: "To",
+      ph_to_other: "City / address",
       lbl_email: "Email",
       ph_email: "name@example.com",
       lbl_extras: "Notes",
@@ -629,9 +680,10 @@
         '<span class="req" aria-hidden="true">*</span> required fields were completed in the steps above. Draft: no data is sent to a server yet – <strong>how the booking is finalised follows the process you set up</strong> when you go live.',
       btn_submit: "Book taxi",
       aside_img_alt: "Taxi on a city street – we’ll help you get sorted.",
-      thanks_title: "Thanks – you’re done on your side",
+      thanks_title: "Thanks!",
       thanks_text:
-        "Nothing is saved automatically in this draft. <strong>We’ll be in touch</strong> as soon as we can. Need to change something? Choose <strong>New request</strong> below.",
+        "We’ve received your booking request. We’ll call you soon on the number you entered – you may also get a reply by email.",
+      thanks_phone_prefix: "We’ll call:",
       thanks_reset: "New request",
       price_title: "Price list",
       price_intro:

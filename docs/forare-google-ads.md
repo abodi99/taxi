@@ -1,39 +1,71 @@
-# Google-annonser – instruktion för dig som kör taxi
+# Google-annonser – för chauffören (Stad Taxi)
 
-Du behöver bara **sätta på** eller **stänga av** annonserna. Rör inget annat.
+Du behöver främst: **svara i telefon**, och ibland **Pause** om du går hem tidigt.
 
-## Bokmärke (spara i telefonen)
+Rör **inte** sökord, bud eller “rekommendationer”.
 
-1. Öppna: [ads.google.com](https://ads.google.com)
-2. Logga in med kontot för **Stad Taxi**
-3. Gå till **Kampanjer**
-4. Lägg till sidan som bokmärke / genväg på hemskärmen
+---
 
-## Sätt PÅ annonserna
+## Bokmärke
 
-1. Öppna **Kampanjer**
-2. Hitta raden: **TAXI-ANNONSER Helsingborg (Pausa/Starta här)**
-3. Klicka så den blir **Aktiverad** (play / grön)
+1. Öppna [ads.google.com](https://ads.google.com)  
+2. Konto **Stad Taxi**  
+3. **Kampanjer** → spara genväg  
 
-När den är på syns annonser när folk söker taxi i Helsingborg.  
-Ungefärlig kostnad: upp till **ca 100 kr per dag**.
+Kampanj: **TAXI-ANNONSER Helsingborg (Pausa/Starta här)**
 
-## Stäng AV annonserna
+---
 
-Gör så här vid semester, när bilen står, eller om ni vill spara pengar:
+## Automatiskt schema (viktigt)
 
-1. Öppna **Kampanjer**
-2. Hitta **TAXI-ANNONSER Helsingborg (Pausa/Starta här)**
-3. Klicka **Pausa** (paus-ikon)
+Annonser kan visas **16:00–06:00** varje dag.  
+**06:00–16:00** syns de inte (sparar pengar när ni ofta sover).
 
-När den är pausad kostar det **0 kr**.
+Kampanjen kan stå **Aktiverad** – schemat styr tiden.
 
-## Gör inte så här
+---
 
-- Tryck inte på sökord, annonser, bud eller “rekommendationer”
-- Skapa inte nya kampanjer
-- Ändra inte budget utan att prata med den som satte upp kontot
+## När du måste trycka Pause själv
+
+Om du går hem **före 06** (t.ex. 03):
+1. Öppna kampanjen  
+2. Tryck **Pausa**  
+
+Annars kan det kosta 03–06 medan du sover.
+
+Ledig natt → **Pausa** hela tiden.
+
+---
+
+## Budget
+
+Dagsbudget nu: ca **500 kr/dag** (under schemafönstret).
+
+Vill synas mer en stark natt: höj tillfälligt till **600–800**, sänk tillbaka efter.  
+Lämna inte **2000+** stående.
+
+---
+
+## Vad ni betalar för
+
+- Synas = **gratis**  
+- Någon **ringer** från annonsen = ni betalar  
+- Målet är **samtal → körning**, inte många klick på hemsidan  
+
+Annonserna är **ring-fokuserade** (Call-knapp). Hemsidan finns kvar för dem som hittar er på annat sätt.
+
+Betalning som syns i annons: **Swish, Klarna, kort, kontant**.
+
+---
+
+## Gör inte
+
+- Tryck inte blå rekommendationer  
+- Skapa inte nya kampanjer  
+- Ändra inte sökord/texter  
+
+---
 
 ## Om något ser konstigt ut
 
-Kontakta den som satte upp annonserna innan du klickar vidare.
+Kontakta den som satte upp kontot.

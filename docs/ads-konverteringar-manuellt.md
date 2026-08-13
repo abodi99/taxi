@@ -1,28 +1,24 @@
-# Google Ads-konverteringar – status
+# Google Ads – samtalsmål (manuellt om behövs)
 
-**Status (verifierat):** målen är redan rätt i Ads. Gör **inte** om stegen nedan om inget har ändrats i kontot.
+## Nuläge (API)
 
-## Gällande mål
-
-| Konvertering | Typ | Status |
+| Konvertering | Önskat | Status |
 |---|---|---|
-| Ringklick - 042-200 777 | Webb | **Primär** |
-| Bokningsformulär skickat | Webb | **Primär** |
-| Calls from ads | Samtal från annons | **Sekundär** |
-| Direktsamtal från Annons | Samtal från annons | **Sekundär** |
+| Ringklick - 042-200 777 | Primär | Primär |
+| Direktsamtal från Annons | Primär | Primär |
+| Calls from ads | Sekundär | Sekundär |
+| Bokningsformulär skickat | Sekundär | **Kan fortfarande vara Primär** (API immutable) |
 
-Konto: **Stad Taxi** (`756-696-6300`).
+## Om bokningsformulär fortfarande är Primär
 
-Budgivningen styrs på de två primära webbmålen (ringklick + bokning). AD_CALL-åtgärderna är sekundära så de inte dubbelräknas i “Maximera konverteringar”.
+Gör i Ads-UI:
+1. **Mål → Konverteringar**
+2. Öppna **Bokningsformulär skickat**
+3. Sätt till **Sekundär** / ta bort från “Inkludera i Konverteringar”
 
-## Valfritt (mindre brus)
+Då styr **Maximera konverteringar** på samtal, inte formulär.
 
-Om **Calls from ads** och **Direktsamtal från Annons** mäter samma sak: pausa eller arkivera en av dem i Ads så rapporterna blir enklare.
+## Call-only vs nu
 
-## Om någon återställer till primär (nödläge)
-
-Google Ads API kan inte sätta `primary_for_goal` på AD_CALL – det måste göras i UI:
-
-1. **Mål** → **Konverteringar**
-2. Öppna respektive AD_CALL-åtgärd → sätt till **Sekundär**
-3. Kontrollera att Ringklick + Bokningsformulär fortfarande är **Primär**
+Gamla call-only-annonser kan inte skapas (Google avvecklar).  
+Vi kör **RSA + call asset** + pausade webb-sitelinks = samtalstung setup.

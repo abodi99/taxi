@@ -7,10 +7,55 @@
   var flow = document.getElementById("booking-flow");
   var immediate = document.getElementById("book-immediate");
   var datetimeFields = document.getElementById("book-datetime-fields");
-  var errorIds = ["book-from", "book-to", "book-name", "book-phone", "book-email", "book-date", "book-time"];
+  var destSelect = document.getElementById("book-to-dest");
+  var fixedBlock = document.getElementById("book-fixed-block");
+  var otherBlock = document.getElementById("book-other-block");
+  var pricePreview = document.getElementById("book-price-preview");
+  var priceSum = document.getElementById("book-price-sum");
+  var priceRoute = document.getElementById("book-price-route");
+  var errorIds = [
+    "book-from",
+    "book-from-other",
+    "book-to-dest",
+    "book-to",
+    "book-name",
+    "book-phone",
+    "book-email",
+    "book-date",
+    "book-time"
+  ];
 
   function tr(key) {
     return window.stadstaxiLang ? window.stadstaxiLang.t(key) : key;
+  }
+
+  function routes() {
+    var cfg = window.STADSTAXI || {};
+    return Array.isArray(cfg.fixedRoutes) ? cfg.fixedRoutes : [];
+  }
+
+  function findRoute(id) {
+    var list = routes();
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === id) return list[i];
+    }
+    return null;
+  }
+
+  function formatPriceSek(n) {
+    try {
+      return new Intl.NumberFormat("sv-SE").format(n) + " kr";
+    } catch (e) {
+      return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " kr";
+    }
+  }
+
+  function phoneToTelHref(raw) {
+    var d = digitsOnly(raw);
+    if (!d) return "";
+    if (d.indexOf("46") === 0 && d.length >= 10) return "tel:+" + d;
+    if (d.indexOf("0") === 0) return "tel:+46" + d.slice(1);
+    return "tel:+" + d;
   }
 
   function applySiteConfig() {
@@ -42,6 +87,88 @@
         a.href = wUrl;
       });
     }
+    fillDestinationOptions();
+    updateDestinationUI();
+  }
+
+  function isOtherTrip() {
+    return !!(destSelect && destSelect.value === "other");
+  }
+
+  function isFixedTrip() {
+    if (!destSelect || !destSelect.value || isOtherTrip()) return false;
+    var route = findRoute(destSelect.value);
+    return !!(route && route.priceSek != null);
+  }
+
+  function fillDestinationOptions() {
+    if (!destSelect) return;
+    var current = destSelect.value;
+    destSelect.innerHTML = "";
+
+    var ph = document.createElement("option");
+    ph.value = "";
+    ph.disabled = true;
+    ph.selected = !current;
+    ph.textContent = tr("book_dest_placeholder");
+    destSelect.appendChild(ph);
+
+    routes().forEach(function (route) {
+      if (route.priceSek == null) return;
+      var opt = document.createElement("option");
+      opt.value = route.id;
+      opt.textContent = route.label + " – " + formatPriceSek(route.priceSek);
+      destSelect.appendChild(opt);
+    });
+
+    var other = document.createElement("option");
+    other.value = "other";
+    other.textContent = tr("book_dest_other");
+    destSelect.appendChild(other);
+
+    if (current === "other" || findRoute(current)) {
+      destSelect.value = current;
+      ph.selected = false;
+    }
+  }
+
+  function updateDestinationUI() {
+    var fixed = isFixedTrip();
+    var other = isOtherTrip();
+    var route = fixed && destSelect ? findRoute(destSelect.value) : null;
+
+    if (fixedBlock) fixedBlock.hidden = !fixed;
+    if (otherBlock) otherBlock.hidden = !other;
+
+    if (pricePreview) pricePreview.hidden = true;
+    if (!fixed || !route) return;
+
+    if (priceRoute) {
+      priceRoute.textContent = "Helsingborg → " + route.label;
+    }
+    if (priceSum) priceSum.textContent = formatPriceSek(route.priceSek);
+    if (pricePreview) pricePreview.hidden = false;
+  }
+
+  function selectedDestinationLabel() {
+    if (isOtherTrip()) {
+      return fieldValue("book-from-other") + " → " + fieldValue("book-to");
+    }
+    var route = destSelect ? findRoute(destSelect.value) : null;
+    if (!route) return "";
+    return "Helsingborg → " + route.label;
+  }
+
+  function selectedPriceLabel() {
+    if (!isFixedTrip()) return "Offert – ring kund";
+    var route = destSelect ? findRoute(destSelect.value) : null;
+    if (!route || route.priceSek == null) return "–";
+    return formatPriceSek(route.priceSek) + " (fast pris)";
+  }
+
+  function selectedFromLabel() {
+    if (isFixedTrip()) return fieldValue("book-from");
+    return fieldValue("book-from-other");
   }
 
   function setMinDate() {
@@ -109,6 +236,7 @@
     clearErrors();
     var ok = true;
     var from = document.getElementById("book-from");
+    var fromOther = document.getElementById("book-from-other");
     var to = document.getElementById("book-to");
     var name = document.getElementById("book-name");
     var phone = document.getElementById("book-phone");
@@ -119,12 +247,25 @@
 
     if (honey && honey.value.trim()) return false;
 
-    if (!from || !from.value.trim()) {
-      showError("book-from", tr("err_pickup"));
+    if (!destSelect || !destSelect.value) {
+      showError("book-to-dest", tr("err_destination"));
       ok = false;
-    }
-    if (!to || !to.value.trim()) {
-      showError("book-to", tr("err_destination"));
+    } else if (isFixedTrip()) {
+      if (!from || !from.value.trim()) {
+        showError("book-from", tr("err_pickup"));
+        ok = false;
+      }
+    } else if (isOtherTrip()) {
+      if (!fromOther || !fromOther.value.trim()) {
+        showError("book-from-other", tr("err_pickup"));
+        ok = false;
+      }
+      if (!to || !to.value.trim()) {
+        showError("book-to", tr("err_destination"));
+        ok = false;
+      }
+    } else {
+      showError("book-to-dest", tr("err_destination"));
       ok = false;
     }
     if (!name || !name.value.trim()) {
@@ -165,7 +306,7 @@
 
   function sendBooking(payload) {
     var cfg = window.STADSTAXI || {};
-    var email = cfg.contactEmail || "Alyoussefadel517@gmail.com";
+    var email = cfg.contactEmail || "info@stadtaxi.se";
     return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(email), {
       method: "POST",
       headers: {
@@ -184,7 +325,6 @@
   function gtagReportConversion(sendTo, url, transactionId) {
     var lockKey = String(sendTo || "default");
     var now = Date.now();
-    /* Hindra dubbel/trippel-firing vid samma klick (bubbling, flera lyssnare, Tag Assistant) */
     if (conversionLocks[lockKey] && now - conversionLocks[lockKey] < 2500) {
       if (url) window.location = url;
       return false;
@@ -202,7 +342,6 @@
         send_to: sendTo,
         event_callback: go
       };
-      /* Unikt id hjälper Google Ads deduplicera om samma event når Ads flera vägar */
       if (transactionId) payload.transaction_id = String(transactionId);
       window.gtag("event", "conversion", payload);
       if (url) window.setTimeout(go, 1500);
@@ -222,7 +361,6 @@
     return String(cfg.callConversionSendTo || "AW-18304182555/IW6ACNmEntQcEJvSjphE").trim();
   }
 
-  /** Bokningsformulär – klick på skicka */
   window.gtag_report_conversion = function (url) {
     return gtagReportConversion(bookingConversionSendTo(), url);
   };
@@ -231,15 +369,10 @@
     return "call-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
   }
 
-  /** Ring-knapp – klick på tel-länk */
   window.gtag_report_call_conversion = function (url) {
     return gtagReportConversion(callConversionSendTo(), url, newCallTransactionId());
   };
 
-  /**
-   * En enda delegerad lyssnare (capture) för alla tel:-länkar.
-   * Undviker 3× firing från bubblande klick / flera knappar / upprepade wire-anrop.
-   */
   function wireCallConversionLinks() {
     if (window.__stadstaxiCallConversionWired) return;
     window.__stadstaxiCallConversionWired = true;
@@ -259,8 +392,18 @@
     );
   }
 
-  function showThanksView() {
+  function showThanksView(phoneDisplay) {
     if (flow) flow.hidden = true;
+    var phoneEl = document.getElementById("booking-thanks-phone");
+    if (phoneEl) {
+      if (phoneDisplay) {
+        phoneEl.hidden = false;
+        phoneEl.textContent = tr("thanks_phone_prefix") + " " + phoneDisplay;
+      } else {
+        phoneEl.hidden = true;
+        phoneEl.textContent = "";
+      }
+    }
     if (thanks) {
       thanks.hidden = false;
       thanks.focus({ preventScroll: true });
@@ -273,8 +416,14 @@
     form.hidden = false;
     if (flow) flow.hidden = false;
     if (thanks) thanks.hidden = true;
+    var phoneEl = document.getElementById("booking-thanks-phone");
+    if (phoneEl) {
+      phoneEl.hidden = true;
+      phoneEl.textContent = "";
+    }
     clearErrors();
     toggleDatetimeFields();
+    updateDestinationUI();
     var statusEl = document.getElementById("book-status");
     if (statusEl) {
       statusEl.hidden = true;
@@ -294,7 +443,7 @@
     if (!bookingDialog.open) bookingDialog.showModal();
     window.requestAnimationFrame(function () {
       if (thanks && !thanks.hidden) return;
-      var first = document.getElementById("book-from");
+      var first = document.getElementById("book-to-dest");
       if (first) first.focus();
     });
   }
@@ -329,15 +478,19 @@
 
   function wireForm() {
     if (!form) return;
-    /* En enda submit-lyssnare – undvik 3× om booking.js laddas/wire:as flera gånger */
     if (window.__stadstaxiBookingFormWired) return;
     window.__stadstaxiBookingFormWired = true;
 
     if (immediate) {
       immediate.addEventListener("change", toggleDatetimeFields);
     }
+    if (destSelect) {
+      destSelect.addEventListener("change", updateDestinationUI);
+    }
     toggleDatetimeFields();
     setMinDate();
+    fillDestinationOptions();
+    updateDestinationUI();
 
     var submitBtn = form.querySelector('button[type="submit"]');
 
@@ -364,26 +517,38 @@
         ? tr("when_immediate")
         : fieldValue("book-date") + " " + fieldValue("book-time");
 
+      var name = fieldValue("book-name");
+      var phone = fieldValue("book-phone");
+      var email = fieldValue("book-email");
+      var destination = selectedDestinationLabel();
+      var priceLabel = selectedPriceLabel();
+      var telHref = phoneToTelHref(phone);
+
       var conversionTxnId =
         "book-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
 
+      /* FormSubmit → info@stadtaxi.se. _replyto gör att Svara går till kunden. */
       sendBooking({
-        _subject: tr("book_email_subject"),
+        _subject: "Bokning: " + name + " · " + phone + " · " + destination,
+        _replyto: email,
         _captcha: "false",
         _template: "table",
-        Från: fieldValue("book-from"),
-        Till: fieldValue("book-to"),
-        Namn: fieldValue("book-name"),
-        Telefon: fieldValue("book-phone"),
-        "Kund e-post": fieldValue("book-email"),
+        "1. Ring kund": phone + (telHref ? "  →  " + telHref : ""),
+        "2. Svara mejl": email,
+        Namn: name,
+        Typ: isFixedTrip() ? "Fastpris" : "Offert / annan resa",
+        Från: selectedFromLabel(),
+        Till: destination,
+        "Fast pris": priceLabel,
         När: whenLabel,
         "Antal personer": fieldValue("book-passengers") || "1",
-        Övrigt: fieldValue("book-message") || "–"
+        Övrigt: fieldValue("book-message") || "–",
+        "Kundtelefon": phone,
+        "Kund e-post": email
       })
         .then(function () {
-          /* En conversion per lyckad bokning – inte på rått knappt-klick */
           gtagReportConversion(bookingConversionSendTo(), undefined, conversionTxnId);
-          showThanksView();
+          showThanksView(phone);
           if (statusEl) statusEl.hidden = true;
         })
         .catch(function () {
@@ -402,7 +567,7 @@
     if (resetBtn) {
       resetBtn.addEventListener("click", function () {
         resetBookingView();
-        var first = document.getElementById("book-from");
+        var first = document.getElementById("book-to-dest");
         if (first) first.focus();
       });
     }
@@ -412,6 +577,13 @@
   wireBookingDialog();
   wireForm();
   wireCallConversionLinks();
+
+  function openBookingFromHash() {
+    var hash = (window.location.hash || "").replace(/^#/, "");
+    if (hash === "boka") openBookingDialog();
+  }
+  openBookingFromHash();
+  window.addEventListener("hashchange", openBookingFromHash);
 
   document.addEventListener("stadstaxi:lang", function () {
     applySiteConfig();
