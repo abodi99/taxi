@@ -16,13 +16,13 @@ window.STADSTAXI.whatsappUrl =
  * Visas som "Helsingborg → …" i bokningsformuläret.
  */
 window.STADSTAXI.fixedRoutes = [
-  { id: "kastrup", label: "Kastrup (Köpenhamns flygplats)", priceSek: 2499 },
-  { id: "sturup", label: "Sturup (Malmö flygplats)", priceSek: 1600 },
+  { id: "kastrup", label: "Kastrup (Köpenhamns flygplats)", priceSek: 1800 },
+  { id: "sturup", label: "Sturup (Malmö flygplats)", priceSek: 1200 },
   { id: "angelholm", label: "Ängelholm & flygplats", priceSek: 695 },
   { id: "hoganas", label: "Höganäs", priceSek: 600 },
   { id: "landskrona", label: "Landskrona", priceSek: 700 },
-  { id: "malmo", label: "Malmö", priceSek: 1495 },
-  { id: "lund", label: "Lund", priceSek: 1200 }
+  { id: "malmo", label: "Malmö", priceSek: 990 },
+  { id: "lund", label: "Lund", priceSek: 890 }
 ];
 
 window.STADSTAXI.analytics = {
